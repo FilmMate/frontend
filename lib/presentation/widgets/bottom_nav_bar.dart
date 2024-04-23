@@ -1,3 +1,4 @@
+import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/menu_data.dart';
 import 'package:film_mate/presentation/widgets/nav_item.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +13,9 @@ class BottomNavBar extends StatelessWidget {
     return Container(
       height: 80,
       decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 37, 36, 36),
-          borderRadius: BorderRadius.circular(85)),
+        color: kBottomNavColor,
+        borderRadius: BorderRadius.circular(85),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
