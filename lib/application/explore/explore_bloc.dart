@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:film_mate/core/failure/main_failure.dart';
-import 'package:film_mate/domain/models/get_latest_response/get_latest/get_latest.dart';
+import 'package:film_mate/domain/models/get_latest/get_latest.dart';
 import 'package:film_mate/domain/services/explore_services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';

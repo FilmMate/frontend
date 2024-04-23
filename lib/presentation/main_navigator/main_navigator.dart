@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:film_mate/application/main_navigator/main_navigator_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/menu_data.dart';
@@ -33,10 +31,6 @@ class MainNavigator extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    // stops: [
-                    //   0.0,
-                    //   1.0
-                    // ], // Adjust the gradient stops for smoother transition
                     colors: [
                       Colors.black.withOpacity(0.0),
                       Colors.black.withOpacity(0.3),
