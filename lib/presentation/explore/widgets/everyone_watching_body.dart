@@ -38,6 +38,7 @@ class EveryOneWatching extends StatelessWidget {
                               title: state.latestMovies[index].title!,
                               video: state.latestMovies[index].video!,
                               image: state.latestMovies[index].backdropPath!,
+                              genre: state.latestMovies[index].genres!,
                             ),
                           );
                         }
@@ -47,6 +48,7 @@ class EveryOneWatching extends StatelessWidget {
                           title: state.latestMovies[index].title!,
                           video: state.latestMovies[index].video!,
                           image: state.latestMovies[index].backdropPath!,
+                          genre: state.latestMovies[index].genres!,
                         );
                       },
                       separatorBuilder: (context, index) {

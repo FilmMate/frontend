@@ -10,8 +10,15 @@ class MediaContainer extends StatelessWidget {
   final String title;
   final String overview;
   final String duration;
+  final List<String> genre;
   const MediaContainer({
-    super.key, required this.video, required this.image, required this.title, required this.overview, required this.duration,
+    super.key,
+    required this.video,
+    required this.image,
+    required this.title,
+    required this.overview,
+    required this.duration,
+    required this.genre,
   });
 
   @override
@@ -26,7 +33,7 @@ class MediaContainer extends StatelessWidget {
           child: Container(
             constraints: BoxConstraints(
               maxHeight: MediaQuery.of(context).size.width *
-                  0.10, // Limit width to screen width - 10
+                  0.30, // Limit width to screen width - 10
             ),
             child: Text(
               title,
@@ -42,7 +49,7 @@ class MediaContainer extends StatelessWidget {
         kHeightXS,
         Padding(
           padding: const EdgeInsets.only(left: 6.0),
-          child: Text("Genre , Genre | $duration",
+          child: Text("${genre.join(', ')} | $duration",
               style: const TextStyle(
                   color: kWhite, fontWeight: FontWeight.normal, fontSize: 12)),
         ),
