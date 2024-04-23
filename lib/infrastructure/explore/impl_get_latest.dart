@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
@@ -13,21 +14,36 @@ class GetLastestImpl implements ExploreServices {
   @override
   Future<Either<MainFailure, GetLatest>> getLatestMovies(
       {required String lang}) async {
-    try {
-      final Response response =
-          await Dio(BaseOptions()).get(EndPoints.latest, queryParameters: {
-        'api_key': apiKey,
-        'lang': lang,
-      });
-      if (response.statusCode == 200 || response.statusCode == 201) {
-        final result = GetLatest.fromJson(response.data);
-        return Right(result);
-      } else {
-        return const Left(MainFailure.serverFailure());
+    const int maxRetries = 2;
+    int retryCount = 0;
+
+    while (true) {
+      try {
+        final Response response = await Dio(BaseOptions()).get(
+          EndPoints.latest,
+          queryParameters: {
+            'api_key': apiKey,
+            'lang': lang,
+          },
+        );
+
+        if (response.statusCode == 200 || response.statusCode == 201) {
+          final result = GetLatest.fromJson(response.data);
+          return Right(result);
+        } else {
+          return const Left(MainFailure.serverFailure());
+        }
+      } catch (e) {
+        log(e.toString());
+        retryCount++;
+        if (retryCount <= maxRetries) {
+          // Retry if there are remaining retries
+          log('Retrying... Attempt $retryCount of $maxRetries');
+          continue; // Continue to the next iteration of the while loop
+        } else {
+          return const Left(MainFailure.clientFailure());
+        }
       }
-    } catch (e) {
-      log(e.toString());
-      return const Left(MainFailure.clientFailure());
     }
   }
 }
