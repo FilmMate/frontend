@@ -1,7 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoWidget extends StatefulWidget {
@@ -131,13 +132,32 @@ class _VideoWidgetState extends State<VideoWidget> {
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  Container(
+                  CachedNetworkImage(
+                    imageUrl: widget.imageUrl,
+                    imageBuilder: (context, imageProvider) => Container(
                       height: size.width * 0.55,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          image: DecorationImage(
-                              image: NetworkImage(widget.imageUrl),
-                              fit: BoxFit.cover))),
+                        borderRadius: BorderRadius.circular(8),
+                        image: DecorationImage(
+                          image: imageProvider,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    placeholder: (context, url) => Shimmer.fromColors(
+                      baseColor: kBottomNavColor,
+                      highlightColor: Colors.grey[100]!,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: kBottomNavColor),
+                        height: size.width * 0.55,
+                      ),
+                    ),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
+                    fit: BoxFit.cover,
+                  ),
                   CircleAvatar(
                     radius: 30,
                     backgroundColor: kBackgroundColor.withOpacity(0.6),
