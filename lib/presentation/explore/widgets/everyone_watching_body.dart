@@ -29,7 +29,7 @@ class EveryOneWatching extends StatelessWidget {
                   child: ListView.separated(
                       shrinkWrap: true,
                       itemBuilder: (context, index) {
-                        if (index == 9) {
+                        if (index == state.latestMovies.length - 1) {
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 200),
                             child: MediaContainer(
