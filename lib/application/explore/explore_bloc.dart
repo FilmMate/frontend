@@ -13,6 +13,7 @@ part 'explore_bloc.freezed.dart';
 @injectable
 class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
   final ExploreServices _exploreServices;
+
   ExploreBloc(this._exploreServices) : super(ExploreState.initial()) {
     on<_ChangeTab>((event, emit) {
       if (state.selectedTab == event.index) {
@@ -20,6 +21,7 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
       }
       emit(state.copyWith(selectedTab: event.index));
     });
+
     on<_GetLatestMovies>((event, emit) async {
       if (state.latestMovies.isNotEmpty) {
         return;
@@ -28,18 +30,39 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
         isLoading: true,
         isError: false,
       ));
-      final result = await _exploreServices.getLatestMovies(lang: event.lang);
-      log(result.toString());
-      result.fold((MainFailure failure) {
-        emit(state.copyWith(isError: true, isLoading: false, latestMovies: []));
-      }, (GetLatest success) {
-        // Filter the success.result list
-        final filteredMovies = success.result
-            .where((movie) => movie.backdropPath != null && movie.video != null)
-            .toList();
-        emit(state.copyWith(
-            isError: false, isLoading: false, latestMovies: filteredMovies));
-      });
+
+      // Define a list to collect filtered and combined results
+      List<GetLatestResponse> combinedResults = [];
+
+      // Helper function to filter and add valid results to the combined list
+      Future<void> addValidResult(String lang) async {
+        final result = await _exploreServices.getLatestMovies(lang: lang);
+        result.fold(
+          (MainFailure failure) {
+            log('Error fetching latest movies for language $lang: ${failure}');
+          },
+          (GetLatest success) {
+            // Filter the success.result list
+            final filteredMovies = success.result
+                .where((movie) => movie.backdropPath != null && movie.video != null)
+                .toList();
+            combinedResults.addAll(filteredMovies);
+          },
+        );
+      }
+
+      // Add and filter results for each language
+      await addValidResult(event.lang); // result
+      await addValidResult('en');       // result2
+      await addValidResult('hi');       // result3
+      await addValidResult('ta');       // result4
+
+      // Emit the updated state with combined and filtered movies
+      emit(state.copyWith(
+        isError: combinedResults.isEmpty, // Set isError if no valid movies found
+        isLoading: false,
+        latestMovies: combinedResults,
+      ));
     });
   }
 }
