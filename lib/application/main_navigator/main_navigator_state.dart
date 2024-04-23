@@ -5,7 +5,6 @@ class MainNavigatorState with _$MainNavigatorState {
   const factory MainNavigatorState({
     required int currentSelected,
   }) = _MainNavigatorState;
-  factory MainNavigatorState.initial() => const MainNavigatorState(
-    currentSelected: 0
-  );
+  factory MainNavigatorState.initial() =>
+      const MainNavigatorState(currentSelected: 0);
 }
