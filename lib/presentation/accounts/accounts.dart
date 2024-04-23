@@ -7,8 +7,10 @@ class ScreenAccounts extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child : Text("Accounts",
-          style: TextStyle(color: Colors.white),),
+        child: Text(
+          "Accounts",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }
