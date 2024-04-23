@@ -138,9 +138,14 @@ class _VideoWidgetState extends State<VideoWidget> {
                           image: DecorationImage(
                               image: NetworkImage(widget.imageUrl),
                               fit: BoxFit.cover))),
-                  const Icon(
-                    Icons.play_arrow_rounded,
-                    size: 50,
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: kBackgroundColor.withOpacity(0.6),
+                    child: const Icon(
+                      Icons.play_arrow_rounded,
+                      color: kSelectedBackgroundColor,
+                      size: 50,
+                    ),
                   )
                 ],
               ),
