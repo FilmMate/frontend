@@ -20,18 +20,21 @@ mixin _$ExploreEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeTab,
     required TResult Function(String lang) getLatestMovies,
+    required TResult Function(bool trigger) triggerDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeTab,
     TResult? Function(String lang)? getLatestMovies,
+    TResult? Function(bool trigger)? triggerDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeTab,
     TResult Function(String lang)? getLatestMovies,
+    TResult Function(bool trigger)? triggerDetail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$ExploreEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeTab value) changeTab,
     required TResult Function(_GetLatestMovies value) getLatestMovies,
+    required TResult Function(_TriggerDetail value) triggerDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeTab value)? changeTab,
     TResult? Function(_GetLatestMovies value)? getLatestMovies,
+    TResult? Function(_TriggerDetail value)? triggerDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeTab value)? changeTab,
     TResult Function(_GetLatestMovies value)? getLatestMovies,
+    TResult Function(_TriggerDetail value)? triggerDetail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -140,6 +146,7 @@ class _$ChangeTabImpl implements _ChangeTab {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeTab,
     required TResult Function(String lang) getLatestMovies,
+    required TResult Function(bool trigger) triggerDetail,
   }) {
     return changeTab(index);
   }
@@ -149,6 +156,7 @@ class _$ChangeTabImpl implements _ChangeTab {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeTab,
     TResult? Function(String lang)? getLatestMovies,
+    TResult? Function(bool trigger)? triggerDetail,
   }) {
     return changeTab?.call(index);
   }
@@ -158,6 +166,7 @@ class _$ChangeTabImpl implements _ChangeTab {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeTab,
     TResult Function(String lang)? getLatestMovies,
+    TResult Function(bool trigger)? triggerDetail,
     required TResult orElse(),
   }) {
     if (changeTab != null) {
@@ -171,6 +180,7 @@ class _$ChangeTabImpl implements _ChangeTab {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeTab value) changeTab,
     required TResult Function(_GetLatestMovies value) getLatestMovies,
+    required TResult Function(_TriggerDetail value) triggerDetail,
   }) {
     return changeTab(this);
   }
@@ -180,6 +190,7 @@ class _$ChangeTabImpl implements _ChangeTab {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeTab value)? changeTab,
     TResult? Function(_GetLatestMovies value)? getLatestMovies,
+    TResult? Function(_TriggerDetail value)? triggerDetail,
   }) {
     return changeTab?.call(this);
   }
@@ -189,6 +200,7 @@ class _$ChangeTabImpl implements _ChangeTab {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeTab value)? changeTab,
     TResult Function(_GetLatestMovies value)? getLatestMovies,
+    TResult Function(_TriggerDetail value)? triggerDetail,
     required TResult orElse(),
   }) {
     if (changeTab != null) {
@@ -274,6 +286,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeTab,
     required TResult Function(String lang) getLatestMovies,
+    required TResult Function(bool trigger) triggerDetail,
   }) {
     return getLatestMovies(lang);
   }
@@ -283,6 +296,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeTab,
     TResult? Function(String lang)? getLatestMovies,
+    TResult? Function(bool trigger)? triggerDetail,
   }) {
     return getLatestMovies?.call(lang);
   }
@@ -292,6 +306,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeTab,
     TResult Function(String lang)? getLatestMovies,
+    TResult Function(bool trigger)? triggerDetail,
     required TResult orElse(),
   }) {
     if (getLatestMovies != null) {
@@ -305,6 +320,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeTab value) changeTab,
     required TResult Function(_GetLatestMovies value) getLatestMovies,
+    required TResult Function(_TriggerDetail value) triggerDetail,
   }) {
     return getLatestMovies(this);
   }
@@ -314,6 +330,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeTab value)? changeTab,
     TResult? Function(_GetLatestMovies value)? getLatestMovies,
+    TResult? Function(_TriggerDetail value)? triggerDetail,
   }) {
     return getLatestMovies?.call(this);
   }
@@ -323,6 +340,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeTab value)? changeTab,
     TResult Function(_GetLatestMovies value)? getLatestMovies,
+    TResult Function(_TriggerDetail value)? triggerDetail,
     required TResult orElse(),
   }) {
     if (getLatestMovies != null) {
@@ -343,12 +361,153 @@ abstract class _GetLatestMovies implements ExploreEvent {
 }
 
 /// @nodoc
+abstract class _$$TriggerDetailImplCopyWith<$Res> {
+  factory _$$TriggerDetailImplCopyWith(
+          _$TriggerDetailImpl value, $Res Function(_$TriggerDetailImpl) then) =
+      __$$TriggerDetailImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool trigger});
+}
+
+/// @nodoc
+class __$$TriggerDetailImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$TriggerDetailImpl>
+    implements _$$TriggerDetailImplCopyWith<$Res> {
+  __$$TriggerDetailImplCopyWithImpl(
+      _$TriggerDetailImpl _value, $Res Function(_$TriggerDetailImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trigger = null,
+  }) {
+    return _then(_$TriggerDetailImpl(
+      trigger: null == trigger
+          ? _value.trigger
+          : trigger // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TriggerDetailImpl implements _TriggerDetail {
+  const _$TriggerDetailImpl({required this.trigger});
+
+  @override
+  final bool trigger;
+
+  @override
+  String toString() {
+    return 'ExploreEvent.triggerDetail(trigger: $trigger)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TriggerDetailImpl &&
+            (identical(other.trigger, trigger) || other.trigger == trigger));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, trigger);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TriggerDetailImplCopyWith<_$TriggerDetailImpl> get copyWith =>
+      __$$TriggerDetailImplCopyWithImpl<_$TriggerDetailImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeTab,
+    required TResult Function(String lang) getLatestMovies,
+    required TResult Function(bool trigger) triggerDetail,
+  }) {
+    return triggerDetail(trigger);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeTab,
+    TResult? Function(String lang)? getLatestMovies,
+    TResult? Function(bool trigger)? triggerDetail,
+  }) {
+    return triggerDetail?.call(trigger);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeTab,
+    TResult Function(String lang)? getLatestMovies,
+    TResult Function(bool trigger)? triggerDetail,
+    required TResult orElse(),
+  }) {
+    if (triggerDetail != null) {
+      return triggerDetail(trigger);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeTab value) changeTab,
+    required TResult Function(_GetLatestMovies value) getLatestMovies,
+    required TResult Function(_TriggerDetail value) triggerDetail,
+  }) {
+    return triggerDetail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeTab value)? changeTab,
+    TResult? Function(_GetLatestMovies value)? getLatestMovies,
+    TResult? Function(_TriggerDetail value)? triggerDetail,
+  }) {
+    return triggerDetail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeTab value)? changeTab,
+    TResult Function(_GetLatestMovies value)? getLatestMovies,
+    TResult Function(_TriggerDetail value)? triggerDetail,
+    required TResult orElse(),
+  }) {
+    if (triggerDetail != null) {
+      return triggerDetail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _TriggerDetail implements ExploreEvent {
+  const factory _TriggerDetail({required final bool trigger}) =
+      _$TriggerDetailImpl;
+
+  bool get trigger;
+  @JsonKey(ignore: true)
+  _$$TriggerDetailImplCopyWith<_$TriggerDetailImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$ExploreState {
   int get selectedTab => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
   List<GetLatestResponse> get latestMovies =>
       throw _privateConstructorUsedError;
+  bool get isDetailTriggered => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ExploreStateCopyWith<ExploreState> get copyWith =>
@@ -365,7 +524,8 @@ abstract class $ExploreStateCopyWith<$Res> {
       {int selectedTab,
       bool isLoading,
       bool isError,
-      List<GetLatestResponse> latestMovies});
+      List<GetLatestResponse> latestMovies,
+      bool isDetailTriggered});
 }
 
 /// @nodoc
@@ -385,6 +545,7 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
     Object? isLoading = null,
     Object? isError = null,
     Object? latestMovies = null,
+    Object? isDetailTriggered = null,
   }) {
     return _then(_value.copyWith(
       selectedTab: null == selectedTab
@@ -403,6 +564,10 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
           ? _value.latestMovies
           : latestMovies // ignore: cast_nullable_to_non_nullable
               as List<GetLatestResponse>,
+      isDetailTriggered: null == isDetailTriggered
+          ? _value.isDetailTriggered
+          : isDetailTriggered // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -419,7 +584,8 @@ abstract class _$$ExploreStateImplCopyWith<$Res>
       {int selectedTab,
       bool isLoading,
       bool isError,
-      List<GetLatestResponse> latestMovies});
+      List<GetLatestResponse> latestMovies,
+      bool isDetailTriggered});
 }
 
 /// @nodoc
@@ -437,6 +603,7 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? isError = null,
     Object? latestMovies = null,
+    Object? isDetailTriggered = null,
   }) {
     return _then(_$ExploreStateImpl(
       selectedTab: null == selectedTab
@@ -455,6 +622,10 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
           ? _value._latestMovies
           : latestMovies // ignore: cast_nullable_to_non_nullable
               as List<GetLatestResponse>,
+      isDetailTriggered: null == isDetailTriggered
+          ? _value.isDetailTriggered
+          : isDetailTriggered // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -466,7 +637,8 @@ class _$ExploreStateImpl implements _ExploreState {
       {required this.selectedTab,
       required this.isLoading,
       required this.isError,
-      required final List<GetLatestResponse> latestMovies})
+      required final List<GetLatestResponse> latestMovies,
+      required this.isDetailTriggered})
       : _latestMovies = latestMovies;
 
   @override
@@ -484,8 +656,11 @@ class _$ExploreStateImpl implements _ExploreState {
   }
 
   @override
+  final bool isDetailTriggered;
+
+  @override
   String toString() {
-    return 'ExploreState(selectedTab: $selectedTab, isLoading: $isLoading, isError: $isError, latestMovies: $latestMovies)';
+    return 'ExploreState(selectedTab: $selectedTab, isLoading: $isLoading, isError: $isError, latestMovies: $latestMovies, isDetailTriggered: $isDetailTriggered)';
   }
 
   @override
@@ -499,12 +674,14 @@ class _$ExploreStateImpl implements _ExploreState {
                 other.isLoading == isLoading) &&
             (identical(other.isError, isError) || other.isError == isError) &&
             const DeepCollectionEquality()
-                .equals(other._latestMovies, _latestMovies));
+                .equals(other._latestMovies, _latestMovies) &&
+            (identical(other.isDetailTriggered, isDetailTriggered) ||
+                other.isDetailTriggered == isDetailTriggered));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, selectedTab, isLoading, isError,
-      const DeepCollectionEquality().hash(_latestMovies));
+      const DeepCollectionEquality().hash(_latestMovies), isDetailTriggered);
 
   @JsonKey(ignore: true)
   @override
@@ -515,11 +692,11 @@ class _$ExploreStateImpl implements _ExploreState {
 
 abstract class _ExploreState implements ExploreState {
   const factory _ExploreState(
-          {required final int selectedTab,
-          required final bool isLoading,
-          required final bool isError,
-          required final List<GetLatestResponse> latestMovies}) =
-      _$ExploreStateImpl;
+      {required final int selectedTab,
+      required final bool isLoading,
+      required final bool isError,
+      required final List<GetLatestResponse> latestMovies,
+      required final bool isDetailTriggered}) = _$ExploreStateImpl;
 
   @override
   int get selectedTab;
@@ -529,6 +706,8 @@ abstract class _ExploreState implements ExploreState {
   bool get isError;
   @override
   List<GetLatestResponse> get latestMovies;
+  @override
+  bool get isDetailTriggered;
   @override
   @JsonKey(ignore: true)
   _$$ExploreStateImplCopyWith<_$ExploreStateImpl> get copyWith =>

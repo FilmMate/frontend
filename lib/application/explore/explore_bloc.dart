@@ -22,6 +22,10 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
       emit(state.copyWith(selectedTab: event.index));
     });
 
+    // to stop playing video if detail page is triggered
+    on<_TriggerDetail>((event, emit) async {
+      emit(state.copyWith(isDetailTriggered: event.trigger));
+    });
     on<_GetLatestMovies>((event, emit) async {
       if (state.latestMovies.isNotEmpty) {
         return;
@@ -39,12 +43,13 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
         final result = await _exploreServices.getLatestMovies(lang: lang);
         result.fold(
           (MainFailure failure) {
-            log('Error fetching latest movies for language $lang: ${failure}');
+            log('Error fetching latest movies for language $lang: $failure');
           },
           (GetLatest success) {
             // Filter the success.result list
             final filteredMovies = success.result
-                .where((movie) => movie.backdropPath != null && movie.video != null)
+                .where((movie) =>
+                    movie.backdropPath != null && movie.video != null)
                 .toList();
             combinedResults.addAll(filteredMovies);
           },
@@ -53,13 +58,14 @@ class ExploreBloc extends Bloc<ExploreEvent, ExploreState> {
 
       // Add and filter results for each language
       await addValidResult(event.lang); // result
-      await addValidResult('en');       // result2
-      await addValidResult('hi');       // result3
-      await addValidResult('ta');       // result4
+      await addValidResult('en'); // result2
+      await addValidResult('hi'); // result3
+      await addValidResult('ta'); // result4
 
       // Emit the updated state with combined and filtered movies
       emit(state.copyWith(
-        isError: combinedResults.isEmpty, // Set isError if no valid movies found
+        isError:
+            combinedResults.isEmpty, // Set isError if no valid movies found
         isLoading: false,
         latestMovies: combinedResults,
       ));

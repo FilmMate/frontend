@@ -59,11 +59,11 @@ class MediaContainer extends StatelessWidget {
           child: Container(
             constraints: BoxConstraints(
               maxHeight: MediaQuery.of(context).size.width *
-                  0.30, // Limit width to screen width - 10
+                  0.45, // Limit width to screen width - 10
             ),
             child: Text(
               overview,
-              maxLines: 5,
+              maxLines: 8,
               textAlign: TextAlign.justify,
               style: const TextStyle(
                 color: kWhite,

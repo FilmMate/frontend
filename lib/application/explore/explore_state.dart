@@ -7,12 +7,13 @@ class ExploreState with _$ExploreState {
     required bool isLoading,
     required bool isError,
     required List<GetLatestResponse> latestMovies,
+    required bool isDetailTriggered,
   }) = _ExploreState;
 
   factory ExploreState.initial() => const ExploreState(
         selectedTab: 0,
         isLoading: false,
         isError: false,
-        latestMovies: [],
+        latestMovies: [], isDetailTriggered: false,
       );
 }
