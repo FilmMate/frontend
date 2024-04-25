@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: ((ctx) => getIt<MainNavigatorBloc>())),
         BlocProvider(create: ((ctx) => getIt<HomeBloc>())),
         BlocProvider(create: ((ctx) => getIt<ExploreBloc>())),
-      ],
+      ],  
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'FilmMate',
