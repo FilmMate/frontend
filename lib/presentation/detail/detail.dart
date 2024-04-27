@@ -139,9 +139,12 @@ class ScreenDetail extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: size.width,
+            Container(
+              constraints: BoxConstraints(
+                maxHeight: size.height * 2,
+              ),
               child: ListView.separated(
+                shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return const Row(
@@ -167,7 +170,7 @@ class ScreenDetail extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (context, index) => const Divider(),
-                itemCount: 10,
+                itemCount: 20,
               ),
             )
           ],
