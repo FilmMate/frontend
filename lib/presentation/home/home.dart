@@ -2,7 +2,6 @@ import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/presentation/detail/widgets/poster.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'widgets/carousel_section.dart';
 import 'widgets/genre_section.dart';
 
@@ -48,8 +47,6 @@ class ScreenHome extends StatelessWidget {
                   HomeList(size: size,title: "Sci-Fi TV Shows",),
                   kHeightS,
                   HomeList(size: size,title: "Feel-Good Anime",),
-
-                  
                 ],
               ),
             ),
@@ -75,7 +72,7 @@ class HomeList extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Text(title,style: TextStyle(
+          child: Text(title,style: const TextStyle(
                         color: kWhite,
                         fontWeight: FontWeight.bold,fontSize: 18
                       ),),

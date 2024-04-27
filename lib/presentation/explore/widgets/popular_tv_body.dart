@@ -5,8 +5,8 @@ import 'package:film_mate/presentation/explore/widgets/media_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class EveryOneWatchingBody extends StatelessWidget {
-  const EveryOneWatchingBody({super.key});
+class PopularTvBody extends StatelessWidget {
+  const PopularTvBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +18,10 @@ class EveryOneWatchingBody extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: BlocBuilder<ExploreBloc, ExploreState>(
               builder: (context, state) {
-                if (state.isLoadingMovie) {
+                if (state.isLoadingTV) {
                   return const Center(child: CircularProgressIndicator());
                 }
-                if (state.isErrorMovie) {
+                if (state.isErrorTV) {
                   return const Center(
                     child: Text("Error"),
                   );
@@ -31,7 +31,7 @@ class EveryOneWatchingBody extends StatelessWidget {
                   child: ListView.separated(
                       shrinkWrap: true,
                       itemBuilder: (context, index) {
-                        if (index == state.latestMovies.length - 1) {
+                        if (index == state.latestTV.length - 1) {
                           return GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
@@ -40,12 +40,12 @@ class EveryOneWatchingBody extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 200),
                               child: MediaContainer(
-                                duration: state.latestMovies[index].duration!,
-                                overview: state.latestMovies[index].overview!,
-                                title: state.latestMovies[index].title!,
-                                video: state.latestMovies[index].video!,
-                                image: state.latestMovies[index].backdropPath!,
-                                genre: state.latestMovies[index].genres!,
+                                duration: "0h 0m",
+                                overview: state.latestTV[index].overview!,
+                                title: state.latestTV[index].title!,
+                                video: state.latestTV[index].video!,
+                                image: state.latestTV[index].backdropPath!,
+                                genre: state.latestTV[index].genres!,
                               ),
                             ),
                           );
@@ -59,19 +59,19 @@ class EveryOneWatchingBody extends StatelessWidget {
                                 builder: (context) => const ScreenDetail()));
                           },
                           child: MediaContainer(
-                            duration: state.latestMovies[index].duration!,
-                            overview: state.latestMovies[index].overview!,
-                            title: state.latestMovies[index].title!,
-                            video: state.latestMovies[index].video!,
-                            image: state.latestMovies[index].backdropPath!,
-                            genre: state.latestMovies[index].genres!,
+                            duration: "0h 0m",
+                            overview: state.latestTV[index].overview!,
+                            title: state.latestTV[index].title!,
+                            video: state.latestTV[index].video!,
+                            image: state.latestTV[index].backdropPath!,
+                            genre: state.latestTV[index].genres!,
                           ),
                         );
                       },
                       separatorBuilder: (context, index) {
                         return kHeightS;
                       },
-                      itemCount: state.latestMovies.length),
+                      itemCount: state.latestTV.length),
                 );
               },
             )),

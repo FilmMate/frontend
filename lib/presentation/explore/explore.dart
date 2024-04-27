@@ -1,5 +1,6 @@
 import 'package:film_mate/application/explore/explore_bloc.dart';
 import 'package:film_mate/core/colors.dart';
+import 'package:film_mate/presentation/explore/widgets/popular_tv_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/custom_tab_bar.dart';
@@ -12,6 +13,8 @@ class ScreenExplore extends StatelessWidget {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<ExploreBloc>(context)
           .add(const ExploreEvent.getLatestMovies(lang: 'ml'));
+      BlocProvider.of<ExploreBloc>(context)
+          .add(const ExploreEvent.getLatestTv());
     });
     return Scaffold(
       appBar: AppBar(
@@ -34,7 +37,7 @@ class ScreenExplore extends StatelessWidget {
                 child: CustomTabBar(
                   tabs: const [
                     "🔥 Everyone's watching",
-                    '🍿 Coming Soon',
+                    '📺 Popular TV Shows',
                   ],
                   selectedIndex: state.selectedTab,
                   onTabSelected: (index) {
@@ -45,13 +48,8 @@ class ScreenExplore extends StatelessWidget {
               ),
               Expanded(
                   child: state.selectedTab == 0
-                      ? const EveryOneWatching()
-                      : const Center(
-                          child: Text(
-                            'Coming Soon Content',
-                            style: TextStyle(fontSize: 20, color: kWhite),
-                          ),
-                        )),
+                      ? const EveryOneWatchingBody()
+                      : const PopularTvBody()),
             ],
           );
         },

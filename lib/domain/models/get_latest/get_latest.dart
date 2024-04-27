@@ -53,18 +53,17 @@ class GetLatestResponse {
   });
 
   factory GetLatestResponse.fromJson(Map<String, dynamic> json) {
-  return GetLatestResponse(
-    backdropPath: json['backdrop_path'] as String?,
-    duration: json['duration'] as String?,
-    genres: (json['genres'] as List<dynamic>?)?.map((e) => e.toString()).toList(),
-    id: json['id'] as int?,
-    overview: json['overview'] as String?,
-    posterPath: json['poster_path'] as String?,
-    title: json['title'] as String?,
-    video: json['video'] as String?,
-  );
-}
-
+    return GetLatestResponse(
+      backdropPath: json['backdrop_path'] as String?,
+      duration: json['duration'] as String?,
+      genres: (json['genres'] as List<dynamic>?)?.map((e) => e.toString()).toList(),
+      id: json['id'] as int?,
+      overview: json['overview'] as String?,
+      posterPath: json['poster_path'] as String?,
+      title: json['title'] as String?,
+      video: json['video'] as String?,
+    );
+  }
 
   Map<String, dynamic> toJson() => {
         'backdrop_path': backdropPath,

@@ -7,4 +7,5 @@ class ExploreEvent with _$ExploreEvent {
       _GetLatestMovies;
   const factory ExploreEvent.triggerDetail({required bool trigger}) =
       _TriggerDetail;
+  const factory ExploreEvent.getLatestTv() = _GetLatestTV;
 }

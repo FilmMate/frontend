@@ -21,6 +21,7 @@ mixin _$ExploreEvent {
     required TResult Function(int index) changeTab,
     required TResult Function(String lang) getLatestMovies,
     required TResult Function(bool trigger) triggerDetail,
+    required TResult Function() getLatestTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$ExploreEvent {
     TResult? Function(int index)? changeTab,
     TResult? Function(String lang)? getLatestMovies,
     TResult? Function(bool trigger)? triggerDetail,
+    TResult? Function()? getLatestTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$ExploreEvent {
     TResult Function(int index)? changeTab,
     TResult Function(String lang)? getLatestMovies,
     TResult Function(bool trigger)? triggerDetail,
+    TResult Function()? getLatestTv,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$ExploreEvent {
     required TResult Function(_ChangeTab value) changeTab,
     required TResult Function(_GetLatestMovies value) getLatestMovies,
     required TResult Function(_TriggerDetail value) triggerDetail,
+    required TResult Function(_GetLatestTV value) getLatestTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$ExploreEvent {
     TResult? Function(_ChangeTab value)? changeTab,
     TResult? Function(_GetLatestMovies value)? getLatestMovies,
     TResult? Function(_TriggerDetail value)? triggerDetail,
+    TResult? Function(_GetLatestTV value)? getLatestTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$ExploreEvent {
     TResult Function(_ChangeTab value)? changeTab,
     TResult Function(_GetLatestMovies value)? getLatestMovies,
     TResult Function(_TriggerDetail value)? triggerDetail,
+    TResult Function(_GetLatestTV value)? getLatestTv,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +153,7 @@ class _$ChangeTabImpl implements _ChangeTab {
     required TResult Function(int index) changeTab,
     required TResult Function(String lang) getLatestMovies,
     required TResult Function(bool trigger) triggerDetail,
+    required TResult Function() getLatestTv,
   }) {
     return changeTab(index);
   }
@@ -157,6 +164,7 @@ class _$ChangeTabImpl implements _ChangeTab {
     TResult? Function(int index)? changeTab,
     TResult? Function(String lang)? getLatestMovies,
     TResult? Function(bool trigger)? triggerDetail,
+    TResult? Function()? getLatestTv,
   }) {
     return changeTab?.call(index);
   }
@@ -167,6 +175,7 @@ class _$ChangeTabImpl implements _ChangeTab {
     TResult Function(int index)? changeTab,
     TResult Function(String lang)? getLatestMovies,
     TResult Function(bool trigger)? triggerDetail,
+    TResult Function()? getLatestTv,
     required TResult orElse(),
   }) {
     if (changeTab != null) {
@@ -181,6 +190,7 @@ class _$ChangeTabImpl implements _ChangeTab {
     required TResult Function(_ChangeTab value) changeTab,
     required TResult Function(_GetLatestMovies value) getLatestMovies,
     required TResult Function(_TriggerDetail value) triggerDetail,
+    required TResult Function(_GetLatestTV value) getLatestTv,
   }) {
     return changeTab(this);
   }
@@ -191,6 +201,7 @@ class _$ChangeTabImpl implements _ChangeTab {
     TResult? Function(_ChangeTab value)? changeTab,
     TResult? Function(_GetLatestMovies value)? getLatestMovies,
     TResult? Function(_TriggerDetail value)? triggerDetail,
+    TResult? Function(_GetLatestTV value)? getLatestTv,
   }) {
     return changeTab?.call(this);
   }
@@ -201,6 +212,7 @@ class _$ChangeTabImpl implements _ChangeTab {
     TResult Function(_ChangeTab value)? changeTab,
     TResult Function(_GetLatestMovies value)? getLatestMovies,
     TResult Function(_TriggerDetail value)? triggerDetail,
+    TResult Function(_GetLatestTV value)? getLatestTv,
     required TResult orElse(),
   }) {
     if (changeTab != null) {
@@ -287,6 +299,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
     required TResult Function(int index) changeTab,
     required TResult Function(String lang) getLatestMovies,
     required TResult Function(bool trigger) triggerDetail,
+    required TResult Function() getLatestTv,
   }) {
     return getLatestMovies(lang);
   }
@@ -297,6 +310,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
     TResult? Function(int index)? changeTab,
     TResult? Function(String lang)? getLatestMovies,
     TResult? Function(bool trigger)? triggerDetail,
+    TResult? Function()? getLatestTv,
   }) {
     return getLatestMovies?.call(lang);
   }
@@ -307,6 +321,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
     TResult Function(int index)? changeTab,
     TResult Function(String lang)? getLatestMovies,
     TResult Function(bool trigger)? triggerDetail,
+    TResult Function()? getLatestTv,
     required TResult orElse(),
   }) {
     if (getLatestMovies != null) {
@@ -321,6 +336,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
     required TResult Function(_ChangeTab value) changeTab,
     required TResult Function(_GetLatestMovies value) getLatestMovies,
     required TResult Function(_TriggerDetail value) triggerDetail,
+    required TResult Function(_GetLatestTV value) getLatestTv,
   }) {
     return getLatestMovies(this);
   }
@@ -331,6 +347,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
     TResult? Function(_ChangeTab value)? changeTab,
     TResult? Function(_GetLatestMovies value)? getLatestMovies,
     TResult? Function(_TriggerDetail value)? triggerDetail,
+    TResult? Function(_GetLatestTV value)? getLatestTv,
   }) {
     return getLatestMovies?.call(this);
   }
@@ -341,6 +358,7 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
     TResult Function(_ChangeTab value)? changeTab,
     TResult Function(_GetLatestMovies value)? getLatestMovies,
     TResult Function(_TriggerDetail value)? triggerDetail,
+    TResult Function(_GetLatestTV value)? getLatestTv,
     required TResult orElse(),
   }) {
     if (getLatestMovies != null) {
@@ -427,6 +445,7 @@ class _$TriggerDetailImpl implements _TriggerDetail {
     required TResult Function(int index) changeTab,
     required TResult Function(String lang) getLatestMovies,
     required TResult Function(bool trigger) triggerDetail,
+    required TResult Function() getLatestTv,
   }) {
     return triggerDetail(trigger);
   }
@@ -437,6 +456,7 @@ class _$TriggerDetailImpl implements _TriggerDetail {
     TResult? Function(int index)? changeTab,
     TResult? Function(String lang)? getLatestMovies,
     TResult? Function(bool trigger)? triggerDetail,
+    TResult? Function()? getLatestTv,
   }) {
     return triggerDetail?.call(trigger);
   }
@@ -447,6 +467,7 @@ class _$TriggerDetailImpl implements _TriggerDetail {
     TResult Function(int index)? changeTab,
     TResult Function(String lang)? getLatestMovies,
     TResult Function(bool trigger)? triggerDetail,
+    TResult Function()? getLatestTv,
     required TResult orElse(),
   }) {
     if (triggerDetail != null) {
@@ -461,6 +482,7 @@ class _$TriggerDetailImpl implements _TriggerDetail {
     required TResult Function(_ChangeTab value) changeTab,
     required TResult Function(_GetLatestMovies value) getLatestMovies,
     required TResult Function(_TriggerDetail value) triggerDetail,
+    required TResult Function(_GetLatestTV value) getLatestTv,
   }) {
     return triggerDetail(this);
   }
@@ -471,6 +493,7 @@ class _$TriggerDetailImpl implements _TriggerDetail {
     TResult? Function(_ChangeTab value)? changeTab,
     TResult? Function(_GetLatestMovies value)? getLatestMovies,
     TResult? Function(_TriggerDetail value)? triggerDetail,
+    TResult? Function(_GetLatestTV value)? getLatestTv,
   }) {
     return triggerDetail?.call(this);
   }
@@ -481,6 +504,7 @@ class _$TriggerDetailImpl implements _TriggerDetail {
     TResult Function(_ChangeTab value)? changeTab,
     TResult Function(_GetLatestMovies value)? getLatestMovies,
     TResult Function(_TriggerDetail value)? triggerDetail,
+    TResult Function(_GetLatestTV value)? getLatestTv,
     required TResult orElse(),
   }) {
     if (triggerDetail != null) {
@@ -501,13 +525,130 @@ abstract class _TriggerDetail implements ExploreEvent {
 }
 
 /// @nodoc
+abstract class _$$GetLatestTVImplCopyWith<$Res> {
+  factory _$$GetLatestTVImplCopyWith(
+          _$GetLatestTVImpl value, $Res Function(_$GetLatestTVImpl) then) =
+      __$$GetLatestTVImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetLatestTVImplCopyWithImpl<$Res>
+    extends _$ExploreEventCopyWithImpl<$Res, _$GetLatestTVImpl>
+    implements _$$GetLatestTVImplCopyWith<$Res> {
+  __$$GetLatestTVImplCopyWithImpl(
+      _$GetLatestTVImpl _value, $Res Function(_$GetLatestTVImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetLatestTVImpl implements _GetLatestTV {
+  const _$GetLatestTVImpl();
+
+  @override
+  String toString() {
+    return 'ExploreEvent.getLatestTv()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetLatestTVImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeTab,
+    required TResult Function(String lang) getLatestMovies,
+    required TResult Function(bool trigger) triggerDetail,
+    required TResult Function() getLatestTv,
+  }) {
+    return getLatestTv();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeTab,
+    TResult? Function(String lang)? getLatestMovies,
+    TResult? Function(bool trigger)? triggerDetail,
+    TResult? Function()? getLatestTv,
+  }) {
+    return getLatestTv?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeTab,
+    TResult Function(String lang)? getLatestMovies,
+    TResult Function(bool trigger)? triggerDetail,
+    TResult Function()? getLatestTv,
+    required TResult orElse(),
+  }) {
+    if (getLatestTv != null) {
+      return getLatestTv();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeTab value) changeTab,
+    required TResult Function(_GetLatestMovies value) getLatestMovies,
+    required TResult Function(_TriggerDetail value) triggerDetail,
+    required TResult Function(_GetLatestTV value) getLatestTv,
+  }) {
+    return getLatestTv(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeTab value)? changeTab,
+    TResult? Function(_GetLatestMovies value)? getLatestMovies,
+    TResult? Function(_TriggerDetail value)? triggerDetail,
+    TResult? Function(_GetLatestTV value)? getLatestTv,
+  }) {
+    return getLatestTv?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeTab value)? changeTab,
+    TResult Function(_GetLatestMovies value)? getLatestMovies,
+    TResult Function(_TriggerDetail value)? triggerDetail,
+    TResult Function(_GetLatestTV value)? getLatestTv,
+    required TResult orElse(),
+  }) {
+    if (getLatestTv != null) {
+      return getLatestTv(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetLatestTV implements ExploreEvent {
+  const factory _GetLatestTV() = _$GetLatestTVImpl;
+}
+
+/// @nodoc
 mixin _$ExploreState {
   int get selectedTab => throw _privateConstructorUsedError;
-  bool get isLoading => throw _privateConstructorUsedError;
-  bool get isError => throw _privateConstructorUsedError;
+  bool get isLoadingMovie => throw _privateConstructorUsedError;
+  bool get isErrorMovie => throw _privateConstructorUsedError;
   List<GetLatestResponse> get latestMovies =>
       throw _privateConstructorUsedError;
   bool get isDetailTriggered => throw _privateConstructorUsedError;
+  List<GetLatestTvResponse> get latestTV => throw _privateConstructorUsedError;
+  bool get isLoadingTV => throw _privateConstructorUsedError;
+  bool get isErrorTV => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ExploreStateCopyWith<ExploreState> get copyWith =>
@@ -522,10 +663,13 @@ abstract class $ExploreStateCopyWith<$Res> {
   @useResult
   $Res call(
       {int selectedTab,
-      bool isLoading,
-      bool isError,
+      bool isLoadingMovie,
+      bool isErrorMovie,
       List<GetLatestResponse> latestMovies,
-      bool isDetailTriggered});
+      bool isDetailTriggered,
+      List<GetLatestTvResponse> latestTV,
+      bool isLoadingTV,
+      bool isErrorTV});
 }
 
 /// @nodoc
@@ -542,23 +686,26 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
   @override
   $Res call({
     Object? selectedTab = null,
-    Object? isLoading = null,
-    Object? isError = null,
+    Object? isLoadingMovie = null,
+    Object? isErrorMovie = null,
     Object? latestMovies = null,
     Object? isDetailTriggered = null,
+    Object? latestTV = null,
+    Object? isLoadingTV = null,
+    Object? isErrorTV = null,
   }) {
     return _then(_value.copyWith(
       selectedTab: null == selectedTab
           ? _value.selectedTab
           : selectedTab // ignore: cast_nullable_to_non_nullable
               as int,
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
+      isLoadingMovie: null == isLoadingMovie
+          ? _value.isLoadingMovie
+          : isLoadingMovie // ignore: cast_nullable_to_non_nullable
               as bool,
-      isError: null == isError
-          ? _value.isError
-          : isError // ignore: cast_nullable_to_non_nullable
+      isErrorMovie: null == isErrorMovie
+          ? _value.isErrorMovie
+          : isErrorMovie // ignore: cast_nullable_to_non_nullable
               as bool,
       latestMovies: null == latestMovies
           ? _value.latestMovies
@@ -567,6 +714,18 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
       isDetailTriggered: null == isDetailTriggered
           ? _value.isDetailTriggered
           : isDetailTriggered // ignore: cast_nullable_to_non_nullable
+              as bool,
+      latestTV: null == latestTV
+          ? _value.latestTV
+          : latestTV // ignore: cast_nullable_to_non_nullable
+              as List<GetLatestTvResponse>,
+      isLoadingTV: null == isLoadingTV
+          ? _value.isLoadingTV
+          : isLoadingTV // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isErrorTV: null == isErrorTV
+          ? _value.isErrorTV
+          : isErrorTV // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -582,10 +741,13 @@ abstract class _$$ExploreStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {int selectedTab,
-      bool isLoading,
-      bool isError,
+      bool isLoadingMovie,
+      bool isErrorMovie,
       List<GetLatestResponse> latestMovies,
-      bool isDetailTriggered});
+      bool isDetailTriggered,
+      List<GetLatestTvResponse> latestTV,
+      bool isLoadingTV,
+      bool isErrorTV});
 }
 
 /// @nodoc
@@ -600,23 +762,26 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? selectedTab = null,
-    Object? isLoading = null,
-    Object? isError = null,
+    Object? isLoadingMovie = null,
+    Object? isErrorMovie = null,
     Object? latestMovies = null,
     Object? isDetailTriggered = null,
+    Object? latestTV = null,
+    Object? isLoadingTV = null,
+    Object? isErrorTV = null,
   }) {
     return _then(_$ExploreStateImpl(
       selectedTab: null == selectedTab
           ? _value.selectedTab
           : selectedTab // ignore: cast_nullable_to_non_nullable
               as int,
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
+      isLoadingMovie: null == isLoadingMovie
+          ? _value.isLoadingMovie
+          : isLoadingMovie // ignore: cast_nullable_to_non_nullable
               as bool,
-      isError: null == isError
-          ? _value.isError
-          : isError // ignore: cast_nullable_to_non_nullable
+      isErrorMovie: null == isErrorMovie
+          ? _value.isErrorMovie
+          : isErrorMovie // ignore: cast_nullable_to_non_nullable
               as bool,
       latestMovies: null == latestMovies
           ? _value._latestMovies
@@ -625,6 +790,18 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
       isDetailTriggered: null == isDetailTriggered
           ? _value.isDetailTriggered
           : isDetailTriggered // ignore: cast_nullable_to_non_nullable
+              as bool,
+      latestTV: null == latestTV
+          ? _value._latestTV
+          : latestTV // ignore: cast_nullable_to_non_nullable
+              as List<GetLatestTvResponse>,
+      isLoadingTV: null == isLoadingTV
+          ? _value.isLoadingTV
+          : isLoadingTV // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isErrorTV: null == isErrorTV
+          ? _value.isErrorTV
+          : isErrorTV // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -635,18 +812,22 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
 class _$ExploreStateImpl implements _ExploreState {
   const _$ExploreStateImpl(
       {required this.selectedTab,
-      required this.isLoading,
-      required this.isError,
+      required this.isLoadingMovie,
+      required this.isErrorMovie,
       required final List<GetLatestResponse> latestMovies,
-      required this.isDetailTriggered})
-      : _latestMovies = latestMovies;
+      required this.isDetailTriggered,
+      required final List<GetLatestTvResponse> latestTV,
+      required this.isLoadingTV,
+      required this.isErrorTV})
+      : _latestMovies = latestMovies,
+        _latestTV = latestTV;
 
   @override
   final int selectedTab;
   @override
-  final bool isLoading;
+  final bool isLoadingMovie;
   @override
-  final bool isError;
+  final bool isErrorMovie;
   final List<GetLatestResponse> _latestMovies;
   @override
   List<GetLatestResponse> get latestMovies {
@@ -657,10 +838,22 @@ class _$ExploreStateImpl implements _ExploreState {
 
   @override
   final bool isDetailTriggered;
+  final List<GetLatestTvResponse> _latestTV;
+  @override
+  List<GetLatestTvResponse> get latestTV {
+    if (_latestTV is EqualUnmodifiableListView) return _latestTV;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_latestTV);
+  }
+
+  @override
+  final bool isLoadingTV;
+  @override
+  final bool isErrorTV;
 
   @override
   String toString() {
-    return 'ExploreState(selectedTab: $selectedTab, isLoading: $isLoading, isError: $isError, latestMovies: $latestMovies, isDetailTriggered: $isDetailTriggered)';
+    return 'ExploreState(selectedTab: $selectedTab, isLoadingMovie: $isLoadingMovie, isErrorMovie: $isErrorMovie, latestMovies: $latestMovies, isDetailTriggered: $isDetailTriggered, latestTV: $latestTV, isLoadingTV: $isLoadingTV, isErrorTV: $isErrorTV)';
   }
 
   @override
@@ -670,18 +863,32 @@ class _$ExploreStateImpl implements _ExploreState {
             other is _$ExploreStateImpl &&
             (identical(other.selectedTab, selectedTab) ||
                 other.selectedTab == selectedTab) &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading) &&
-            (identical(other.isError, isError) || other.isError == isError) &&
+            (identical(other.isLoadingMovie, isLoadingMovie) ||
+                other.isLoadingMovie == isLoadingMovie) &&
+            (identical(other.isErrorMovie, isErrorMovie) ||
+                other.isErrorMovie == isErrorMovie) &&
             const DeepCollectionEquality()
                 .equals(other._latestMovies, _latestMovies) &&
             (identical(other.isDetailTriggered, isDetailTriggered) ||
-                other.isDetailTriggered == isDetailTriggered));
+                other.isDetailTriggered == isDetailTriggered) &&
+            const DeepCollectionEquality().equals(other._latestTV, _latestTV) &&
+            (identical(other.isLoadingTV, isLoadingTV) ||
+                other.isLoadingTV == isLoadingTV) &&
+            (identical(other.isErrorTV, isErrorTV) ||
+                other.isErrorTV == isErrorTV));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, selectedTab, isLoading, isError,
-      const DeepCollectionEquality().hash(_latestMovies), isDetailTriggered);
+  int get hashCode => Object.hash(
+      runtimeType,
+      selectedTab,
+      isLoadingMovie,
+      isErrorMovie,
+      const DeepCollectionEquality().hash(_latestMovies),
+      isDetailTriggered,
+      const DeepCollectionEquality().hash(_latestTV),
+      isLoadingTV,
+      isErrorTV);
 
   @JsonKey(ignore: true)
   @override
@@ -693,21 +900,30 @@ class _$ExploreStateImpl implements _ExploreState {
 abstract class _ExploreState implements ExploreState {
   const factory _ExploreState(
       {required final int selectedTab,
-      required final bool isLoading,
-      required final bool isError,
+      required final bool isLoadingMovie,
+      required final bool isErrorMovie,
       required final List<GetLatestResponse> latestMovies,
-      required final bool isDetailTriggered}) = _$ExploreStateImpl;
+      required final bool isDetailTriggered,
+      required final List<GetLatestTvResponse> latestTV,
+      required final bool isLoadingTV,
+      required final bool isErrorTV}) = _$ExploreStateImpl;
 
   @override
   int get selectedTab;
   @override
-  bool get isLoading;
+  bool get isLoadingMovie;
   @override
-  bool get isError;
+  bool get isErrorMovie;
   @override
   List<GetLatestResponse> get latestMovies;
   @override
   bool get isDetailTriggered;
+  @override
+  List<GetLatestTvResponse> get latestTV;
+  @override
+  bool get isLoadingTV;
+  @override
+  bool get isErrorTV;
   @override
   @JsonKey(ignore: true)
   _$$ExploreStateImplCopyWith<_$ExploreStateImpl> get copyWith =>
