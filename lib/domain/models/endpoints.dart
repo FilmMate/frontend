@@ -7,6 +7,10 @@ class EndPoints {
 
   static const getLatestTV = "$serverBaseUrl/getlatesttv";
 
+  // get details
+  static const getMovie = "$serverBaseUrl/getmoviedetail";
+  static const getTv = "$serverBaseUrl/gettvdetail";
+
   //image endpoints
   static const image = 'https://image.tmdb.org/t/p/original';
 }

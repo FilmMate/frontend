@@ -1,3 +1,4 @@
+import 'package:film_mate/application/detail/detail_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/presentation/main_navigator/main_navigator.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: ((ctx) => getIt<MainNavigatorBloc>())),
         BlocProvider(create: ((ctx) => getIt<HomeBloc>())),
         BlocProvider(create: ((ctx) => getIt<ExploreBloc>())),
+        BlocProvider(create: ((ctx) => getIt<DetailBloc>())),
       ],  
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

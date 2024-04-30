@@ -8,4 +8,5 @@ abstract class ExploreServices {
     required String lang,
   });
   Future<Either<MainFailure, GetLatestTv>> getLatestTV();
+  
 }

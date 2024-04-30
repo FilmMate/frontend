@@ -33,20 +33,38 @@ class ScreenHome extends StatelessWidget {
                   CarouselSection(size: size),
                   const GenreSection(),
                   kHeightS,
-                  HomeList(size: size,title: "Top 10 TV Shows",),
+                  HomeList(
+                    size: size,
+                    title: "Top 10 TV Shows",
+                  ),
                   kHeightS,
-                  HomeList(size: size,title: "Top 10 Movies",),
+                  HomeList(
+                    size: size,
+                    title: "Top 10 Movies",
+                  ),
                   kHeightS,
                   kHeightS,
                   const GenreSection(),
-                   kHeightS,
-                  HomeList(size: size,title: "Best Comedy Movies",),
                   kHeightS,
-                  HomeList(size: size,title: "Action With Style",),
-                   kHeightS,
-                  HomeList(size: size,title: "Sci-Fi TV Shows",),
+                  HomeList(
+                    size: size,
+                    title: "Best Comedy Movies",
+                  ),
                   kHeightS,
-                  HomeList(size: size,title: "Feel-Good Anime",),
+                  HomeList(
+                    size: size,
+                    title: "Action With Style",
+                  ),
+                  kHeightS,
+                  HomeList(
+                    size: size,
+                    title: "Sci-Fi TV Shows",
+                  ),
+                  kHeightS,
+                  HomeList(
+                    size: size,
+                    title: "Feel-Good Anime",
+                  ),
                 ],
               ),
             ),
@@ -56,11 +74,7 @@ class ScreenHome extends StatelessWidget {
 }
 
 class HomeList extends StatelessWidget {
-  const HomeList({
-    super.key,
-    required this.size,
-    required this.title
-  });
+  const HomeList({super.key, required this.size, required this.title});
 
   final Size size;
   final String title;
@@ -72,23 +86,31 @@ class HomeList extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Text(title,style: const TextStyle(
-                        color: kWhite,
-                        fontWeight: FontWeight.bold,fontSize: 18
-                      ),),
+          child: Text(
+            title,
+            style: const TextStyle(
+                color: kWhite, fontWeight: FontWeight.bold, fontSize: 18),
+          ),
         ),
         SizedBox(
-      width: size.width,
-      height: size.width*.60,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context,index){
-        return Padding(
-          padding: const EdgeInsets.only(left: 5,right: 5),
-          child: Poster(width: size.width*.40, height: 300),
-        );
-      },itemCount:10,),
-    )
+          width: size.width,
+          height: size.width * .60,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Poster(
+                  width: size.width * .40,
+                  height: 300,
+                  image:
+                      'https://image.tmdb.org/t/p/original/uPpmBjY3znUqGY8kYwI5xvOrSc0.jpg',
+                ),
+              );
+            },
+            itemCount: 10,
+          ),
+        )
       ],
     );
   }

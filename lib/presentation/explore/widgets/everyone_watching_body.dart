@@ -1,6 +1,6 @@
 import 'package:film_mate/application/explore/explore_bloc.dart';
 import 'package:film_mate/core/constants.dart';
-import 'package:film_mate/presentation/detail/detail.dart';
+import 'package:film_mate/presentation/detail/detail_everyone.dart';
 import 'package:film_mate/presentation/explore/widgets/media_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,7 +35,26 @@ class EveryOneWatchingBody extends StatelessWidget {
                           return GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => const ScreenDetail()));
+                                  builder: (context) => ScreenDetailEveryone(
+                                    backDrop: state.latestMovies[index].backdropPath!,
+                                        duration:
+                                            state.latestMovies[index].duration!,
+                                        overview:
+                                            state.latestMovies[index].overview!,
+                                        title: state.latestMovies[index].title!,
+                                        video: state.latestMovies[index].video!,
+                                        image: state
+                                            .latestMovies[index].backdropPath!,
+                                        genres:
+                                            state.latestMovies[index].genres!,
+                                        release: state
+                                            .latestMovies[index].releaseDate!,
+                                        rating:
+                                            state.latestMovies[index].rating!,
+                                        lang: state.latestMovies[index].lang!,
+                                        crew: state.latestMovies[index].crew!,
+                                        cast: state.latestMovies[index].cast!,
+                                      )));
                             },
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 200),
@@ -56,7 +75,24 @@ class EveryOneWatchingBody extends StatelessWidget {
                                 const ExploreEvent.triggerDetail(
                                     trigger: true));
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const ScreenDetail()));
+                                builder: (context) => ScreenDetailEveryone(
+                                  backDrop: state.latestMovies[index].backdropPath!,
+                                      duration:
+                                          state.latestMovies[index].duration!,
+                                      overview:
+                                          state.latestMovies[index].overview!,
+                                      title: state.latestMovies[index].title!,
+                                      video: state.latestMovies[index].video,
+                                      image:
+                                          state.latestMovies[index].posterPath!,
+                                      genres: state.latestMovies[index].genres!,
+                                      release: state
+                                          .latestMovies[index].releaseDate!,
+                                      rating: state.latestMovies[index].rating!,
+                                      lang: state.latestMovies[index].lang!,
+                                      crew: state.latestMovies[index].crew!,
+                                      cast: state.latestMovies[index].cast!,
+                                    )));
                           },
                           child: MediaContainer(
                             duration: state.latestMovies[index].duration!,

@@ -1,18 +1,23 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:film_mate/core/colors.dart';
+import 'package:film_mate/domain/models/endpoints.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class Poster extends StatelessWidget {
-  const Poster({super.key, required this.width, required this.height});
+  final String image;
+  const Poster(
+      {super.key,
+      required this.width,
+      required this.height,
+      required this.image});
 
   final double width, height;
 
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      imageUrl:
-          "https://image.tmdb.org/t/p/original/uPpmBjY3znUqGY8kYwI5xvOrSc0.jpg",
+      imageUrl: "${EndPoints.image}/$image",
       imageBuilder: (context, imageProvider) => Container(
         width: width,
         height: height,

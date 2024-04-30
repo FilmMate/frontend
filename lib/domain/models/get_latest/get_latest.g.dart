@@ -31,7 +31,16 @@ GetLatestResponse _$GetLatestResponseFromJson(Map<String, dynamic> json) =>
       posterPath: json['poster_path'] as String?,
       title: json['title'] as String?,
       video: json['video'] as String?,
-    )..lang = json['lang'] as String?;
+      cast: (json['cast'] as List<dynamic>?)
+          ?.map((e) => Cast.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      crew: (json['crew'] as List<dynamic>?)
+          ?.map((e) => Crew.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      rating: (json['rating'] as num?)?.toDouble(),
+      lang: json['lang'] as String?,
+      releaseDate: json['release_date'] as String?,
+    );
 
 Map<String, dynamic> _$GetLatestResponseToJson(GetLatestResponse instance) =>
     <String, dynamic>{
@@ -44,4 +53,8 @@ Map<String, dynamic> _$GetLatestResponseToJson(GetLatestResponse instance) =>
       'poster_path': instance.posterPath,
       'title': instance.title,
       'video': instance.video,
+      'release_date': instance.releaseDate,
+      'rating': instance.rating,
+      'cast': instance.cast,
+      'crew': instance.crew,
     };

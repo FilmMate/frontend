@@ -1,6 +1,7 @@
 import 'package:film_mate/application/explore/explore_bloc.dart';
 import 'package:film_mate/core/constants.dart';
-import 'package:film_mate/presentation/detail/detail.dart';
+import 'package:film_mate/presentation/detail/detail_everyone.dart';
+import 'package:film_mate/presentation/detail/detail_screen_primary.dart';
 import 'package:film_mate/presentation/explore/widgets/media_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,11 +20,20 @@ class PopularTvBody extends StatelessWidget {
             child: BlocBuilder<ExploreBloc, ExploreState>(
               builder: (context, state) {
                 if (state.isLoadingTV) {
-                  return const Center(child: CircularProgressIndicator());
+                  return SizedBox(
+                      height: size.height,
+                      width: size.width,
+                      child: const Center(
+                        child: CircularProgressIndicator(),
+                      ));
                 }
                 if (state.isErrorTV) {
-                  return const Center(
-                    child: Text("Error"),
+                  return SizedBox(
+                    height: size.height,
+                    width: size.width,
+                    child: const Center(
+                      child: Text("Error"),
+                    ),
                   );
                 }
                 return SizedBox(
@@ -35,7 +45,10 @@ class PopularTvBody extends StatelessWidget {
                           return GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => const ScreenDetail()));
+                                  builder: (context) => ScreenDetailPrimary(
+                                        type: state.latestTV[index].type!,
+                                        id: state.latestTV[index].id!,
+                                      )));
                             },
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 200),
@@ -56,7 +69,10 @@ class PopularTvBody extends StatelessWidget {
                                 const ExploreEvent.triggerDetail(
                                     trigger: true));
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const ScreenDetail()));
+                                builder: (context) => ScreenDetailPrimary(
+                                      type: state.latestTV[index].type!,
+                                      id: state.latestTV[index].id!,
+                                    )));
                           },
                           child: MediaContainer(
                             duration: "0h 0m",
