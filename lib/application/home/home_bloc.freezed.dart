@@ -16,42 +16,67 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeEvent {
-  int get index => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $HomeEventCopyWith<HomeEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -59,8 +84,6 @@ mixin _$HomeEvent {
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res, HomeEvent>;
-  @useResult
-  $Res call({int index});
 }
 
 /// @nodoc
@@ -72,28 +95,13 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? index = null,
-  }) {
-    return _then(_value.copyWith(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$ChangeIndicatorImplCopyWith<$Res>
-    implements $HomeEventCopyWith<$Res> {
+abstract class _$$ChangeIndicatorImplCopyWith<$Res> {
   factory _$$ChangeIndicatorImplCopyWith(_$ChangeIndicatorImpl value,
           $Res Function(_$ChangeIndicatorImpl) then) =
       __$$ChangeIndicatorImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({int index});
 }
@@ -155,6 +163,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
   }) {
     return changeIndicator(index);
   }
@@ -163,6 +176,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
   }) {
     return changeIndicator?.call(index);
   }
@@ -171,6 +189,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
     required TResult orElse(),
   }) {
     if (changeIndicator != null) {
@@ -183,6 +206,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
   }) {
     return changeIndicator(this);
   }
@@ -191,6 +219,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
   }) {
     return changeIndicator?.call(this);
   }
@@ -199,6 +232,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
     required TResult orElse(),
   }) {
     if (changeIndicator != null) {
@@ -212,17 +250,660 @@ abstract class _ChangeIndicator implements HomeEvent {
   const factory _ChangeIndicator({required final int index}) =
       _$ChangeIndicatorImpl;
 
-  @override
   int get index;
-  @override
   @JsonKey(ignore: true)
   _$$ChangeIndicatorImplCopyWith<_$ChangeIndicatorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
+abstract class _$$GetCarouselPostersImplCopyWith<$Res> {
+  factory _$$GetCarouselPostersImplCopyWith(_$GetCarouselPostersImpl value,
+          $Res Function(_$GetCarouselPostersImpl) then) =
+      __$$GetCarouselPostersImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetCarouselPostersImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetCarouselPostersImpl>
+    implements _$$GetCarouselPostersImplCopyWith<$Res> {
+  __$$GetCarouselPostersImplCopyWithImpl(_$GetCarouselPostersImpl _value,
+      $Res Function(_$GetCarouselPostersImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCarouselPostersImpl implements _GetCarouselPosters {
+  const _$GetCarouselPostersImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getcarouselPosters()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetCarouselPostersImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+  }) {
+    return getcarouselPosters();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+  }) {
+    return getcarouselPosters?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getcarouselPosters != null) {
+      return getcarouselPosters();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+  }) {
+    return getcarouselPosters(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+  }) {
+    return getcarouselPosters?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getcarouselPosters != null) {
+      return getcarouselPosters(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCarouselPosters implements HomeEvent {
+  const factory _GetCarouselPosters() = _$GetCarouselPostersImpl;
+}
+
+/// @nodoc
+abstract class _$$GetTopTvImplCopyWith<$Res> {
+  factory _$$GetTopTvImplCopyWith(
+          _$GetTopTvImpl value, $Res Function(_$GetTopTvImpl) then) =
+      __$$GetTopTvImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetTopTvImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetTopTvImpl>
+    implements _$$GetTopTvImplCopyWith<$Res> {
+  __$$GetTopTvImplCopyWithImpl(
+      _$GetTopTvImpl _value, $Res Function(_$GetTopTvImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetTopTvImpl implements _GetTopTv {
+  const _$GetTopTvImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getTopTv()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetTopTvImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+  }) {
+    return getTopTv();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+  }) {
+    return getTopTv?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopTv != null) {
+      return getTopTv();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+  }) {
+    return getTopTv(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+  }) {
+    return getTopTv?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopTv != null) {
+      return getTopTv(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetTopTv implements HomeEvent {
+  const factory _GetTopTv() = _$GetTopTvImpl;
+}
+
+/// @nodoc
+abstract class _$$GetTopMovieImplCopyWith<$Res> {
+  factory _$$GetTopMovieImplCopyWith(
+          _$GetTopMovieImpl value, $Res Function(_$GetTopMovieImpl) then) =
+      __$$GetTopMovieImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetTopMovieImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetTopMovieImpl>
+    implements _$$GetTopMovieImplCopyWith<$Res> {
+  __$$GetTopMovieImplCopyWithImpl(
+      _$GetTopMovieImpl _value, $Res Function(_$GetTopMovieImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetTopMovieImpl implements _GetTopMovie {
+  const _$GetTopMovieImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getTopMovie()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetTopMovieImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+  }) {
+    return getTopMovie();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+  }) {
+    return getTopMovie?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopMovie != null) {
+      return getTopMovie();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+  }) {
+    return getTopMovie(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+  }) {
+    return getTopMovie?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopMovie != null) {
+      return getTopMovie(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetTopMovie implements HomeEvent {
+  const factory _GetTopMovie() = _$GetTopMovieImpl;
+}
+
+/// @nodoc
+abstract class _$$GetTopRatedMovieImplCopyWith<$Res> {
+  factory _$$GetTopRatedMovieImplCopyWith(_$GetTopRatedMovieImpl value,
+          $Res Function(_$GetTopRatedMovieImpl) then) =
+      __$$GetTopRatedMovieImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetTopRatedMovieImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetTopRatedMovieImpl>
+    implements _$$GetTopRatedMovieImplCopyWith<$Res> {
+  __$$GetTopRatedMovieImplCopyWithImpl(_$GetTopRatedMovieImpl _value,
+      $Res Function(_$GetTopRatedMovieImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
+  const _$GetTopRatedMovieImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getTopRatedMovie()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetTopRatedMovieImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+  }) {
+    return getTopRatedMovie();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+  }) {
+    return getTopRatedMovie?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopRatedMovie != null) {
+      return getTopRatedMovie();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+  }) {
+    return getTopRatedMovie(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+  }) {
+    return getTopRatedMovie?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopRatedMovie != null) {
+      return getTopRatedMovie(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetTopRatedMovie implements HomeEvent {
+  const factory _GetTopRatedMovie() = _$GetTopRatedMovieImpl;
+}
+
+/// @nodoc
+abstract class _$$GetTopRatedTvImplCopyWith<$Res> {
+  factory _$$GetTopRatedTvImplCopyWith(
+          _$GetTopRatedTvImpl value, $Res Function(_$GetTopRatedTvImpl) then) =
+      __$$GetTopRatedTvImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetTopRatedTvImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetTopRatedTvImpl>
+    implements _$$GetTopRatedTvImplCopyWith<$Res> {
+  __$$GetTopRatedTvImplCopyWithImpl(
+      _$GetTopRatedTvImpl _value, $Res Function(_$GetTopRatedTvImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetTopRatedTvImpl implements _GetTopRatedTv {
+  const _$GetTopRatedTvImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getTopRatedTv()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetTopRatedTvImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+  }) {
+    return getTopRatedTv();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+  }) {
+    return getTopRatedTv?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopRatedTv != null) {
+      return getTopRatedTv();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+  }) {
+    return getTopRatedTv(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+  }) {
+    return getTopRatedTv?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    required TResult orElse(),
+  }) {
+    if (getTopRatedTv != null) {
+      return getTopRatedTv(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetTopRatedTv implements HomeEvent {
+  const factory _GetTopRatedTv() = _$GetTopRatedTvImpl;
+}
+
+/// @nodoc
 mixin _$HomeState {
   int get carouselIndex => throw _privateConstructorUsedError;
+  bool get isCarouselLoading => throw _privateConstructorUsedError;
+  bool get isCarouselError => throw _privateConstructorUsedError;
+  List<TMDBResponse> get carouselList => throw _privateConstructorUsedError;
+  bool get isTopTvError => throw _privateConstructorUsedError;
+  bool get isTopMovieError => throw _privateConstructorUsedError;
+  bool get isTopTvLoading => throw _privateConstructorUsedError;
+  bool get isTopMovieLoading => throw _privateConstructorUsedError;
+  List<TMDBResponse> get topTvList => throw _privateConstructorUsedError;
+  List<TMDBResponse> get topMovieList => throw _privateConstructorUsedError;
+  List<TMDBResponse> get topRatedTv => throw _privateConstructorUsedError;
+  List<TMDBResponse> get topRatedMovies => throw _privateConstructorUsedError;
+  bool get isTopRatedMovieError => throw _privateConstructorUsedError;
+  bool get isTopRatedTvError => throw _privateConstructorUsedError;
+  bool get isTopRatedMovieLoading => throw _privateConstructorUsedError;
+  bool get isTopRatedTvLoading => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -234,7 +915,23 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
-  $Res call({int carouselIndex});
+  $Res call(
+      {int carouselIndex,
+      bool isCarouselLoading,
+      bool isCarouselError,
+      List<TMDBResponse> carouselList,
+      bool isTopTvError,
+      bool isTopMovieError,
+      bool isTopTvLoading,
+      bool isTopMovieLoading,
+      List<TMDBResponse> topTvList,
+      List<TMDBResponse> topMovieList,
+      List<TMDBResponse> topRatedTv,
+      List<TMDBResponse> topRatedMovies,
+      bool isTopRatedMovieError,
+      bool isTopRatedTvError,
+      bool isTopRatedMovieLoading,
+      bool isTopRatedTvLoading});
 }
 
 /// @nodoc
@@ -251,12 +948,87 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @override
   $Res call({
     Object? carouselIndex = null,
+    Object? isCarouselLoading = null,
+    Object? isCarouselError = null,
+    Object? carouselList = null,
+    Object? isTopTvError = null,
+    Object? isTopMovieError = null,
+    Object? isTopTvLoading = null,
+    Object? isTopMovieLoading = null,
+    Object? topTvList = null,
+    Object? topMovieList = null,
+    Object? topRatedTv = null,
+    Object? topRatedMovies = null,
+    Object? isTopRatedMovieError = null,
+    Object? isTopRatedTvError = null,
+    Object? isTopRatedMovieLoading = null,
+    Object? isTopRatedTvLoading = null,
   }) {
     return _then(_value.copyWith(
       carouselIndex: null == carouselIndex
           ? _value.carouselIndex
           : carouselIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      isCarouselLoading: null == isCarouselLoading
+          ? _value.isCarouselLoading
+          : isCarouselLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isCarouselError: null == isCarouselError
+          ? _value.isCarouselError
+          : isCarouselError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      carouselList: null == carouselList
+          ? _value.carouselList
+          : carouselList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      isTopTvError: null == isTopTvError
+          ? _value.isTopTvError
+          : isTopTvError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopMovieError: null == isTopMovieError
+          ? _value.isTopMovieError
+          : isTopMovieError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopTvLoading: null == isTopTvLoading
+          ? _value.isTopTvLoading
+          : isTopTvLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopMovieLoading: null == isTopMovieLoading
+          ? _value.isTopMovieLoading
+          : isTopMovieLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      topTvList: null == topTvList
+          ? _value.topTvList
+          : topTvList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      topMovieList: null == topMovieList
+          ? _value.topMovieList
+          : topMovieList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      topRatedTv: null == topRatedTv
+          ? _value.topRatedTv
+          : topRatedTv // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      topRatedMovies: null == topRatedMovies
+          ? _value.topRatedMovies
+          : topRatedMovies // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      isTopRatedMovieError: null == isTopRatedMovieError
+          ? _value.isTopRatedMovieError
+          : isTopRatedMovieError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopRatedTvError: null == isTopRatedTvError
+          ? _value.isTopRatedTvError
+          : isTopRatedTvError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopRatedMovieLoading: null == isTopRatedMovieLoading
+          ? _value.isTopRatedMovieLoading
+          : isTopRatedMovieLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopRatedTvLoading: null == isTopRatedTvLoading
+          ? _value.isTopRatedTvLoading
+          : isTopRatedTvLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -269,7 +1041,23 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       __$$HomeStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int carouselIndex});
+  $Res call(
+      {int carouselIndex,
+      bool isCarouselLoading,
+      bool isCarouselError,
+      List<TMDBResponse> carouselList,
+      bool isTopTvError,
+      bool isTopMovieError,
+      bool isTopTvLoading,
+      bool isTopMovieLoading,
+      List<TMDBResponse> topTvList,
+      List<TMDBResponse> topMovieList,
+      List<TMDBResponse> topRatedTv,
+      List<TMDBResponse> topRatedMovies,
+      bool isTopRatedMovieError,
+      bool isTopRatedTvError,
+      bool isTopRatedMovieLoading,
+      bool isTopRatedTvLoading});
 }
 
 /// @nodoc
@@ -284,12 +1072,87 @@ class __$$HomeStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? carouselIndex = null,
+    Object? isCarouselLoading = null,
+    Object? isCarouselError = null,
+    Object? carouselList = null,
+    Object? isTopTvError = null,
+    Object? isTopMovieError = null,
+    Object? isTopTvLoading = null,
+    Object? isTopMovieLoading = null,
+    Object? topTvList = null,
+    Object? topMovieList = null,
+    Object? topRatedTv = null,
+    Object? topRatedMovies = null,
+    Object? isTopRatedMovieError = null,
+    Object? isTopRatedTvError = null,
+    Object? isTopRatedMovieLoading = null,
+    Object? isTopRatedTvLoading = null,
   }) {
     return _then(_$HomeStateImpl(
       carouselIndex: null == carouselIndex
           ? _value.carouselIndex
           : carouselIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      isCarouselLoading: null == isCarouselLoading
+          ? _value.isCarouselLoading
+          : isCarouselLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isCarouselError: null == isCarouselError
+          ? _value.isCarouselError
+          : isCarouselError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      carouselList: null == carouselList
+          ? _value._carouselList
+          : carouselList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      isTopTvError: null == isTopTvError
+          ? _value.isTopTvError
+          : isTopTvError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopMovieError: null == isTopMovieError
+          ? _value.isTopMovieError
+          : isTopMovieError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopTvLoading: null == isTopTvLoading
+          ? _value.isTopTvLoading
+          : isTopTvLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopMovieLoading: null == isTopMovieLoading
+          ? _value.isTopMovieLoading
+          : isTopMovieLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      topTvList: null == topTvList
+          ? _value._topTvList
+          : topTvList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      topMovieList: null == topMovieList
+          ? _value._topMovieList
+          : topMovieList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      topRatedTv: null == topRatedTv
+          ? _value._topRatedTv
+          : topRatedTv // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      topRatedMovies: null == topRatedMovies
+          ? _value._topRatedMovies
+          : topRatedMovies // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      isTopRatedMovieError: null == isTopRatedMovieError
+          ? _value.isTopRatedMovieError
+          : isTopRatedMovieError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopRatedTvError: null == isTopRatedTvError
+          ? _value.isTopRatedTvError
+          : isTopRatedTvError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopRatedMovieLoading: null == isTopRatedMovieLoading
+          ? _value.isTopRatedMovieLoading
+          : isTopRatedMovieLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTopRatedTvLoading: null == isTopRatedTvLoading
+          ? _value.isTopRatedTvLoading
+          : isTopRatedTvLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -297,14 +1160,95 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeStateImpl implements _HomeState {
-  const _$HomeStateImpl({required this.carouselIndex});
+  const _$HomeStateImpl(
+      {required this.carouselIndex,
+      required this.isCarouselLoading,
+      required this.isCarouselError,
+      required final List<TMDBResponse> carouselList,
+      required this.isTopTvError,
+      required this.isTopMovieError,
+      required this.isTopTvLoading,
+      required this.isTopMovieLoading,
+      required final List<TMDBResponse> topTvList,
+      required final List<TMDBResponse> topMovieList,
+      required final List<TMDBResponse> topRatedTv,
+      required final List<TMDBResponse> topRatedMovies,
+      required this.isTopRatedMovieError,
+      required this.isTopRatedTvError,
+      required this.isTopRatedMovieLoading,
+      required this.isTopRatedTvLoading})
+      : _carouselList = carouselList,
+        _topTvList = topTvList,
+        _topMovieList = topMovieList,
+        _topRatedTv = topRatedTv,
+        _topRatedMovies = topRatedMovies;
 
   @override
   final int carouselIndex;
+  @override
+  final bool isCarouselLoading;
+  @override
+  final bool isCarouselError;
+  final List<TMDBResponse> _carouselList;
+  @override
+  List<TMDBResponse> get carouselList {
+    if (_carouselList is EqualUnmodifiableListView) return _carouselList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_carouselList);
+  }
+
+  @override
+  final bool isTopTvError;
+  @override
+  final bool isTopMovieError;
+  @override
+  final bool isTopTvLoading;
+  @override
+  final bool isTopMovieLoading;
+  final List<TMDBResponse> _topTvList;
+  @override
+  List<TMDBResponse> get topTvList {
+    if (_topTvList is EqualUnmodifiableListView) return _topTvList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_topTvList);
+  }
+
+  final List<TMDBResponse> _topMovieList;
+  @override
+  List<TMDBResponse> get topMovieList {
+    if (_topMovieList is EqualUnmodifiableListView) return _topMovieList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_topMovieList);
+  }
+
+  final List<TMDBResponse> _topRatedTv;
+  @override
+  List<TMDBResponse> get topRatedTv {
+    if (_topRatedTv is EqualUnmodifiableListView) return _topRatedTv;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_topRatedTv);
+  }
+
+  final List<TMDBResponse> _topRatedMovies;
+  @override
+  List<TMDBResponse> get topRatedMovies {
+    if (_topRatedMovies is EqualUnmodifiableListView) return _topRatedMovies;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_topRatedMovies);
+  }
+
+  @override
+  final bool isTopRatedMovieError;
+  @override
+  final bool isTopRatedTvError;
+  @override
+  final bool isTopRatedMovieLoading;
+  @override
+  final bool isTopRatedTvLoading;
 
   @override
   String toString() {
-    return 'HomeState(carouselIndex: $carouselIndex)';
+    return 'HomeState(carouselIndex: $carouselIndex, isCarouselLoading: $isCarouselLoading, isCarouselError: $isCarouselError, carouselList: $carouselList, isTopTvError: $isTopTvError, isTopMovieError: $isTopMovieError, isTopTvLoading: $isTopTvLoading, isTopMovieLoading: $isTopMovieLoading, topTvList: $topTvList, topMovieList: $topMovieList, topRatedTv: $topRatedTv, topRatedMovies: $topRatedMovies, isTopRatedMovieError: $isTopRatedMovieError, isTopRatedTvError: $isTopRatedTvError, isTopRatedMovieLoading: $isTopRatedMovieLoading, isTopRatedTvLoading: $isTopRatedTvLoading)';
   }
 
   @override
@@ -313,11 +1257,58 @@ class _$HomeStateImpl implements _HomeState {
         (other.runtimeType == runtimeType &&
             other is _$HomeStateImpl &&
             (identical(other.carouselIndex, carouselIndex) ||
-                other.carouselIndex == carouselIndex));
+                other.carouselIndex == carouselIndex) &&
+            (identical(other.isCarouselLoading, isCarouselLoading) ||
+                other.isCarouselLoading == isCarouselLoading) &&
+            (identical(other.isCarouselError, isCarouselError) ||
+                other.isCarouselError == isCarouselError) &&
+            const DeepCollectionEquality()
+                .equals(other._carouselList, _carouselList) &&
+            (identical(other.isTopTvError, isTopTvError) ||
+                other.isTopTvError == isTopTvError) &&
+            (identical(other.isTopMovieError, isTopMovieError) ||
+                other.isTopMovieError == isTopMovieError) &&
+            (identical(other.isTopTvLoading, isTopTvLoading) ||
+                other.isTopTvLoading == isTopTvLoading) &&
+            (identical(other.isTopMovieLoading, isTopMovieLoading) ||
+                other.isTopMovieLoading == isTopMovieLoading) &&
+            const DeepCollectionEquality()
+                .equals(other._topTvList, _topTvList) &&
+            const DeepCollectionEquality()
+                .equals(other._topMovieList, _topMovieList) &&
+            const DeepCollectionEquality()
+                .equals(other._topRatedTv, _topRatedTv) &&
+            const DeepCollectionEquality()
+                .equals(other._topRatedMovies, _topRatedMovies) &&
+            (identical(other.isTopRatedMovieError, isTopRatedMovieError) ||
+                other.isTopRatedMovieError == isTopRatedMovieError) &&
+            (identical(other.isTopRatedTvError, isTopRatedTvError) ||
+                other.isTopRatedTvError == isTopRatedTvError) &&
+            (identical(other.isTopRatedMovieLoading, isTopRatedMovieLoading) ||
+                other.isTopRatedMovieLoading == isTopRatedMovieLoading) &&
+            (identical(other.isTopRatedTvLoading, isTopRatedTvLoading) ||
+                other.isTopRatedTvLoading == isTopRatedTvLoading));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, carouselIndex);
+  int get hashCode => Object.hash(
+      runtimeType,
+      carouselIndex,
+      isCarouselLoading,
+      isCarouselError,
+      const DeepCollectionEquality().hash(_carouselList),
+      isTopTvError,
+      isTopMovieError,
+      isTopTvLoading,
+      isTopMovieLoading,
+      const DeepCollectionEquality().hash(_topTvList),
+      const DeepCollectionEquality().hash(_topMovieList),
+      const DeepCollectionEquality().hash(_topRatedTv),
+      const DeepCollectionEquality().hash(_topRatedMovies),
+      isTopRatedMovieError,
+      isTopRatedTvError,
+      isTopRatedMovieLoading,
+      isTopRatedTvLoading);
 
   @JsonKey(ignore: true)
   @override
@@ -327,11 +1318,56 @@ class _$HomeStateImpl implements _HomeState {
 }
 
 abstract class _HomeState implements HomeState {
-  const factory _HomeState({required final int carouselIndex}) =
-      _$HomeStateImpl;
+  const factory _HomeState(
+      {required final int carouselIndex,
+      required final bool isCarouselLoading,
+      required final bool isCarouselError,
+      required final List<TMDBResponse> carouselList,
+      required final bool isTopTvError,
+      required final bool isTopMovieError,
+      required final bool isTopTvLoading,
+      required final bool isTopMovieLoading,
+      required final List<TMDBResponse> topTvList,
+      required final List<TMDBResponse> topMovieList,
+      required final List<TMDBResponse> topRatedTv,
+      required final List<TMDBResponse> topRatedMovies,
+      required final bool isTopRatedMovieError,
+      required final bool isTopRatedTvError,
+      required final bool isTopRatedMovieLoading,
+      required final bool isTopRatedTvLoading}) = _$HomeStateImpl;
 
   @override
   int get carouselIndex;
+  @override
+  bool get isCarouselLoading;
+  @override
+  bool get isCarouselError;
+  @override
+  List<TMDBResponse> get carouselList;
+  @override
+  bool get isTopTvError;
+  @override
+  bool get isTopMovieError;
+  @override
+  bool get isTopTvLoading;
+  @override
+  bool get isTopMovieLoading;
+  @override
+  List<TMDBResponse> get topTvList;
+  @override
+  List<TMDBResponse> get topMovieList;
+  @override
+  List<TMDBResponse> get topRatedTv;
+  @override
+  List<TMDBResponse> get topRatedMovies;
+  @override
+  bool get isTopRatedMovieError;
+  @override
+  bool get isTopRatedTvError;
+  @override
+  bool get isTopRatedMovieLoading;
+  @override
+  bool get isTopRatedTvLoading;
   @override
   @JsonKey(ignore: true)
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
