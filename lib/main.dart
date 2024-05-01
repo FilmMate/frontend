@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'application/explore/explore_bloc.dart';
 import 'application/home/home_bloc.dart';
 import 'application/main_navigator/main_navigator_bloc.dart';
+import 'application/search/search_bloc.dart';
 import 'core/di/injectable.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: ((ctx) => getIt<HomeBloc>())),
         BlocProvider(create: ((ctx) => getIt<ExploreBloc>())),
         BlocProvider(create: ((ctx) => getIt<DetailBloc>())),
+        BlocProvider(create: ((ctx) => getIt<SearchBloc>())),
       ],  
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
