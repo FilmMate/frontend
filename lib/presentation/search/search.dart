@@ -1,14 +1,25 @@
+import 'dart:developer';
+
+import 'package:film_mate/application/search/search_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
+import 'package:film_mate/core/debouncer/debouncer.dart';
+import 'package:film_mate/presentation/search/widgets/result_grid.dart';
+import 'package:film_mate/presentation/search/widgets/search_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ScreenSearch extends StatelessWidget {
   const ScreenSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      BlocProvider.of<SearchBloc>(context).add(const SearchEvent.initialize());
+    });
     final size = MediaQuery.of(context).size;
+    final debouncer = Debouncer(milliseconds: 1 * 1000);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -19,69 +30,33 @@ class ScreenSearch extends StatelessWidget {
               padding: const EdgeInsets.only(top: 40),
               child: SizedBox(
                 height: size.width * .10,
-                child: const CupertinoSearchTextField(
-                  prefixIcon: Icon(
+                child: CupertinoSearchTextField(
+                  prefixIcon: const Icon(
                     CupertinoIcons.search,
                     color: kWhite,
                   ),
-                  suffixIcon: Icon(
+                  suffixIcon: const Icon(
                     CupertinoIcons.xmark_circle_fill,
                     color: kWhite,
                   ),
-                  style: TextStyle(color: kWhite),
+                  style: const TextStyle(color: kWhite),
+                  onChanged: (value) {
+                    debouncer.run(() {
+                      log(value);
+                      BlocProvider.of<SearchBloc>(context)
+                          .add(SearchEvent.triggerSearch(query: value.trim()));
+                    });
+                  },
                 ),
               ),
             ),
             kHeightS,
-            Text(
+            const Text(
               "Top Searches",
-              style: const TextStyle(
+              style: TextStyle(
                   color: kWhite, fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            Expanded(
-                child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return SizedBox(
-                        height: size.width * .28,
-                        width: size.width,
-                        child: Row(
-                          children: [
-                            Container(
-                              width: size.width * .50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  image: const DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(
-                                          "https://image.tmdb.org/t/p/original/iiPyuMn3SHluoLPhIBvxh04wIAb.jpg"))),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Kunfu panda 4",
-                                      style: TextStyle(
-                                          color: kWhite,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16)),
-                                  Text("2024",
-                                      style: TextStyle(
-                                          color: kWhite,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16))
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      );
-                    },
-                    separatorBuilder: (context, index) {
-                      return kHeightS;
-                    },
-                    itemCount: 10))
+            SearchBody(size: size)
           ],
         ),
       ),
