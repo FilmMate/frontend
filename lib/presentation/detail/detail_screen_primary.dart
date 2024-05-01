@@ -38,7 +38,9 @@ class ScreenDetailPrimary extends StatelessWidget {
       body: SingleChildScrollView(
         child: BlocBuilder<DetailBloc, DetailState>(
           builder: (context, state) {
-            if (state.isLoading) {
+            if (state.isLoading ||
+                state.detailData.posterPath == null ||
+                state.detailData.backdropPath == null) {
               return SizedBox(
                   height: size.height,
                   width: size.width,
