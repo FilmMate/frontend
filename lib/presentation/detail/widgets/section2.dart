@@ -1,7 +1,5 @@
 import 'dart:developer';
-
 import 'package:film_mate/application/detail/detail_bloc.dart';
-import 'package:film_mate/application/explore/explore_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/presentation/explore/widgets/video_widget.dart';
