@@ -21,6 +21,9 @@ class EndPoints {
   // tmdb now playing movies
   static const getNowPlaying = "$tmdbBaseUrl/movie/now_playing";
 
+  // tmdb trending all (movie + tv)
+  static const getTrendingAll = "$tmdbBaseUrl/trending/all/day";
+
   //tmdb trending movie
   static const getTrendingMovie = "$tmdbBaseUrl/trending/movie/day";
 
