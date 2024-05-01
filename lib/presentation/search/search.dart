@@ -1,10 +1,8 @@
 import 'dart:developer';
-
 import 'package:film_mate/application/search/search_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/core/debouncer/debouncer.dart';
-import 'package:film_mate/presentation/search/widgets/result_grid.dart';
 import 'package:film_mate/presentation/search/widgets/search_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
