@@ -24,6 +24,8 @@ mixin _$HomeEvent {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +36,8 @@ mixin _$HomeEvent {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +48,8 @@ mixin _$HomeEvent {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +61,8 @@ mixin _$HomeEvent {
     required TResult Function(_GetTopMovie value) getTopMovie,
     required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
     required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +73,8 @@ mixin _$HomeEvent {
     TResult? Function(_GetTopMovie value)? getTopMovie,
     TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +85,8 @@ mixin _$HomeEvent {
     TResult Function(_GetTopMovie value)? getTopMovie,
     TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -168,6 +180,8 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
   }) {
     return changeIndicator(index);
   }
@@ -181,6 +195,8 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
   }) {
     return changeIndicator?.call(index);
   }
@@ -194,6 +210,8 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
     required TResult orElse(),
   }) {
     if (changeIndicator != null) {
@@ -211,6 +229,8 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     required TResult Function(_GetTopMovie value) getTopMovie,
     required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
     required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
   }) {
     return changeIndicator(this);
   }
@@ -224,6 +244,8 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     TResult? Function(_GetTopMovie value)? getTopMovie,
     TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
   }) {
     return changeIndicator?.call(this);
   }
@@ -237,6 +259,8 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     TResult Function(_GetTopMovie value)? getTopMovie,
     TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
     required TResult orElse(),
   }) {
     if (changeIndicator != null) {
@@ -300,6 +324,8 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
   }) {
     return getcarouselPosters();
   }
@@ -313,6 +339,8 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
   }) {
     return getcarouselPosters?.call();
   }
@@ -326,6 +354,8 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getcarouselPosters != null) {
@@ -343,6 +373,8 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     required TResult Function(_GetTopMovie value) getTopMovie,
     required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
     required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
   }) {
     return getcarouselPosters(this);
   }
@@ -356,6 +388,8 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     TResult? Function(_GetTopMovie value)? getTopMovie,
     TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
   }) {
     return getcarouselPosters?.call(this);
   }
@@ -369,6 +403,8 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     TResult Function(_GetTopMovie value)? getTopMovie,
     TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getcarouselPosters != null) {
@@ -426,6 +462,8 @@ class _$GetTopTvImpl implements _GetTopTv {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
   }) {
     return getTopTv();
   }
@@ -439,6 +477,8 @@ class _$GetTopTvImpl implements _GetTopTv {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
   }) {
     return getTopTv?.call();
   }
@@ -452,6 +492,8 @@ class _$GetTopTvImpl implements _GetTopTv {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopTv != null) {
@@ -469,6 +511,8 @@ class _$GetTopTvImpl implements _GetTopTv {
     required TResult Function(_GetTopMovie value) getTopMovie,
     required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
     required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
   }) {
     return getTopTv(this);
   }
@@ -482,6 +526,8 @@ class _$GetTopTvImpl implements _GetTopTv {
     TResult? Function(_GetTopMovie value)? getTopMovie,
     TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
   }) {
     return getTopTv?.call(this);
   }
@@ -495,6 +541,8 @@ class _$GetTopTvImpl implements _GetTopTv {
     TResult Function(_GetTopMovie value)? getTopMovie,
     TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopTv != null) {
@@ -552,6 +600,8 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
   }) {
     return getTopMovie();
   }
@@ -565,6 +615,8 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
   }) {
     return getTopMovie?.call();
   }
@@ -578,6 +630,8 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopMovie != null) {
@@ -595,6 +649,8 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     required TResult Function(_GetTopMovie value) getTopMovie,
     required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
     required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
   }) {
     return getTopMovie(this);
   }
@@ -608,6 +664,8 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     TResult? Function(_GetTopMovie value)? getTopMovie,
     TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
   }) {
     return getTopMovie?.call(this);
   }
@@ -621,6 +679,8 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     TResult Function(_GetTopMovie value)? getTopMovie,
     TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopMovie != null) {
@@ -678,6 +738,8 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
   }) {
     return getTopRatedMovie();
   }
@@ -691,6 +753,8 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
   }) {
     return getTopRatedMovie?.call();
   }
@@ -704,6 +768,8 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopRatedMovie != null) {
@@ -721,6 +787,8 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     required TResult Function(_GetTopMovie value) getTopMovie,
     required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
     required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
   }) {
     return getTopRatedMovie(this);
   }
@@ -734,6 +802,8 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     TResult? Function(_GetTopMovie value)? getTopMovie,
     TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
   }) {
     return getTopRatedMovie?.call(this);
   }
@@ -747,6 +817,8 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     TResult Function(_GetTopMovie value)? getTopMovie,
     TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopRatedMovie != null) {
@@ -804,6 +876,8 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
   }) {
     return getTopRatedTv();
   }
@@ -817,6 +891,8 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
   }) {
     return getTopRatedTv?.call();
   }
@@ -830,6 +906,8 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopRatedTv != null) {
@@ -847,6 +925,8 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     required TResult Function(_GetTopMovie value) getTopMovie,
     required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
     required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
   }) {
     return getTopRatedTv(this);
   }
@@ -860,6 +940,8 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     TResult? Function(_GetTopMovie value)? getTopMovie,
     TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
   }) {
     return getTopRatedTv?.call(this);
   }
@@ -873,6 +955,8 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     TResult Function(_GetTopMovie value)? getTopMovie,
     TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
     TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
     required TResult orElse(),
   }) {
     if (getTopRatedTv != null) {
@@ -884,6 +968,315 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
 
 abstract class _GetTopRatedTv implements HomeEvent {
   const factory _GetTopRatedTv() = _$GetTopRatedTvImpl;
+}
+
+/// @nodoc
+abstract class _$$GetGenresImplCopyWith<$Res> {
+  factory _$$GetGenresImplCopyWith(
+          _$GetGenresImpl value, $Res Function(_$GetGenresImpl) then) =
+      __$$GetGenresImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetGenresImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetGenresImpl>
+    implements _$$GetGenresImplCopyWith<$Res> {
+  __$$GetGenresImplCopyWithImpl(
+      _$GetGenresImpl _value, $Res Function(_$GetGenresImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetGenresImpl implements _GetGenres {
+  const _$GetGenresImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getGenres()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetGenresImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
+  }) {
+    return getGenres();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
+  }) {
+    return getGenres?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
+    required TResult orElse(),
+  }) {
+    if (getGenres != null) {
+      return getGenres();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
+  }) {
+    return getGenres(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
+  }) {
+    return getGenres?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
+    required TResult orElse(),
+  }) {
+    if (getGenres != null) {
+      return getGenres(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetGenres implements HomeEvent {
+  const factory _GetGenres() = _$GetGenresImpl;
+}
+
+/// @nodoc
+abstract class _$$GetGenreResultImplCopyWith<$Res> {
+  factory _$$GetGenreResultImplCopyWith(_$GetGenreResultImpl value,
+          $Res Function(_$GetGenreResultImpl) then) =
+      __$$GetGenreResultImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int gid});
+}
+
+/// @nodoc
+class __$$GetGenreResultImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetGenreResultImpl>
+    implements _$$GetGenreResultImplCopyWith<$Res> {
+  __$$GetGenreResultImplCopyWithImpl(
+      _$GetGenreResultImpl _value, $Res Function(_$GetGenreResultImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? gid = null,
+  }) {
+    return _then(_$GetGenreResultImpl(
+      gid: null == gid
+          ? _value.gid
+          : gid // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetGenreResultImpl implements _GetGenreResult {
+  const _$GetGenreResultImpl({required this.gid});
+
+  @override
+  final int gid;
+
+  @override
+  String toString() {
+    return 'HomeEvent.getGenreResult(gid: $gid)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetGenreResultImpl &&
+            (identical(other.gid, gid) || other.gid == gid));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, gid);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetGenreResultImplCopyWith<_$GetGenreResultImpl> get copyWith =>
+      __$$GetGenreResultImplCopyWithImpl<_$GetGenreResultImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+    required TResult Function() getGenres,
+    required TResult Function(int gid) getGenreResult,
+  }) {
+    return getGenreResult(gid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenres,
+    TResult? Function(int gid)? getGenreResult,
+  }) {
+    return getGenreResult?.call(gid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    TResult Function()? getGenres,
+    TResult Function(int gid)? getGenreResult,
+    required TResult orElse(),
+  }) {
+    if (getGenreResult != null) {
+      return getGenreResult(gid);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenres value) getGenres,
+    required TResult Function(_GetGenreResult value) getGenreResult,
+  }) {
+    return getGenreResult(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenres value)? getGenres,
+    TResult? Function(_GetGenreResult value)? getGenreResult,
+  }) {
+    return getGenreResult?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenres value)? getGenres,
+    TResult Function(_GetGenreResult value)? getGenreResult,
+    required TResult orElse(),
+  }) {
+    if (getGenreResult != null) {
+      return getGenreResult(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetGenreResult implements HomeEvent {
+  const factory _GetGenreResult({required final int gid}) =
+      _$GetGenreResultImpl;
+
+  int get gid;
+  @JsonKey(ignore: true)
+  _$$GetGenreResultImplCopyWith<_$GetGenreResultImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -904,6 +1297,10 @@ mixin _$HomeState {
   bool get isTopRatedTvError => throw _privateConstructorUsedError;
   bool get isTopRatedMovieLoading => throw _privateConstructorUsedError;
   bool get isTopRatedTvLoading => throw _privateConstructorUsedError;
+  List<Genre> get genres => throw _privateConstructorUsedError;
+  List<TMDBResponse> get genreResult => throw _privateConstructorUsedError;
+  bool get isGenreLoading => throw _privateConstructorUsedError;
+  bool get isGenreError => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -931,7 +1328,11 @@ abstract class $HomeStateCopyWith<$Res> {
       bool isTopRatedMovieError,
       bool isTopRatedTvError,
       bool isTopRatedMovieLoading,
-      bool isTopRatedTvLoading});
+      bool isTopRatedTvLoading,
+      List<Genre> genres,
+      List<TMDBResponse> genreResult,
+      bool isGenreLoading,
+      bool isGenreError});
 }
 
 /// @nodoc
@@ -963,6 +1364,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? isTopRatedTvError = null,
     Object? isTopRatedMovieLoading = null,
     Object? isTopRatedTvLoading = null,
+    Object? genres = null,
+    Object? genreResult = null,
+    Object? isGenreLoading = null,
+    Object? isGenreError = null,
   }) {
     return _then(_value.copyWith(
       carouselIndex: null == carouselIndex
@@ -1029,6 +1434,22 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.isTopRatedTvLoading
           : isTopRatedTvLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      genres: null == genres
+          ? _value.genres
+          : genres // ignore: cast_nullable_to_non_nullable
+              as List<Genre>,
+      genreResult: null == genreResult
+          ? _value.genreResult
+          : genreResult // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      isGenreLoading: null == isGenreLoading
+          ? _value.isGenreLoading
+          : isGenreLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isGenreError: null == isGenreError
+          ? _value.isGenreError
+          : isGenreError // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -1057,7 +1478,11 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       bool isTopRatedMovieError,
       bool isTopRatedTvError,
       bool isTopRatedMovieLoading,
-      bool isTopRatedTvLoading});
+      bool isTopRatedTvLoading,
+      List<Genre> genres,
+      List<TMDBResponse> genreResult,
+      bool isGenreLoading,
+      bool isGenreError});
 }
 
 /// @nodoc
@@ -1087,6 +1512,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? isTopRatedTvError = null,
     Object? isTopRatedMovieLoading = null,
     Object? isTopRatedTvLoading = null,
+    Object? genres = null,
+    Object? genreResult = null,
+    Object? isGenreLoading = null,
+    Object? isGenreError = null,
   }) {
     return _then(_$HomeStateImpl(
       carouselIndex: null == carouselIndex
@@ -1153,6 +1582,22 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.isTopRatedTvLoading
           : isTopRatedTvLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      genres: null == genres
+          ? _value._genres
+          : genres // ignore: cast_nullable_to_non_nullable
+              as List<Genre>,
+      genreResult: null == genreResult
+          ? _value._genreResult
+          : genreResult // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      isGenreLoading: null == isGenreLoading
+          ? _value.isGenreLoading
+          : isGenreLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isGenreError: null == isGenreError
+          ? _value.isGenreError
+          : isGenreError // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1176,12 +1621,18 @@ class _$HomeStateImpl implements _HomeState {
       required this.isTopRatedMovieError,
       required this.isTopRatedTvError,
       required this.isTopRatedMovieLoading,
-      required this.isTopRatedTvLoading})
+      required this.isTopRatedTvLoading,
+      required final List<Genre> genres,
+      required final List<TMDBResponse> genreResult,
+      required this.isGenreLoading,
+      required this.isGenreError})
       : _carouselList = carouselList,
         _topTvList = topTvList,
         _topMovieList = topMovieList,
         _topRatedTv = topRatedTv,
-        _topRatedMovies = topRatedMovies;
+        _topRatedMovies = topRatedMovies,
+        _genres = genres,
+        _genreResult = genreResult;
 
   @override
   final int carouselIndex;
@@ -1245,10 +1696,30 @@ class _$HomeStateImpl implements _HomeState {
   final bool isTopRatedMovieLoading;
   @override
   final bool isTopRatedTvLoading;
+  final List<Genre> _genres;
+  @override
+  List<Genre> get genres {
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_genres);
+  }
+
+  final List<TMDBResponse> _genreResult;
+  @override
+  List<TMDBResponse> get genreResult {
+    if (_genreResult is EqualUnmodifiableListView) return _genreResult;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_genreResult);
+  }
+
+  @override
+  final bool isGenreLoading;
+  @override
+  final bool isGenreError;
 
   @override
   String toString() {
-    return 'HomeState(carouselIndex: $carouselIndex, isCarouselLoading: $isCarouselLoading, isCarouselError: $isCarouselError, carouselList: $carouselList, isTopTvError: $isTopTvError, isTopMovieError: $isTopMovieError, isTopTvLoading: $isTopTvLoading, isTopMovieLoading: $isTopMovieLoading, topTvList: $topTvList, topMovieList: $topMovieList, topRatedTv: $topRatedTv, topRatedMovies: $topRatedMovies, isTopRatedMovieError: $isTopRatedMovieError, isTopRatedTvError: $isTopRatedTvError, isTopRatedMovieLoading: $isTopRatedMovieLoading, isTopRatedTvLoading: $isTopRatedTvLoading)';
+    return 'HomeState(carouselIndex: $carouselIndex, isCarouselLoading: $isCarouselLoading, isCarouselError: $isCarouselError, carouselList: $carouselList, isTopTvError: $isTopTvError, isTopMovieError: $isTopMovieError, isTopTvLoading: $isTopTvLoading, isTopMovieLoading: $isTopMovieLoading, topTvList: $topTvList, topMovieList: $topMovieList, topRatedTv: $topRatedTv, topRatedMovies: $topRatedMovies, isTopRatedMovieError: $isTopRatedMovieError, isTopRatedTvError: $isTopRatedTvError, isTopRatedMovieLoading: $isTopRatedMovieLoading, isTopRatedTvLoading: $isTopRatedTvLoading, genres: $genres, genreResult: $genreResult, isGenreLoading: $isGenreLoading, isGenreError: $isGenreError)';
   }
 
   @override
@@ -1287,28 +1758,40 @@ class _$HomeStateImpl implements _HomeState {
             (identical(other.isTopRatedMovieLoading, isTopRatedMovieLoading) ||
                 other.isTopRatedMovieLoading == isTopRatedMovieLoading) &&
             (identical(other.isTopRatedTvLoading, isTopRatedTvLoading) ||
-                other.isTopRatedTvLoading == isTopRatedTvLoading));
+                other.isTopRatedTvLoading == isTopRatedTvLoading) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality()
+                .equals(other._genreResult, _genreResult) &&
+            (identical(other.isGenreLoading, isGenreLoading) ||
+                other.isGenreLoading == isGenreLoading) &&
+            (identical(other.isGenreError, isGenreError) ||
+                other.isGenreError == isGenreError));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      carouselIndex,
-      isCarouselLoading,
-      isCarouselError,
-      const DeepCollectionEquality().hash(_carouselList),
-      isTopTvError,
-      isTopMovieError,
-      isTopTvLoading,
-      isTopMovieLoading,
-      const DeepCollectionEquality().hash(_topTvList),
-      const DeepCollectionEquality().hash(_topMovieList),
-      const DeepCollectionEquality().hash(_topRatedTv),
-      const DeepCollectionEquality().hash(_topRatedMovies),
-      isTopRatedMovieError,
-      isTopRatedTvError,
-      isTopRatedMovieLoading,
-      isTopRatedTvLoading);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        carouselIndex,
+        isCarouselLoading,
+        isCarouselError,
+        const DeepCollectionEquality().hash(_carouselList),
+        isTopTvError,
+        isTopMovieError,
+        isTopTvLoading,
+        isTopMovieLoading,
+        const DeepCollectionEquality().hash(_topTvList),
+        const DeepCollectionEquality().hash(_topMovieList),
+        const DeepCollectionEquality().hash(_topRatedTv),
+        const DeepCollectionEquality().hash(_topRatedMovies),
+        isTopRatedMovieError,
+        isTopRatedTvError,
+        isTopRatedMovieLoading,
+        isTopRatedTvLoading,
+        const DeepCollectionEquality().hash(_genres),
+        const DeepCollectionEquality().hash(_genreResult),
+        isGenreLoading,
+        isGenreError
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -1334,7 +1817,11 @@ abstract class _HomeState implements HomeState {
       required final bool isTopRatedMovieError,
       required final bool isTopRatedTvError,
       required final bool isTopRatedMovieLoading,
-      required final bool isTopRatedTvLoading}) = _$HomeStateImpl;
+      required final bool isTopRatedTvLoading,
+      required final List<Genre> genres,
+      required final List<TMDBResponse> genreResult,
+      required final bool isGenreLoading,
+      required final bool isGenreError}) = _$HomeStateImpl;
 
   @override
   int get carouselIndex;
@@ -1368,6 +1855,14 @@ abstract class _HomeState implements HomeState {
   bool get isTopRatedMovieLoading;
   @override
   bool get isTopRatedTvLoading;
+  @override
+  List<Genre> get genres;
+  @override
+  List<TMDBResponse> get genreResult;
+  @override
+  bool get isGenreLoading;
+  @override
+  bool get isGenreError;
   @override
   @JsonKey(ignore: true)
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>

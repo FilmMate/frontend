@@ -38,4 +38,7 @@ class EndPoints {
 
   //tmdb search
   static const search = "$tmdbBaseUrl/search/multi";
+
+  // search by genre
+  static const genreSearch = "$tmdbBaseUrl/discover/movie";
 }
