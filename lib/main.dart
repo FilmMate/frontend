@@ -1,6 +1,8 @@
 import 'package:film_mate/application/detail/detail_bloc.dart';
 import 'package:film_mate/core/colors.dart';
+import 'package:film_mate/firebase_options.dart';
 import 'package:film_mate/presentation/splash/screen_splash.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -17,6 +19,9 @@ import 'domain/models/user/user_model.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+   options: DefaultFirebaseOptions.currentPlatform,
+ );
   await configureInjectable();
   await SharedPreferences.getInstance();
   await Hive.initFlutter();
