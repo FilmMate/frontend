@@ -187,9 +187,21 @@ class Login extends StatelessWidget {
         GestureDetector(
           onTap: () => BlocProvider.of<UserBloc>(context)
               .add(const UserEvent.changeScreen()),
-          child: const Text(
-            "New User ? Register Now !",
-            style: TextStyle(color: kWhite),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "New User ? ",
+                style: TextStyle(color: kWhite),
+              ),
+              const Text(
+                "Register Now",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         )
       ],
