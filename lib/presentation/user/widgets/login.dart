@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:film_mate/application/user/user_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
