@@ -1,8 +1,8 @@
 import 'dart:developer';
-
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/presentation/user/login_and_register.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -64,11 +64,12 @@ class ScreenAccounts extends StatelessWidget {
                   height: 50,
                   child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
+                        backgroundColor: WidgetStateProperty.all<Color>(
                             kSelectedBackgroundColor), // Set background color
                       ),
                       onPressed: () async {
                         log("log out");
+                        FirebaseAuth.instance.signOut();
                         final SharedPreferences prefs =
                             await SharedPreferences.getInstance();
                         await prefs.setBool('isLoggedIn', false);

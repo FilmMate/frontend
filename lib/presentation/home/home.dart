@@ -67,7 +67,7 @@ class ScreenHome extends StatelessWidget {
                       kHeightS,
                       kHeightS,
                       // const GenreSection(),
-                      TempGenreSection(size: size),
+                      // TempGenreSection(size: size),
                       kHeightS,
                       HomeList(
                         size: size,
