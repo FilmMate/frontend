@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:film_mate/application/main_navigator/main_navigator_bloc.dart';
 import 'package:film_mate/application/user/user_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
@@ -14,6 +15,10 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      BlocProvider.of<MainNavigatorBloc>(context)
+                  .add(MainNavigatorEvent.changeItem(item: 0));
+    });
     final TextEditingController usernameController = TextEditingController();
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passController = TextEditingController();
