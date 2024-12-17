@@ -1,11 +1,9 @@
 import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:film_mate/application/main_navigator/main_navigator_bloc.dart';
 import 'package:film_mate/application/user/user_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
-import 'package:film_mate/domain/services/user_services.dart';
 import 'package:film_mate/presentation/main_navigator/main_navigator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
