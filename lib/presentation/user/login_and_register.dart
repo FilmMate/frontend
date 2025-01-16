@@ -3,7 +3,6 @@ import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/presentation/user/widgets/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'widgets/register.dart';
 
 class ScreenLoginAndRegister extends StatelessWidget {
@@ -31,7 +30,7 @@ class ScreenLoginAndRegister extends StatelessWidget {
             if (state.changeScreen) {
               return const Register();
             } else {
-              return const Login();
+              return Login();
             }
           },
         ),
