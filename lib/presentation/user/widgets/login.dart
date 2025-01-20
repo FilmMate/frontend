@@ -4,6 +4,8 @@ import 'package:film_mate/application/main_navigator/main_navigator_bloc.dart';
 import 'package:film_mate/application/user/user_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
+import 'package:film_mate/domain/models/user/genre.dart';
+import 'package:film_mate/presentation/main_navigator/genre_navigator.dart';
 import 'package:film_mate/presentation/main_navigator/main_navigator.dart';
 import 'package:film_mate/presentation/user/forgot.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -147,7 +149,7 @@ class _LoginState extends State<Login> {
 
       await Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (context) => const MainNavigator(),
+          builder: (context) => GenreNavigator(userId: userCredential.user!.uid),
         ),
         (route) => false,
       );

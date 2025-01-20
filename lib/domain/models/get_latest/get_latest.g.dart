@@ -26,7 +26,7 @@ GetLatestResponse _$GetLatestResponseFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           const [],
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       overview: json['overview'] as String?,
       posterPath: json['poster_path'] as String?,
       title: json['title'] as String?,

@@ -177,15 +177,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       });
     });
 
-    on<_GetGenres>(((event, emit) async {
-      UserServices userServices = UserServices();
-      final SharedPreferences prefs = await SharedPreferences.getInstance();
-      final email = prefs.getString('currentUser');
-      final List<Genre> genres = await userServices.getGenres(email!);
-      log(genres.toString());
-      emit(state.copyWith(genres: genres));
-    }));
-
     on<_GetGenreResult>(((event, emit) async{
       emit(state.copyWith(
         isGenreLoading: true,

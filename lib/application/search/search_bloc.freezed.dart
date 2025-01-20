@@ -72,6 +72,9 @@ class _$SearchEventCopyWithImpl<$Res, $Val extends SearchEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SearchEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -88,6 +91,9 @@ class __$$InitializeImplCopyWithImpl<$Res>
   __$$InitializeImplCopyWithImpl(
       _$InitializeImpl _value, $Res Function(_$InitializeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SearchEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -193,6 +199,8 @@ class __$$TiggerSearchImplCopyWithImpl<$Res>
       _$TiggerSearchImpl _value, $Res Function(_$TiggerSearchImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -231,7 +239,9 @@ class _$TiggerSearchImpl implements _TiggerSearch {
   @override
   int get hashCode => Object.hash(runtimeType, query);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TiggerSearchImplCopyWith<_$TiggerSearchImpl> get copyWith =>
@@ -305,7 +315,10 @@ abstract class _TiggerSearch implements SearchEvent {
       _$TiggerSearchImpl;
 
   String get query;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TiggerSearchImplCopyWith<_$TiggerSearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -318,7 +331,9 @@ mixin _$SearchState {
   List<TMDBResponse> get resultList => throw _privateConstructorUsedError;
   bool get noResult => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchStateCopyWith<SearchState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -347,6 +362,8 @@ class _$SearchStateCopyWithImpl<$Res, $Val extends SearchState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -405,6 +422,8 @@ class __$$SearchStateImplCopyWithImpl<$Res>
       _$SearchStateImpl _value, $Res Function(_$SearchStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -503,7 +522,9 @@ class _$SearchStateImpl implements _SearchState {
       const DeepCollectionEquality().hash(_resultList),
       noResult);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchStateImplCopyWith<_$SearchStateImpl> get copyWith =>
@@ -528,8 +549,11 @@ abstract class _SearchState implements SearchState {
   List<TMDBResponse> get resultList;
   @override
   bool get noResult;
+
+  /// Create a copy of SearchState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchStateImplCopyWith<_$SearchStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

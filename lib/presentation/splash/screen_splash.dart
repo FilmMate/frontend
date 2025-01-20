@@ -1,7 +1,9 @@
 import 'dart:developer';
 import 'package:film_mate/application/explore/explore_bloc.dart';
+import 'package:film_mate/presentation/main_navigator/genre_navigator.dart';
 import 'package:film_mate/presentation/main_navigator/main_navigator.dart';
 import 'package:film_mate/presentation/user/login_and_register.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -62,9 +64,10 @@ class _ScreenSplashState extends State<ScreenSplash> {
           context,
           MaterialPageRoute(
               builder: (context) => const ScreenLoginAndRegister()));
-    } else {
+    }
+     else {
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => const MainNavigator()));
+          MaterialPageRoute(builder: (context) => GenreNavigator(userId: FirebaseAuth.instance.currentUser!.uid,)));
     }
   }
 }

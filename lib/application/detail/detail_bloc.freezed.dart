@@ -72,6 +72,9 @@ class _$DetailEventCopyWithImpl<$Res, $Val extends DetailEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -91,6 +94,8 @@ class __$$TriggerTrailerImplCopyWithImpl<$Res>
       _$TriggerTrailerImpl _value, $Res Function(_$TriggerTrailerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,7 +134,9 @@ class _$TriggerTrailerImpl implements _TriggerTrailer {
   @override
   int get hashCode => Object.hash(runtimeType, trigger);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TriggerTrailerImplCopyWith<_$TriggerTrailerImpl> get copyWith =>
@@ -204,7 +211,10 @@ abstract class _TriggerTrailer implements DetailEvent {
       _$TriggerTrailerImpl;
 
   bool get trigger;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TriggerTrailerImplCopyWith<_$TriggerTrailerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -226,6 +236,8 @@ class __$$GetDetailsImplCopyWithImpl<$Res>
       _$GetDetailsImpl _value, $Res Function(_$GetDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -272,7 +284,9 @@ class _$GetDetailsImpl implements _GetDetails {
   @override
   int get hashCode => Object.hash(runtimeType, type, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetDetailsImplCopyWith<_$GetDetailsImpl> get copyWith =>
@@ -347,7 +361,10 @@ abstract class _GetDetails implements DetailEvent {
 
   String get type;
   int get id;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetDetailsImplCopyWith<_$GetDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -359,7 +376,9 @@ mixin _$DetailState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isError => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DetailStateCopyWith<DetailState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -387,6 +406,8 @@ class _$DetailStateCopyWithImpl<$Res, $Val extends DetailState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DetailState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -439,6 +460,8 @@ class __$$DetailStateImplCopyWithImpl<$Res>
       _$DetailStateImpl _value, $Res Function(_$DetailStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -509,7 +532,9 @@ class _$DetailStateImpl implements _DetailState {
   int get hashCode =>
       Object.hash(runtimeType, pressedTrailer, detailData, isLoading, isError);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailStateImplCopyWith<_$DetailStateImpl> get copyWith =>
@@ -531,8 +556,11 @@ abstract class _DetailState implements DetailState {
   bool get isLoading;
   @override
   bool get isError;
+
+  /// Create a copy of DetailState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailStateImplCopyWith<_$DetailStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

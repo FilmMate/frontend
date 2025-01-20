@@ -1,19 +1,17 @@
 import 'dart:developer';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/domain/models/genre/genre_data.dart';
 import 'package:film_mate/domain/models/user/genre.dart';
-import 'package:film_mate/domain/models/user/user_model.dart';
 import 'package:film_mate/domain/services/user_services.dart';
-import 'package:film_mate/presentation/user/login_and_register.dart';
+import 'package:film_mate/presentation/main_navigator/genre_navigator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class GenreSelector extends StatefulWidget {
-  final String userName, email, password;
-  const GenreSelector(
-      {super.key,
-      required this.userName,
-      required this.email,
-      required this.password});
+  const GenreSelector({
+    super.key,
+  });
 
   @override
   State<GenreSelector> createState() => _GenreSelectorState();
@@ -36,7 +34,6 @@ class _GenreSelectorState extends State<GenreSelector> {
 
   @override
   Widget build(BuildContext context) {
-    final UserServices userServices = UserServices();
     return Scaffold(
       appBar: AppBar(
           title: const Text(
@@ -81,27 +78,56 @@ class _GenreSelectorState extends State<GenreSelector> {
       floatingActionButton: ElevatedButton(
         onPressed: () async {
           if (selectedGenres.length == 4) {
-            final user = User(
-                username: widget.userName,
-                password: widget.password,
-                email: widget.email,
-                genres: selectedGenres);
-            await userServices.registerUser(user);
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('User Registered. Login to continue'),
-                duration: Duration(seconds: 2),
-                backgroundColor: Colors.green,
-              ),
-            );
-            Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(
-                builder: (context) => const ScreenLoginAndRegister(),
-              ),
-              (route) => false,
-            );
-            // Process the selected genres, e.g., navigate to a new page
-            log('Selected Genres: ${selectedGenres.map((genre) => genre.name).toList()}');
+            try {
+              // Get the current user's UID
+              final String userId = FirebaseAuth.instance.currentUser!.uid;
+
+              // Prepare the selected genres in the desired format
+              final genresList = selectedGenres
+                  .map((genre) => {
+                        'name': genre.name,
+                        'gid': genre.gid,
+                      })
+                  .toList();
+
+              // Update the 'genre' field in the user's document
+              await FirebaseFirestore.instance
+                  .collection('users')
+                  .doc(userId)
+                  .update({
+                'genre': genresList,
+              });
+
+              // Show success message
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Genres updated successfully.'),
+                  duration: Duration(seconds: 2),
+                  backgroundColor: Colors.green,
+                ),
+              );
+
+              // Navigate to the Login page or next screen
+              Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(
+                  builder: (context) => GenreNavigator(userId: FirebaseAuth.instance.currentUser!.uid,),
+                ),
+                (route) => false,
+              );
+
+              // Log the selected genres for debugging
+              log('Selected Genres: ${genresList}');
+            } catch (e) {
+              // Handle any errors during Firestore operation
+              log('Error updating genres: $e');
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Failed to update genres. Try again.'),
+                  duration: Duration(seconds: 2),
+                  backgroundColor: Colors.red,
+                ),
+              );
+            }
           } else {
             // Show an error message if exactly 4 genres are not selected
             ScaffoldMessenger.of(context).showSnackBar(

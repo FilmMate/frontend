@@ -83,6 +83,9 @@ class _$UserEventCopyWithImpl<$Res, $Val extends UserEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -102,6 +105,8 @@ class __$$ChangeColorImplCopyWithImpl<$Res>
       _$ChangeColorImpl _value, $Res Function(_$ChangeColorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,7 +145,9 @@ class _$ChangeColorImpl implements _ChangeColor {
   @override
   int get hashCode => Object.hash(runtimeType, trigger);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeColorImplCopyWith<_$ChangeColorImpl> get copyWith =>
@@ -225,7 +232,10 @@ abstract class _ChangeColor implements UserEvent {
   const factory _ChangeColor({required final bool trigger}) = _$ChangeColorImpl;
 
   bool get trigger;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeColorImplCopyWith<_$ChangeColorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -244,6 +254,9 @@ class __$$ChangeScreenImplCopyWithImpl<$Res>
   __$$ChangeScreenImplCopyWithImpl(
       _$ChangeScreenImpl _value, $Res Function(_$ChangeScreenImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -358,6 +371,9 @@ class __$$DisplayAllUsersImplCopyWithImpl<$Res>
   __$$DisplayAllUsersImplCopyWithImpl(
       _$DisplayAllUsersImpl _value, $Res Function(_$DisplayAllUsersImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -475,6 +491,8 @@ class __$$IsUserExistImplCopyWithImpl<$Res>
       _$IsUserExistImpl _value, $Res Function(_$IsUserExistImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -513,7 +531,9 @@ class _$IsUserExistImpl implements _IsUserExist {
   @override
   int get hashCode => Object.hash(runtimeType, email);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsUserExistImplCopyWith<_$IsUserExistImpl> get copyWith =>
@@ -598,7 +618,10 @@ abstract class _IsUserExist implements UserEvent {
   const factory _IsUserExist({required final String email}) = _$IsUserExistImpl;
 
   String get email;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsUserExistImplCopyWith<_$IsUserExistImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -608,7 +631,9 @@ mixin _$UserState {
   bool get changeButtonColor => throw _privateConstructorUsedError;
   bool get changeScreen => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserStateCopyWith<UserState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -631,6 +656,8 @@ class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -669,6 +696,8 @@ class __$$UserStateImplCopyWithImpl<$Res>
       _$UserStateImpl _value, $Res Function(_$UserStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -718,7 +747,9 @@ class _$UserStateImpl implements _UserState {
   @override
   int get hashCode => Object.hash(runtimeType, changeButtonColor, changeScreen);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserStateImplCopyWith<_$UserStateImpl> get copyWith =>
@@ -734,8 +765,11 @@ abstract class _UserState implements UserState {
   bool get changeButtonColor;
   @override
   bool get changeScreen;
+
+  /// Create a copy of UserState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserStateImplCopyWith<_$UserStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

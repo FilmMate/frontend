@@ -84,6 +84,9 @@ class _$ExploreEventCopyWithImpl<$Res, $Val extends ExploreEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -103,6 +106,8 @@ class __$$ChangeTabImplCopyWithImpl<$Res>
       _$ChangeTabImpl _value, $Res Function(_$ChangeTabImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,7 +146,9 @@ class _$ChangeTabImpl implements _ChangeTab {
   @override
   int get hashCode => Object.hash(runtimeType, index);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeTabImplCopyWith<_$ChangeTabImpl> get copyWith =>
@@ -226,7 +233,10 @@ abstract class _ChangeTab implements ExploreEvent {
   const factory _ChangeTab({required final int index}) = _$ChangeTabImpl;
 
   int get index;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeTabImplCopyWith<_$ChangeTabImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -248,6 +258,8 @@ class __$$GetLatestMoviesImplCopyWithImpl<$Res>
       _$GetLatestMoviesImpl _value, $Res Function(_$GetLatestMoviesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -286,7 +298,9 @@ class _$GetLatestMoviesImpl implements _GetLatestMovies {
   @override
   int get hashCode => Object.hash(runtimeType, lang);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetLatestMoviesImplCopyWith<_$GetLatestMoviesImpl> get copyWith =>
@@ -373,7 +387,10 @@ abstract class _GetLatestMovies implements ExploreEvent {
       _$GetLatestMoviesImpl;
 
   String get lang;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetLatestMoviesImplCopyWith<_$GetLatestMoviesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -395,6 +412,8 @@ class __$$TriggerDetailImplCopyWithImpl<$Res>
       _$TriggerDetailImpl _value, $Res Function(_$TriggerDetailImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -433,7 +452,9 @@ class _$TriggerDetailImpl implements _TriggerDetail {
   @override
   int get hashCode => Object.hash(runtimeType, trigger);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TriggerDetailImplCopyWith<_$TriggerDetailImpl> get copyWith =>
@@ -519,7 +540,10 @@ abstract class _TriggerDetail implements ExploreEvent {
       _$TriggerDetailImpl;
 
   bool get trigger;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TriggerDetailImplCopyWith<_$TriggerDetailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -538,6 +562,9 @@ class __$$GetLatestTVImplCopyWithImpl<$Res>
   __$$GetLatestTVImplCopyWithImpl(
       _$GetLatestTVImpl _value, $Res Function(_$GetLatestTVImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ExploreEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -650,7 +677,9 @@ mixin _$ExploreState {
   bool get isLoadingTV => throw _privateConstructorUsedError;
   bool get isErrorTV => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExploreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExploreStateCopyWith<ExploreState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -682,6 +711,8 @@ class _$ExploreStateCopyWithImpl<$Res, $Val extends ExploreState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ExploreState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -758,6 +789,8 @@ class __$$ExploreStateImplCopyWithImpl<$Res>
       _$ExploreStateImpl _value, $Res Function(_$ExploreStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExploreState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -890,7 +923,9 @@ class _$ExploreStateImpl implements _ExploreState {
       isLoadingTV,
       isErrorTV);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExploreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExploreStateImplCopyWith<_$ExploreStateImpl> get copyWith =>
@@ -924,8 +959,11 @@ abstract class _ExploreState implements ExploreState {
   bool get isLoadingTV;
   @override
   bool get isErrorTV;
+
+  /// Create a copy of ExploreState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExploreStateImplCopyWith<_$ExploreStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

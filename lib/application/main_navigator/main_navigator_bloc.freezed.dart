@@ -50,7 +50,9 @@ mixin _$MainNavigatorEvent {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainNavigatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MainNavigatorEventCopyWith<MainNavigatorEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +76,8 @@ class _$MainNavigatorEventCopyWithImpl<$Res, $Val extends MainNavigatorEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MainNavigatorEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +111,8 @@ class __$$ChangeItemImplCopyWithImpl<$Res>
       _$ChangeItemImpl _value, $Res Function(_$ChangeItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MainNavigatorEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,7 +151,9 @@ class _$ChangeItemImpl implements _ChangeItem {
   @override
   int get hashCode => Object.hash(runtimeType, item);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainNavigatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeItemImplCopyWith<_$ChangeItemImpl> get copyWith =>
@@ -213,8 +221,11 @@ abstract class _ChangeItem implements MainNavigatorEvent {
 
   @override
   int get item;
+
+  /// Create a copy of MainNavigatorEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeItemImplCopyWith<_$ChangeItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -223,7 +234,9 @@ abstract class _ChangeItem implements MainNavigatorEvent {
 mixin _$MainNavigatorState {
   int get currentSelected => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainNavigatorState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MainNavigatorStateCopyWith<MainNavigatorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -247,6 +260,8 @@ class _$MainNavigatorStateCopyWithImpl<$Res, $Val extends MainNavigatorState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MainNavigatorState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -280,6 +295,8 @@ class __$$MainNavigatorStateImplCopyWithImpl<$Res>
       $Res Function(_$MainNavigatorStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MainNavigatorState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -319,7 +336,9 @@ class _$MainNavigatorStateImpl implements _MainNavigatorState {
   @override
   int get hashCode => Object.hash(runtimeType, currentSelected);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MainNavigatorState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MainNavigatorStateImplCopyWith<_$MainNavigatorStateImpl> get copyWith =>
@@ -333,8 +352,11 @@ abstract class _MainNavigatorState implements MainNavigatorState {
 
   @override
   int get currentSelected;
+
+  /// Create a copy of MainNavigatorState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MainNavigatorStateImplCopyWith<_$MainNavigatorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
