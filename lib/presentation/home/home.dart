@@ -1,8 +1,9 @@
+import 'dart:developer';
+
 import 'package:film_mate/application/home/home_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/infrastructure/genres/fetch_genre.dart';
-import 'package:film_mate/presentation/home/widgets/genre_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/carousel_section.dart';
@@ -13,7 +14,7 @@ class ScreenHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       BlocProvider.of<HomeBloc>(context)
           .add(const HomeEvent.getcarouselPosters());
       BlocProvider.of<HomeBloc>(context).add(const HomeEvent.getTopMovie());
@@ -21,7 +22,9 @@ class ScreenHome extends StatelessWidget {
       BlocProvider.of<HomeBloc>(context).add(const HomeEvent.getTopRatedTv());
       BlocProvider.of<HomeBloc>(context)
           .add(const HomeEvent.getTopRatedMovie());
-      // BlocProvider.of<HomeBloc>(context).add(const HomeEvent.getGenreResult(gid: ));
+      final genre = await fetchUserGenres();
+      BlocProvider.of<HomeBloc>(context)
+          .add(HomeEvent.getGenreResult1(gid: genre[0]['gid']));
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -69,6 +72,15 @@ class ScreenHome extends StatelessWidget {
                       // TempGenreSection(size: size),
                       HomeList(
                         size: size,
+                        title: 'genre',
+                        data: state.genreResult1,
+                        isLoading: state.isGenreLoading1,
+                        isError: state.isGenreError1,
+                        length: state.genreResult1.length,
+                        type: "movie",
+                      ),
+                      HomeList(
+                        size: size,
                         title: "Top Rated TV Shows",
                         data: state.topRatedTv,
                         isLoading: state.isTopRatedTvLoading,
@@ -96,60 +108,61 @@ class ScreenHome extends StatelessWidget {
   }
 }
 
-class TempGenreSection extends StatelessWidget {
-  const TempGenreSection({super.key, required this.size});
-  final Size size;
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: size.width * 0.2,
-      child: ListView.builder(
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(left: 10.0, right: 4),
-            child: BlocBuilder<HomeBloc, HomeState>(
-              builder: (context, state) {
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: ((context) => GenreResult(
-                                  gid: state.genres[index].gid,
-                                  name: state.genres[index].name,
-                                ))));
-                  },
-                  child: Container(
-                    width: size.width * 0.4,
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                          color:
-                              kSelectedBackgroundColor, // Set border color here
-                          width: 2.0, // Set border width here
-                        ),
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Center(
-                      child: Text(
-                        state.genres.isNotEmpty
-                            ? state.genres[index].name
-                            : "Reload",
-                        style: const TextStyle(
-                            color: kWhite, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
-          );
-        },
-        itemCount: 4,
-        // separatorBuilder: (context, index) => SizedBox(
-        //   width: 5,
-        // ),
-      ),
-    );
-  }
-}
+
+// class TempGenreSection extends StatelessWidget {
+//   const TempGenreSection({super.key, required this.size});
+//   final Size size;
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: size.width * 0.2,
+//       child: ListView.builder(
+//         shrinkWrap: true,
+//         scrollDirection: Axis.horizontal,
+//         itemBuilder: (context, index) {
+//           return Padding(
+//             padding: const EdgeInsets.only(left: 10.0, right: 4),
+//             child: BlocBuilder<HomeBloc, HomeState>(
+//               builder: (context, state) {
+//                 return GestureDetector(
+//                   onTap: () {
+//                     Navigator.push(
+//                         context,
+//                         MaterialPageRoute(
+//                             builder: ((context) => GenreResult(
+//                                   gid: state.genres[index].gid,
+//                                   name: state.genres[index].name,
+//                                 ))));
+//                   },
+//                   child: Container(
+//                     width: size.width * 0.4,
+//                     decoration: BoxDecoration(
+//                         border: Border.all(
+//                           color:
+//                               kSelectedBackgroundColor, // Set border color here
+//                           width: 2.0, // Set border width here
+//                         ),
+//                         borderRadius: BorderRadius.circular(20)),
+//                     child: Center(
+//                       child: Text(
+//                         state.genres.isNotEmpty
+//                             ? state.genres[index].name
+//                             : "Reload",
+//                         style: const TextStyle(
+//                             color: kWhite, fontWeight: FontWeight.bold),
+//                       ),
+//                     ),
+//                   ),
+//                 );
+//               },
+//             ),
+//           );
+//         },
+//         itemCount: 4,
+//         // separatorBuilder: (context, index) => SizedBox(
+//         //   width: 5,
+//         // ),
+//       ),
+//     );
+//   }
+// }

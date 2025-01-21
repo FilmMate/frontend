@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/domain/models/endpoints.dart';
 import 'package:film_mate/domain/models/tmdb/tmdb.dart';

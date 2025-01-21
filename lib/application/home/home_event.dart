@@ -10,5 +10,5 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.getTopMovie() = _GetTopMovie;
   const factory HomeEvent.getTopRatedMovie() = _GetTopRatedMovie;
   const factory HomeEvent.getTopRatedTv() = _GetTopRatedTv;
-  const factory HomeEvent.getGenreResult({required int gid}) = _GetGenreResult;
+  const factory HomeEvent.getGenreResult1({required int gid}) = _GetGenreResult1;
 }

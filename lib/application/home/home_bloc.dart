@@ -177,18 +177,18 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       });
     });
 
-    on<_GetGenreResult>(((event, emit) async{
+    on<_GetGenreResult1>(((event, emit) async {
       emit(state.copyWith(
-        isGenreLoading: true,
-        isGenreError: false,
+        isGenreLoading1: true,
+        isGenreError1: false,
       ));
       final result = await _homeServices.getGenre(gid: event.gid);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
           state.copyWith(
-            isGenreError: true,
-            isGenreLoading: false,
+            isGenreError1: true,
+            isGenreLoading1: false,
           ),
         );
       }, (TMDB success) {
@@ -196,10 +196,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         // Filter the success.result list
         final filteredMovies =
             success.results.where((media) => media.posterPath != null).toList();
+        log(filteredMovies[0].posterPath.toString());
         emit(state.copyWith(
-          isGenreError: false,
-          isGenreLoading: false,
-          genreResult: filteredMovies,
+          isGenreError1: false,
+          isGenreLoading1: false,
+          genreResult1: filteredMovies,
         ));
       });
     }));

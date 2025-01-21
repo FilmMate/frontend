@@ -9,20 +9,20 @@ import 'package:film_mate/domain/services/detail_services.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: DetailServices)
-class ImplDetail implements DetailServices{
+class ImplDetail implements DetailServices {
   @override
-  Future<Either<MainFailure, GetDetail>> getMovieDetail({required int id}) async{
+  Future<Either<MainFailure, GetDetail>> getMovieDetail(
+      {required int id}) async {
     const int maxRetries = 2;
     int retryCount = 0;
-
+    // log(id.toString());
+    // final String fullUrl = '${EndPoints.getMovie}?api_key=$apiKey&mid=$id';
+    // log('Full Request URL: $fullUrl');
     while (true) {
       try {
         final Response response = await Dio(BaseOptions()).get(
           EndPoints.getMovie,
-          queryParameters: {
-            'api_key': apiKey,
-            'mid' : id
-          },
+          queryParameters: {'api_key': apiKey, 'mid': id},
         );
 
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -44,20 +44,17 @@ class ImplDetail implements DetailServices{
       }
     }
   }
-  
+
   @override
-  Future<Either<MainFailure, GetDetail>> getTVDetail({required int id}) async{
+  Future<Either<MainFailure, GetDetail>> getTVDetail({required int id}) async {
     const int maxRetries = 2;
     int retryCount = 0;
-
+    // log(id.toString());
     while (true) {
       try {
         final Response response = await Dio(BaseOptions()).get(
           EndPoints.getTv,
-          queryParameters: {
-            'api_key': apiKey,
-            'tid' : id
-          },
+          queryParameters: {'api_key': apiKey, 'tid': id},
         );
 
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -79,5 +76,4 @@ class ImplDetail implements DetailServices{
       }
     }
   }
-
 }
