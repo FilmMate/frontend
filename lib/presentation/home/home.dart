@@ -23,8 +23,18 @@ class ScreenHome extends StatelessWidget {
       BlocProvider.of<HomeBloc>(context)
           .add(const HomeEvent.getTopRatedMovie());
       final genre = await fetchUserGenres();
+      final List<String> gidNames =
+          genre.map<String>((item) => item['name'].toString()).toList();
+      BlocProvider.of<HomeBloc>(context)
+          .add(HomeEvent.getGenreNames(gnames: gidNames));
       BlocProvider.of<HomeBloc>(context)
           .add(HomeEvent.getGenreResult1(gid: genre[0]['gid']));
+      BlocProvider.of<HomeBloc>(context)
+          .add(HomeEvent.getGenreResult2(gid: genre[1]['gid']));
+      BlocProvider.of<HomeBloc>(context)
+          .add(HomeEvent.getGenreResult3(gid: genre[2]['gid']));
+      BlocProvider.of<HomeBloc>(context)
+          .add(HomeEvent.getGenreResult4(gid: genre[3]['gid']));
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -67,16 +77,42 @@ class ScreenHome extends StatelessWidget {
                         isLoading: state.isTopMovieLoading,
                         type: "movie",
                       ),
-                      kHeightS,
                       // const GenreSection(),
                       // TempGenreSection(size: size),
                       HomeList(
                         size: size,
-                        title: 'genre',
+                        title: "${state.genreNames[0]} Movies",
                         data: state.genreResult1,
                         isLoading: state.isGenreLoading1,
                         isError: state.isGenreError1,
                         length: state.genreResult1.length,
+                        type: "movie",
+                      ),
+                      HomeList(
+                        size: size,
+                        title: "${state.genreNames[1]} Movies",
+                        data: state.genreResult2,
+                        isLoading: state.isGenreLoading2,
+                        isError: state.isGenreError2,
+                        length: state.genreResult2.length,
+                        type: "movie",
+                      ),
+                      HomeList(
+                        size: size,
+                        title: "${state.genreNames[2]} Movies",
+                        data: state.genreResult3,
+                        isLoading: state.isGenreLoading3,
+                        isError: state.isGenreError3,
+                        length: state.genreResult3.length,
+                        type: "movie",
+                      ),
+                      HomeList(
+                        size: size,
+                        title: "${state.genreNames[3]} Movies",
+                        data: state.genreResult4,
+                        isLoading: state.isGenreLoading4,
+                        isError: state.isGenreError4,
+                        length: state.genreResult4.length,
                         type: "movie",
                       ),
                       HomeList(
