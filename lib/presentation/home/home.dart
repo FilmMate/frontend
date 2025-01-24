@@ -1,9 +1,6 @@
-import 'dart:developer';
-
 import 'package:film_mate/application/home/home_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
-import 'package:film_mate/infrastructure/genres/fetch_genre.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/carousel_section.dart';
@@ -22,19 +19,14 @@ class ScreenHome extends StatelessWidget {
       BlocProvider.of<HomeBloc>(context).add(const HomeEvent.getTopRatedTv());
       BlocProvider.of<HomeBloc>(context)
           .add(const HomeEvent.getTopRatedMovie());
-      final genre = await fetchUserGenres();
-      final List<String> gidNames =
-          genre.map<String>((item) => item['name'].toString()).toList();
       BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreNames(gnames: gidNames));
+          .add(HomeEvent.getGenreResult1());
       BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult1(gid: genre[0]['gid']));
+          .add(HomeEvent.getGenreResult2());
       BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult2(gid: genre[1]['gid']));
+          .add(HomeEvent.getGenreResult3());
       BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult3(gid: genre[2]['gid']));
-      BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult4(gid: genre[3]['gid']));
+          .add(HomeEvent.getGenreResult4());
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(

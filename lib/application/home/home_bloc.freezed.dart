@@ -24,11 +24,11 @@ mixin _$HomeEvent {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,11 +39,11 @@ mixin _$HomeEvent {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,11 +54,11 @@ mixin _$HomeEvent {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -205,11 +205,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
     return changeIndicator(index);
   }
@@ -223,11 +223,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
     return changeIndicator?.call(index);
   }
@@ -241,11 +241,11 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (changeIndicator != null) {
@@ -373,11 +373,11 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
     return getcarouselPosters();
   }
@@ -391,11 +391,11 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
     return getcarouselPosters?.call();
   }
@@ -409,11 +409,11 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getcarouselPosters != null) {
@@ -532,11 +532,11 @@ class _$GetTopTvImpl implements _GetTopTv {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
     return getTopTv();
   }
@@ -550,11 +550,11 @@ class _$GetTopTvImpl implements _GetTopTv {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
     return getTopTv?.call();
   }
@@ -568,11 +568,11 @@ class _$GetTopTvImpl implements _GetTopTv {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getTopTv != null) {
@@ -691,11 +691,11 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
     return getTopMovie();
   }
@@ -709,11 +709,11 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
     return getTopMovie?.call();
   }
@@ -727,11 +727,11 @@ class _$GetTopMovieImpl implements _GetTopMovie {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getTopMovie != null) {
@@ -850,11 +850,11 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
     return getTopRatedMovie();
   }
@@ -868,11 +868,11 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
     return getTopRatedMovie?.call();
   }
@@ -886,11 +886,11 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getTopRatedMovie != null) {
@@ -1009,11 +1009,11 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
     return getTopRatedTv();
   }
@@ -1027,11 +1027,11 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
     return getTopRatedTv?.call();
   }
@@ -1045,11 +1045,11 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getTopRatedTv != null) {
@@ -1126,8 +1126,6 @@ abstract class _$$GetGenreResult1ImplCopyWith<$Res> {
   factory _$$GetGenreResult1ImplCopyWith(_$GetGenreResult1Impl value,
           $Res Function(_$GetGenreResult1Impl) then) =
       __$$GetGenreResult1ImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int gid});
 }
 
 /// @nodoc
@@ -1140,52 +1138,26 @@ class __$$GetGenreResult1ImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gid = null,
-  }) {
-    return _then(_$GetGenreResult1Impl(
-      gid: null == gid
-          ? _value.gid
-          : gid // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$GetGenreResult1Impl implements _GetGenreResult1 {
-  const _$GetGenreResult1Impl({required this.gid});
-
-  @override
-  final int gid;
+  const _$GetGenreResult1Impl();
 
   @override
   String toString() {
-    return 'HomeEvent.getGenreResult1(gid: $gid)';
+    return 'HomeEvent.getGenreResult1()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetGenreResult1Impl &&
-            (identical(other.gid, gid) || other.gid == gid));
+        (other.runtimeType == runtimeType && other is _$GetGenreResult1Impl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gid);
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetGenreResult1ImplCopyWith<_$GetGenreResult1Impl> get copyWith =>
-      __$$GetGenreResult1ImplCopyWithImpl<_$GetGenreResult1Impl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1196,13 +1168,13 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
-    return getGenreResult1(gid);
+    return getGenreResult1();
   }
 
   @override
@@ -1214,13 +1186,13 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
-    return getGenreResult1?.call(gid);
+    return getGenreResult1?.call();
   }
 
   @override
@@ -1232,15 +1204,15 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getGenreResult1 != null) {
-      return getGenreResult1(gid);
+      return getGenreResult1();
     }
     return orElse();
   }
@@ -1305,16 +1277,7 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
 }
 
 abstract class _GetGenreResult1 implements HomeEvent {
-  const factory _GetGenreResult1({required final int gid}) =
-      _$GetGenreResult1Impl;
-
-  int get gid;
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetGenreResult1ImplCopyWith<_$GetGenreResult1Impl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _GetGenreResult1() = _$GetGenreResult1Impl;
 }
 
 /// @nodoc
@@ -1322,8 +1285,6 @@ abstract class _$$GetGenreResult2ImplCopyWith<$Res> {
   factory _$$GetGenreResult2ImplCopyWith(_$GetGenreResult2Impl value,
           $Res Function(_$GetGenreResult2Impl) then) =
       __$$GetGenreResult2ImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int gid});
 }
 
 /// @nodoc
@@ -1336,52 +1297,26 @@ class __$$GetGenreResult2ImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gid = null,
-  }) {
-    return _then(_$GetGenreResult2Impl(
-      gid: null == gid
-          ? _value.gid
-          : gid // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$GetGenreResult2Impl implements _GetGenreResult2 {
-  const _$GetGenreResult2Impl({required this.gid});
-
-  @override
-  final int gid;
+  const _$GetGenreResult2Impl();
 
   @override
   String toString() {
-    return 'HomeEvent.getGenreResult2(gid: $gid)';
+    return 'HomeEvent.getGenreResult2()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetGenreResult2Impl &&
-            (identical(other.gid, gid) || other.gid == gid));
+        (other.runtimeType == runtimeType && other is _$GetGenreResult2Impl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gid);
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetGenreResult2ImplCopyWith<_$GetGenreResult2Impl> get copyWith =>
-      __$$GetGenreResult2ImplCopyWithImpl<_$GetGenreResult2Impl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1392,13 +1327,13 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
-    return getGenreResult2(gid);
+    return getGenreResult2();
   }
 
   @override
@@ -1410,13 +1345,13 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
-    return getGenreResult2?.call(gid);
+    return getGenreResult2?.call();
   }
 
   @override
@@ -1428,15 +1363,15 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getGenreResult2 != null) {
-      return getGenreResult2(gid);
+      return getGenreResult2();
     }
     return orElse();
   }
@@ -1501,16 +1436,7 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
 }
 
 abstract class _GetGenreResult2 implements HomeEvent {
-  const factory _GetGenreResult2({required final int gid}) =
-      _$GetGenreResult2Impl;
-
-  int get gid;
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetGenreResult2ImplCopyWith<_$GetGenreResult2Impl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _GetGenreResult2() = _$GetGenreResult2Impl;
 }
 
 /// @nodoc
@@ -1518,8 +1444,6 @@ abstract class _$$GetGenreResult3ImplCopyWith<$Res> {
   factory _$$GetGenreResult3ImplCopyWith(_$GetGenreResult3Impl value,
           $Res Function(_$GetGenreResult3Impl) then) =
       __$$GetGenreResult3ImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int gid});
 }
 
 /// @nodoc
@@ -1532,52 +1456,26 @@ class __$$GetGenreResult3ImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gid = null,
-  }) {
-    return _then(_$GetGenreResult3Impl(
-      gid: null == gid
-          ? _value.gid
-          : gid // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$GetGenreResult3Impl implements _GetGenreResult3 {
-  const _$GetGenreResult3Impl({required this.gid});
-
-  @override
-  final int gid;
+  const _$GetGenreResult3Impl();
 
   @override
   String toString() {
-    return 'HomeEvent.getGenreResult3(gid: $gid)';
+    return 'HomeEvent.getGenreResult3()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetGenreResult3Impl &&
-            (identical(other.gid, gid) || other.gid == gid));
+        (other.runtimeType == runtimeType && other is _$GetGenreResult3Impl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gid);
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetGenreResult3ImplCopyWith<_$GetGenreResult3Impl> get copyWith =>
-      __$$GetGenreResult3ImplCopyWithImpl<_$GetGenreResult3Impl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1588,13 +1486,13 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
-    return getGenreResult3(gid);
+    return getGenreResult3();
   }
 
   @override
@@ -1606,13 +1504,13 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
-    return getGenreResult3?.call(gid);
+    return getGenreResult3?.call();
   }
 
   @override
@@ -1624,15 +1522,15 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getGenreResult3 != null) {
-      return getGenreResult3(gid);
+      return getGenreResult3();
     }
     return orElse();
   }
@@ -1697,16 +1595,7 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
 }
 
 abstract class _GetGenreResult3 implements HomeEvent {
-  const factory _GetGenreResult3({required final int gid}) =
-      _$GetGenreResult3Impl;
-
-  int get gid;
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetGenreResult3ImplCopyWith<_$GetGenreResult3Impl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _GetGenreResult3() = _$GetGenreResult3Impl;
 }
 
 /// @nodoc
@@ -1714,8 +1603,6 @@ abstract class _$$GetGenreResult4ImplCopyWith<$Res> {
   factory _$$GetGenreResult4ImplCopyWith(_$GetGenreResult4Impl value,
           $Res Function(_$GetGenreResult4Impl) then) =
       __$$GetGenreResult4ImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int gid});
 }
 
 /// @nodoc
@@ -1728,52 +1615,26 @@ class __$$GetGenreResult4ImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gid = null,
-  }) {
-    return _then(_$GetGenreResult4Impl(
-      gid: null == gid
-          ? _value.gid
-          : gid // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$GetGenreResult4Impl implements _GetGenreResult4 {
-  const _$GetGenreResult4Impl({required this.gid});
-
-  @override
-  final int gid;
+  const _$GetGenreResult4Impl();
 
   @override
   String toString() {
-    return 'HomeEvent.getGenreResult4(gid: $gid)';
+    return 'HomeEvent.getGenreResult4()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetGenreResult4Impl &&
-            (identical(other.gid, gid) || other.gid == gid));
+        (other.runtimeType == runtimeType && other is _$GetGenreResult4Impl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gid);
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetGenreResult4ImplCopyWith<_$GetGenreResult4Impl> get copyWith =>
-      __$$GetGenreResult4ImplCopyWithImpl<_$GetGenreResult4Impl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1784,13 +1645,13 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
-    return getGenreResult4(gid);
+    return getGenreResult4();
   }
 
   @override
@@ -1802,13 +1663,13 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
-    return getGenreResult4?.call(gid);
+    return getGenreResult4?.call();
   }
 
   @override
@@ -1820,15 +1681,15 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getGenreResult4 != null) {
-      return getGenreResult4(gid);
+      return getGenreResult4();
     }
     return orElse();
   }
@@ -1893,16 +1754,7 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
 }
 
 abstract class _GetGenreResult4 implements HomeEvent {
-  const factory _GetGenreResult4({required final int gid}) =
-      _$GetGenreResult4Impl;
-
-  int get gid;
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetGenreResult4ImplCopyWith<_$GetGenreResult4Impl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _GetGenreResult4() = _$GetGenreResult4Impl;
 }
 
 /// @nodoc
@@ -1910,8 +1762,6 @@ abstract class _$$GetGenreNamesImplCopyWith<$Res> {
   factory _$$GetGenreNamesImplCopyWith(
           _$GetGenreNamesImpl value, $Res Function(_$GetGenreNamesImpl) then) =
       __$$GetGenreNamesImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<String> gnames});
 }
 
 /// @nodoc
@@ -1924,58 +1774,26 @@ class __$$GetGenreNamesImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? gnames = null,
-  }) {
-    return _then(_$GetGenreNamesImpl(
-      gnames: null == gnames
-          ? _value._gnames
-          : gnames // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$GetGenreNamesImpl implements _GetGenreNames {
-  const _$GetGenreNamesImpl({required final List<String> gnames})
-      : _gnames = gnames;
-
-  final List<String> _gnames;
-  @override
-  List<String> get gnames {
-    if (_gnames is EqualUnmodifiableListView) return _gnames;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_gnames);
-  }
+  const _$GetGenreNamesImpl();
 
   @override
   String toString() {
-    return 'HomeEvent.getGenreNames(gnames: $gnames)';
+    return 'HomeEvent.getGenreNames()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetGenreNamesImpl &&
-            const DeepCollectionEquality().equals(other._gnames, _gnames));
+        (other.runtimeType == runtimeType && other is _$GetGenreNamesImpl);
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_gnames));
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetGenreNamesImplCopyWith<_$GetGenreNamesImpl> get copyWith =>
-      __$$GetGenreNamesImplCopyWithImpl<_$GetGenreNamesImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1986,13 +1804,13 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
     required TResult Function() getTopMovie,
     required TResult Function() getTopRatedMovie,
     required TResult Function() getTopRatedTv,
-    required TResult Function(int gid) getGenreResult1,
-    required TResult Function(int gid) getGenreResult2,
-    required TResult Function(int gid) getGenreResult3,
-    required TResult Function(int gid) getGenreResult4,
-    required TResult Function(List<String> gnames) getGenreNames,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
   }) {
-    return getGenreNames(gnames);
+    return getGenreNames();
   }
 
   @override
@@ -2004,13 +1822,13 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
     TResult? Function()? getTopMovie,
     TResult? Function()? getTopRatedMovie,
     TResult? Function()? getTopRatedTv,
-    TResult? Function(int gid)? getGenreResult1,
-    TResult? Function(int gid)? getGenreResult2,
-    TResult? Function(int gid)? getGenreResult3,
-    TResult? Function(int gid)? getGenreResult4,
-    TResult? Function(List<String> gnames)? getGenreNames,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
   }) {
-    return getGenreNames?.call(gnames);
+    return getGenreNames?.call();
   }
 
   @override
@@ -2022,15 +1840,15 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
     TResult Function()? getTopMovie,
     TResult Function()? getTopRatedMovie,
     TResult Function()? getTopRatedTv,
-    TResult Function(int gid)? getGenreResult1,
-    TResult Function(int gid)? getGenreResult2,
-    TResult Function(int gid)? getGenreResult3,
-    TResult Function(int gid)? getGenreResult4,
-    TResult Function(List<String> gnames)? getGenreNames,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
     required TResult orElse(),
   }) {
     if (getGenreNames != null) {
-      return getGenreNames(gnames);
+      return getGenreNames();
     }
     return orElse();
   }
@@ -2095,16 +1913,7 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
 }
 
 abstract class _GetGenreNames implements HomeEvent {
-  const factory _GetGenreNames({required final List<String> gnames}) =
-      _$GetGenreNamesImpl;
-
-  List<String> get gnames;
-
-  /// Create a copy of HomeEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetGenreNamesImplCopyWith<_$GetGenreNamesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _GetGenreNames() = _$GetGenreNamesImpl;
 }
 
 /// @nodoc
@@ -2138,6 +1947,7 @@ mixin _$HomeState {
   bool get isGenreLoading4 => throw _privateConstructorUsedError;
   bool get isGenreError4 => throw _privateConstructorUsedError;
   List<String> get genreNames => throw _privateConstructorUsedError;
+  List<int> get genreIds => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -2180,7 +1990,8 @@ abstract class $HomeStateCopyWith<$Res> {
       List<TMDBResponse> genreResult4,
       bool isGenreLoading4,
       bool isGenreError4,
-      List<String> genreNames});
+      List<String> genreNames,
+      List<int> genreIds});
 }
 
 /// @nodoc
@@ -2227,6 +2038,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? isGenreLoading4 = null,
     Object? isGenreError4 = null,
     Object? genreNames = null,
+    Object? genreIds = null,
   }) {
     return _then(_value.copyWith(
       carouselIndex: null == carouselIndex
@@ -2345,6 +2157,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      genreIds: null == genreIds
+          ? _value.genreIds
+          : genreIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
     ) as $Val);
   }
 }
@@ -2386,7 +2202,8 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       List<TMDBResponse> genreResult4,
       bool isGenreLoading4,
       bool isGenreError4,
-      List<String> genreNames});
+      List<String> genreNames,
+      List<int> genreIds});
 }
 
 /// @nodoc
@@ -2431,6 +2248,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? isGenreLoading4 = null,
     Object? isGenreError4 = null,
     Object? genreNames = null,
+    Object? genreIds = null,
   }) {
     return _then(_$HomeStateImpl(
       carouselIndex: null == carouselIndex
@@ -2549,6 +2367,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value._genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      genreIds: null == genreIds
+          ? _value._genreIds
+          : genreIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
     ));
   }
 }
@@ -2585,7 +2407,8 @@ class _$HomeStateImpl implements _HomeState {
       required final List<TMDBResponse> genreResult4,
       required this.isGenreLoading4,
       required this.isGenreError4,
-      required final List<String> genreNames})
+      required final List<String> genreNames,
+      required final List<int> genreIds})
       : _carouselList = carouselList,
         _topTvList = topTvList,
         _topMovieList = topMovieList,
@@ -2595,7 +2418,8 @@ class _$HomeStateImpl implements _HomeState {
         _genreResult2 = genreResult2,
         _genreResult3 = genreResult3,
         _genreResult4 = genreResult4,
-        _genreNames = genreNames;
+        _genreNames = genreNames,
+        _genreIds = genreIds;
 
   @override
   final int carouselIndex;
@@ -2715,9 +2539,17 @@ class _$HomeStateImpl implements _HomeState {
     return EqualUnmodifiableListView(_genreNames);
   }
 
+  final List<int> _genreIds;
+  @override
+  List<int> get genreIds {
+    if (_genreIds is EqualUnmodifiableListView) return _genreIds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_genreIds);
+  }
+
   @override
   String toString() {
-    return 'HomeState(carouselIndex: $carouselIndex, isCarouselLoading: $isCarouselLoading, isCarouselError: $isCarouselError, carouselList: $carouselList, isTopTvError: $isTopTvError, isTopMovieError: $isTopMovieError, isTopTvLoading: $isTopTvLoading, isTopMovieLoading: $isTopMovieLoading, topTvList: $topTvList, topMovieList: $topMovieList, topRatedTv: $topRatedTv, topRatedMovies: $topRatedMovies, isTopRatedMovieError: $isTopRatedMovieError, isTopRatedTvError: $isTopRatedTvError, isTopRatedMovieLoading: $isTopRatedMovieLoading, isTopRatedTvLoading: $isTopRatedTvLoading, genreResult1: $genreResult1, isGenreLoading1: $isGenreLoading1, isGenreError1: $isGenreError1, genreResult2: $genreResult2, isGenreLoading2: $isGenreLoading2, isGenreError2: $isGenreError2, genreResult3: $genreResult3, isGenreLoading3: $isGenreLoading3, isGenreError3: $isGenreError3, genreResult4: $genreResult4, isGenreLoading4: $isGenreLoading4, isGenreError4: $isGenreError4, genreNames: $genreNames)';
+    return 'HomeState(carouselIndex: $carouselIndex, isCarouselLoading: $isCarouselLoading, isCarouselError: $isCarouselError, carouselList: $carouselList, isTopTvError: $isTopTvError, isTopMovieError: $isTopMovieError, isTopTvLoading: $isTopTvLoading, isTopMovieLoading: $isTopMovieLoading, topTvList: $topTvList, topMovieList: $topMovieList, topRatedTv: $topRatedTv, topRatedMovies: $topRatedMovies, isTopRatedMovieError: $isTopRatedMovieError, isTopRatedTvError: $isTopRatedTvError, isTopRatedMovieLoading: $isTopRatedMovieLoading, isTopRatedTvLoading: $isTopRatedTvLoading, genreResult1: $genreResult1, isGenreLoading1: $isGenreLoading1, isGenreError1: $isGenreError1, genreResult2: $genreResult2, isGenreLoading2: $isGenreLoading2, isGenreError2: $isGenreError2, genreResult3: $genreResult3, isGenreLoading3: $isGenreLoading3, isGenreError3: $isGenreError3, genreResult4: $genreResult4, isGenreLoading4: $isGenreLoading4, isGenreError4: $isGenreError4, genreNames: $genreNames, genreIds: $genreIds)';
   }
 
   @override
@@ -2782,7 +2614,8 @@ class _$HomeStateImpl implements _HomeState {
             (identical(other.isGenreError4, isGenreError4) ||
                 other.isGenreError4 == isGenreError4) &&
             const DeepCollectionEquality()
-                .equals(other._genreNames, _genreNames));
+                .equals(other._genreNames, _genreNames) &&
+            const DeepCollectionEquality().equals(other._genreIds, _genreIds));
   }
 
   @override
@@ -2816,7 +2649,8 @@ class _$HomeStateImpl implements _HomeState {
         const DeepCollectionEquality().hash(_genreResult4),
         isGenreLoading4,
         isGenreError4,
-        const DeepCollectionEquality().hash(_genreNames)
+        const DeepCollectionEquality().hash(_genreNames),
+        const DeepCollectionEquality().hash(_genreIds)
       ]);
 
   /// Create a copy of HomeState
@@ -2858,7 +2692,8 @@ abstract class _HomeState implements HomeState {
       required final List<TMDBResponse> genreResult4,
       required final bool isGenreLoading4,
       required final bool isGenreError4,
-      required final List<String> genreNames}) = _$HomeStateImpl;
+      required final List<String> genreNames,
+      required final List<int> genreIds}) = _$HomeStateImpl;
 
   @override
   int get carouselIndex;
@@ -2918,6 +2753,8 @@ abstract class _HomeState implements HomeState {
   bool get isGenreError4;
   @override
   List<String> get genreNames;
+  @override
+  List<int> get genreIds;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

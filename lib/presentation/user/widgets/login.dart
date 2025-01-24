@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
     }
 
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -72,7 +72,7 @@ class _LoginState extends State<Login> {
 
       await Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (context) => const MainNavigator(),
+          builder: (context) => GenreNavigator(userId: userCredential.user!.uid,),
         ),
         (route) => false,
       );

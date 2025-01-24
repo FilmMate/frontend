@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:film_mate/application/home/home_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/presentation/main_navigator/main_navigator.dart';
 import 'package:film_mate/presentation/user/widgets/genre_selector.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class GenreNavigator extends StatelessWidget {
   final String userId;
@@ -42,6 +44,7 @@ class GenreNavigator extends StatelessWidget {
             // If the 'genre' field is empty, show GenreSelector
             return const GenreSelector();
           } else {
+            BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreNames());
             // Navigate to another screen if 'genre' is not empty
             return const MainNavigator();
           }

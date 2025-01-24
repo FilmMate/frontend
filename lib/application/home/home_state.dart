@@ -32,6 +32,7 @@ class HomeState with _$HomeState {
     required bool isGenreLoading4,
     required bool isGenreError4,
     required List<String> genreNames,
+    required List<int> genreIds,
   }) = _HomeState;
   factory HomeState.initial() => const HomeState(
         carouselIndex: 0,
@@ -62,6 +63,7 @@ class HomeState with _$HomeState {
         genreResult4: [],
         isGenreLoading4: false,
         isGenreError4: false,
-        genreNames: ['','','','']
+        genreNames: ['','','',''],
+        genreIds: []
       );
 }

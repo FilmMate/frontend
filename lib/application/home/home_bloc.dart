@@ -2,10 +2,10 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:film_mate/core/failure/main_failure.dart';
 import 'package:film_mate/domain/models/tmdb/tmdb.dart';
+import 'package:film_mate/domain/services/genre_services.dart';
 import 'package:film_mate/domain/services/home_services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-
 
 part 'home_event.dart';
 part 'home_state.dart';
@@ -14,7 +14,9 @@ part 'home_bloc.freezed.dart';
 @injectable
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final HomeServices _homeServices;
-  HomeBloc(this._homeServices) : super(HomeState.initial()) {
+  final GenreServices _genreServices;
+  HomeBloc(this._homeServices, this._genreServices)
+      : super(HomeState.initial()) {
     on<_ChangeIndicator>((event, emit) {
       if (state.carouselIndex == event.index) {
         return;
@@ -24,10 +26,22 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       ));
     });
 
-    on<_GetGenreNames>((event, emit) {
-      emit(state.copyWith(
-        genreNames: event.gnames,
-      ));
+    on<_GetGenreNames>((event, emit) async {
+      final result = await _genreServices.fetchUserGenres();
+      result.fold(
+        (MainFailure failure) {
+          log("Fetching genre names -> Failed");
+        },
+        (List<Map<String, dynamic>> genre) {
+          final List<String> gidNames =
+              genre.map<String>((item) => item['name'].toString()).toList();
+          final List<int> gids = genre.map<int>((item) => item['gid']).toList();
+          emit(state.copyWith(
+            genreNames: gidNames,
+            genreIds: gids,
+          ));
+        },
+      );
     });
 
     on<_GetCarouselPosters>((event, emit) async {
@@ -186,7 +200,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading1: true,
         isGenreError1: false,
       ));
-      final result = await _homeServices.getGenre(gid: event.gid);
+
+      final result = await _homeServices.getGenre(gid: state.genreIds.isNotEmpty ? state.genreIds[0] : 12);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
@@ -214,7 +229,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading2: true,
         isGenreError2: false,
       ));
-      final result = await _homeServices.getGenre(gid: event.gid);
+      final result = await _homeServices.getGenre(gid: state.genreIds.isNotEmpty ? state.genreIds[1] : 28);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
@@ -242,7 +257,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading3: true,
         isGenreError3: false,
       ));
-      final result = await _homeServices.getGenre(gid: event.gid);
+      final result = await _homeServices.getGenre(gid: state.genreIds.isNotEmpty ? state.genreIds[2] : 35);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
@@ -270,7 +285,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading4: true,
         isGenreError4: false,
       ));
-      final result = await _homeServices.getGenre(gid: event.gid);
+      final result = await _homeServices.getGenre(gid: state.genreIds.isNotEmpty ? state.genreIds[3] : 10749);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
@@ -292,6 +307,5 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         ));
       });
     }));
-
   }
 }
