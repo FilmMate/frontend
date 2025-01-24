@@ -3,7 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/domain/models/genre/genre_data.dart';
 import 'package:film_mate/domain/models/user/genre.dart';
-import 'package:film_mate/domain/services/user_services.dart';
 import 'package:film_mate/presentation/main_navigator/genre_navigator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

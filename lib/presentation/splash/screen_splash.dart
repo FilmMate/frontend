@@ -1,7 +1,6 @@
 import 'dart:developer';
 import 'package:film_mate/application/explore/explore_bloc.dart';
 import 'package:film_mate/presentation/main_navigator/genre_navigator.dart';
-import 'package:film_mate/presentation/main_navigator/main_navigator.dart';
 import 'package:film_mate/presentation/user/login_and_register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

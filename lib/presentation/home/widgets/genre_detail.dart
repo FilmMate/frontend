@@ -1,11 +1,8 @@
 import 'package:film_mate/application/home/home_bloc.dart';
 import 'package:film_mate/core/colors.dart';
-import 'package:film_mate/domain/models/endpoints.dart';
-import 'package:film_mate/presentation/detail/detail_screen_primary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../detail/widgets/poster.dart';
 
 class GenreResult extends StatelessWidget {
   final String name;
