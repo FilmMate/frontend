@@ -11,7 +11,7 @@ class ScreenLoginAndRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: const Text(
@@ -23,16 +23,21 @@ class ScreenLoginAndRegister extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: BlocBuilder<UserBloc, UserState>(
-          builder: (context, state) {
-            if (state.changeScreen) {
-              return const Register();
-            } else {
-              return Login();
-            }
-          },
+      body: SingleChildScrollView(
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height * 0.75,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: BlocBuilder<UserBloc, UserState>(
+              builder: (context, state) {
+                if (state.changeScreen) {
+                  return const Register();
+                } else {
+                  return Login();
+                }
+              },
+            ),
+          ),
         ),
       ),
     );
