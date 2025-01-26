@@ -19,14 +19,10 @@ class ScreenHome extends StatelessWidget {
       BlocProvider.of<HomeBloc>(context).add(const HomeEvent.getTopRatedTv());
       BlocProvider.of<HomeBloc>(context)
           .add(const HomeEvent.getTopRatedMovie());
-      BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult1());
-      BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult2());
-      BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult3());
-      BlocProvider.of<HomeBloc>(context)
-          .add(HomeEvent.getGenreResult4());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResult1());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResult2());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResult3());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResult4());
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(

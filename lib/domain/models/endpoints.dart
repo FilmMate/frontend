@@ -11,6 +11,9 @@ class EndPoints {
   // get latest tv
   static const getLatestTV = "$serverBaseUrl/getlatesttv";
 
+  //get hero
+  static const getHero = "$serverBaseUrl/gethero";
+
   // get details
   static const getMovie = "$serverBaseUrl/getmoviedetail";
   static const getTv = "$serverBaseUrl/gettvdetail";

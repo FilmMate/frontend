@@ -12,7 +12,7 @@ import 'dart:math' show Random;
 @LazySingleton(as: HomeServices)
 class ImplHome implements HomeServices {
   @override
-  Future<Either<MainFailure, TMDB>> getNowPlaying() async {
+  Future<Either<MainFailure, TMDB>> getCarouselList() async {
     const int maxRetries = 5;
     int retryCount = 0;
     while (true) {
@@ -23,7 +23,7 @@ class ImplHome implements HomeServices {
             'api_key': apiKey,
           },
         );
-        if (response.statusCode == 200 || response.statusCode == 201) {
+        if (response.statusCode == 200 || response.statusCode == 203) {
           final result = TMDB.fromJson(response.data);
           return Right(result);
         } else {
@@ -184,7 +184,7 @@ class ImplHome implements HomeServices {
             'api_key': apiKey,
             'with_genres': gid,
             'with_original_language': lang[Random().nextInt(4)],
-            'sort_by' : 'popularity.desc'
+            'sort_by': 'popularity.desc'
           },
         );
         if (response.statusCode == 200 || response.statusCode == 201) {

@@ -60,7 +60,8 @@ class _LoginState extends State<Login> {
     }
 
     try {
-      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+      UserCredential userCredential =
+          await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -70,7 +71,9 @@ class _LoginState extends State<Login> {
 
       await Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (context) => GenreNavigator(userId: userCredential.user!.uid,),
+          builder: (context) => GenreNavigator(
+            userId: userCredential.user!.uid,
+          ),
         ),
         (route) => false,
       );
@@ -115,7 +118,6 @@ class _LoginState extends State<Login> {
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
-
       log("Authenticating Google user...");
       UserCredential userCredential =
           await FirebaseAuth.instance.signInWithCredential(credential);
@@ -147,7 +149,8 @@ class _LoginState extends State<Login> {
 
       await Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (context) => GenreNavigator(userId: userCredential.user!.uid),
+          builder: (context) =>
+              GenreNavigator(userId: userCredential.user!.uid),
         ),
         (route) => false,
       );
@@ -254,20 +257,23 @@ class _LoginState extends State<Login> {
           ),
         ),
         kHeightS,
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: 50,
-          child: ElevatedButton(
-            onPressed: signIn,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: kSelectedBackgroundColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: signIn,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: kSelectedBackgroundColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
-            ),
-            child: const Text(
-              "Login",
-              style: TextStyle(color: Colors.white),
+              child: const Text(
+                "Login",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
         ),
@@ -321,24 +327,27 @@ class _LoginState extends State<Login> {
           ),
         ),
         kHeightXS,
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: 50,
-          child: ElevatedButton(
-            onPressed: signInWithGoogle,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: kSelectedBackgroundColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: signInWithGoogle,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: kSelectedBackgroundColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
-            ),
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FaIcon(FontAwesomeIcons.google, color: kWhite),
-                SizedBox(width: 10),
-                Text("Login with Google", style: TextStyle(color: kWhite)),
-              ],
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FaIcon(FontAwesomeIcons.google, color: kWhite),
+                  SizedBox(width: 10),
+                  Text("Login with Google", style: TextStyle(color: kWhite)),
+                ],
+              ),
             ),
           ),
         ),
