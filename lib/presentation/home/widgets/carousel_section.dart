@@ -61,7 +61,7 @@ class CarouselSection extends StatelessWidget {
                   ),
                 );
               },
-              itemCount: 5,
+              itemCount: 6,
               options: CarouselOptions(
                 height: size.width,
                 aspectRatio: 4 / 5,
@@ -84,7 +84,7 @@ class CarouselSection extends StatelessWidget {
             ),
             kHeightXS,
             DotsIndicator(
-              dotsCount: 5,
+              dotsCount: 6,
               position: state.carouselIndex,
               decorator: DotsDecorator(
                 activeColor: kSelectedBackgroundColor,

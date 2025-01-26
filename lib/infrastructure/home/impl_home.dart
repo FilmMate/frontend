@@ -178,8 +178,47 @@ class ImplHome implements HomeServices {
     while (true) {
       try {
         final List<String> lang = ['ml', 'en', 'ta', 'hi'];
+        final List<String> aniLang = ['en', 'ja'];
         final Response response = await Dio(BaseOptions()).get(
           EndPoints.genreSearch,
+          queryParameters: {
+            'api_key': apiKey,
+            'with_genres': gid,
+            'with_original_language': gid == 16
+                ? aniLang[Random().nextInt(2)]
+                : lang[Random().nextInt(4)],
+            'sort_by': 'popularity.desc'
+          },
+        );
+        if (response.statusCode == 200 || response.statusCode == 201) {
+          final result = TMDB.fromJson(response.data);
+          return Right(result);
+        } else {
+          return const Left(MainFailure.serverFailure());
+        }
+      } catch (e) {
+        log(e.toString());
+        retryCount++;
+        if (retryCount <= maxRetries) {
+          // Retry if there are remaining retries
+          log('Retrying... Attempt $retryCount of $maxRetries');
+          continue; // Continue to the next iteration of the while loop
+        } else {
+          return const Left(MainFailure.clientFailure());
+        }
+      }
+    }
+  }
+
+  @override
+  Future<Either<MainFailure, TMDB>> getGenreTv({required int gid}) async {
+    const int maxRetries = 10;
+    int retryCount = 0;
+    while (true) {
+      try {
+        final List<String> lang = ['ja','ko','en','de'];
+        final Response response = await Dio(BaseOptions()).get(
+          EndPoints.genreSearchTv,
           queryParameters: {
             'api_key': apiKey,
             'with_genres': gid,

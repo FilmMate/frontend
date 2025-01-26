@@ -26,6 +26,36 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       ));
     });
 
+    on<_ResetAll>(
+      (event, emit) {
+        emit(state.copyWith(
+          genreResult1: [],
+          isGenreLoading1: false,
+          isGenreError1: false,
+          genreResult2: [],
+          isGenreLoading2: false,
+          isGenreError2: false,
+          genreResult3: [],
+          isGenreLoading3: false,
+          isGenreError3: false,
+          genreResult4: [],
+          isGenreLoading4: false,
+          isGenreError4: false,
+          genreNames: ['', '', '', ''],
+          genreIds: [],
+          isGenreLoadingTv1: false,
+          isGenreErrorTv1: false,
+          genreResultTv1: [],
+          isGenreLoadingTv2: false,
+          isGenreErrorTv2: false,
+          genreResultTv2: [],
+          isGenreLoadingTv3: false,
+          isGenreErrorTv3: false,
+          genreResultTv3: [],
+        ));
+      },
+    );
+
     on<_GetGenreNames>((event, emit) async {
       if (state.genreIds.isEmpty) {
         final result = await _genreServices.fetchUserGenres();
@@ -200,8 +230,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading1: true,
         isGenreError1: false,
       ));
-      
-      if(state.genreIds.isEmpty){
+
+      if (state.genreIds.isEmpty) {
         final result = await _genreServices.fetchUserGenres();
         result.fold(
           (MainFailure failure) {
@@ -242,7 +272,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading2: true,
         isGenreError2: false,
       ));
-      if(state.genreIds.isEmpty){
+      if (state.genreIds.isEmpty) {
         final result = await _genreServices.fetchUserGenres();
         result.fold(
           (MainFailure failure) {
@@ -255,8 +285,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           },
         );
       }
-      final result = await _homeServices.getGenre(
-          gid:state.genreIds[1]);
+      final result = await _homeServices.getGenre(gid: state.genreIds[1]);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
@@ -284,7 +313,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading3: true,
         isGenreError3: false,
       ));
-      if(state.genreIds.isEmpty){
+      if (state.genreIds.isEmpty) {
         final result = await _genreServices.fetchUserGenres();
         result.fold(
           (MainFailure failure) {
@@ -297,8 +326,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           },
         );
       }
-      final result = await _homeServices.getGenre(
-          gid:state.genreIds[2]);
+      final result = await _homeServices.getGenre(gid: state.genreIds[2]);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
@@ -326,7 +354,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         isGenreLoading4: true,
         isGenreError4: false,
       ));
-      if(state.genreIds.isEmpty){
+      if (state.genreIds.isEmpty) {
         final result = await _genreServices.fetchUserGenres();
         result.fold(
           (MainFailure failure) {
@@ -339,8 +367,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           },
         );
       }
-      final result = await _homeServices.getGenre(
-          gid: state.genreIds[3]);
+      final result = await _homeServices.getGenre(gid: state.genreIds[3]);
       result.fold((MainFailure failure) {
         log('Genre Detail -> failure');
         emit(
@@ -359,6 +386,93 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           isGenreError4: false,
           isGenreLoading4: false,
           genreResult4: filteredMovies,
+        ));
+      });
+    }));
+
+    on<_GetGenreResultTv1>(((event, emit) async {
+      emit(state.copyWith(
+        isGenreLoadingTv1: true,
+        isGenreErrorTv1: false,
+      ));
+      // Scifi and fantasy
+      final result = await _homeServices.getGenreTv(gid: 10765);
+      result.fold((MainFailure failure) {
+        log('Genre Detail TV -> failure');
+        emit(
+          state.copyWith(
+            isGenreErrorTv1: true,
+            isGenreLoadingTv1: false,
+          ),
+        );
+      }, (TMDB success) {
+        log("Genre Detail TV -> success");
+        // Filter the success.result list
+        final filteredMovies =
+            success.results.where((media) => media.posterPath != null).toList();
+        log(filteredMovies[0].posterPath.toString());
+        emit(state.copyWith(
+          isGenreErrorTv1: false,
+          isGenreLoadingTv1: false,
+          genreResultTv1: success.results,
+        ));
+      });
+    }));
+
+    on<_GetGenreResultTv2>(((event, emit) async {
+      emit(state.copyWith(
+        isGenreLoadingTv2: true,
+        isGenreErrorTv2: false,
+      ));
+      //action and adventure
+      final result = await _homeServices.getGenreTv(gid: 10759);
+      result.fold((MainFailure failure) {
+        log('Genre Detail -> failure');
+        emit(
+          state.copyWith(
+            isGenreErrorTv2: true,
+            isGenreLoadingTv2: false,
+          ),
+        );
+      }, (TMDB success) {
+        log("Genre Detail -> success");
+        // Filter the success.result list
+        final filteredMovies =
+            success.results.where((media) => media.posterPath != null).toList();
+        log(filteredMovies[0].posterPath.toString());
+        emit(state.copyWith(
+          isGenreErrorTv2: false,
+          isGenreLoadingTv2: false,
+          genreResultTv2: filteredMovies,
+        ));
+      });
+    }));
+
+    on<_GetGenreResultTv3>(((event, emit) async {
+      emit(state.copyWith(
+        isGenreLoadingTv3: true,
+        isGenreErrorTv3: false,
+      ));
+      //action and adventure
+      final result = await _homeServices.getGenreTv(gid: 9648);
+      result.fold((MainFailure failure) {
+        log('Genre Detail -> failure');
+        emit(
+          state.copyWith(
+            isGenreErrorTv3: true,
+            isGenreLoadingTv3: false,
+          ),
+        );
+      }, (TMDB success) {
+        log("Genre Detail -> success");
+        // Filter the success.result list
+        final filteredMovies =
+            success.results.where((media) => media.posterPath != null).toList();
+        log(filteredMovies[0].posterPath.toString());
+        emit(state.copyWith(
+          isGenreErrorTv3: false,
+          isGenreLoadingTv3: false,
+          genreResultTv3: filteredMovies,
         ));
       });
     }));

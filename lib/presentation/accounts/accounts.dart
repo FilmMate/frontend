@@ -1,9 +1,11 @@
 import 'dart:developer';
+import 'package:film_mate/application/home/home_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/presentation/user/login_and_register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -69,6 +71,8 @@ class ScreenAccounts extends StatelessWidget {
                             kSelectedBackgroundColor), // Set background color
                       ),
                       onPressed: () async {
+                        BlocProvider.of<HomeBloc>(context)
+                            .add(HomeEvent.resetAll());
                         log("log out");
                         await GoogleSignIn().signOut();
                         FirebaseAuth.instance.signOut();

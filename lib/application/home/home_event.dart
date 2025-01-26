@@ -15,4 +15,8 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.getGenreResult3() = _GetGenreResult3;
   const factory HomeEvent.getGenreResult4() = _GetGenreResult4;
   const factory HomeEvent.getGenreNames() = _GetGenreNames;
+  const factory HomeEvent.resetAll() = _ResetAll;
+  const factory HomeEvent.getGenreResultTv1() = _GetGenreResultTv1;
+  const factory HomeEvent.getGenreResultTv2() = _GetGenreResultTv2;
+  const factory HomeEvent.getGenreResultTv3() = _GetGenreResultTv3;
 }

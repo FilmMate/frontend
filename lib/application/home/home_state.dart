@@ -33,6 +33,15 @@ class HomeState with _$HomeState {
     required bool isGenreError4,
     required List<String> genreNames,
     required List<int> genreIds,
+    required List<TMDBResponse> genreResultTv1,
+    required bool isGenreLoadingTv1,
+    required bool isGenreErrorTv1,
+    required List<TMDBResponse> genreResultTv2,
+    required bool isGenreLoadingTv2,
+    required bool isGenreErrorTv2,
+    required List<TMDBResponse> genreResultTv3,
+    required bool isGenreLoadingTv3,
+    required bool isGenreErrorTv3,
   }) = _HomeState;
   factory HomeState.initial() => const HomeState(
         carouselIndex: 0,
@@ -64,6 +73,15 @@ class HomeState with _$HomeState {
         isGenreLoading4: false,
         isGenreError4: false,
         genreNames: ['','','',''],
-        genreIds: []
+        genreIds: [],
+        isGenreLoadingTv1: false,
+        isGenreErrorTv1: false,
+        genreResultTv1: [],
+        isGenreLoadingTv2: false,
+        isGenreErrorTv2: false,
+        genreResultTv2: [],
+        isGenreLoadingTv3: false,
+        isGenreErrorTv3: false,
+        genreResultTv3: [],
       );
 }

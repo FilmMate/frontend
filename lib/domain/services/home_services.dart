@@ -9,4 +9,5 @@ abstract class HomeServices {
   Future<Either<MainFailure, TMDB>> getTopRatedMovies();
   Future<Either<MainFailure, TMDB>> getTopRatedTV();
   Future<Either<MainFailure, TMDB>> getGenre({required int gid});
+  Future<Either<MainFailure, TMDB>> getGenreTv({required int gid});
 }

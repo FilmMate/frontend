@@ -23,6 +23,9 @@ class ScreenHome extends StatelessWidget {
       BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResult2());
       BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResult3());
       BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResult4());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResultTv1());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResultTv2());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResultTv3());
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -121,6 +124,34 @@ class ScreenHome extends StatelessWidget {
                         isLoading: state.isTopRatedMovieLoading,
                         length: state.topRatedMovies.length,
                         type: "movie",
+                      ),
+                      kHeightS,
+                      HomeList(
+                        size: size,
+                        title: "Action & Adventure TV Shows",
+                        data: state.genreResultTv1,
+                        isError: state.isGenreErrorTv1,
+                        isLoading: state.isGenreLoadingTv1,
+                        length: state.genreResultTv1.length,
+                        type: "TV",
+                      ),
+                      HomeList(
+                        size: size,
+                        title: "Sci-Fi & Fantasy TV Shows",
+                        data: state.genreResultTv2,
+                        isError: state.isGenreErrorTv2,
+                        isLoading: state.isGenreLoadingTv2,
+                        length: state.genreResultTv2.length,
+                        type: "TV",
+                      ),
+                      HomeList(
+                        size: size,
+                        title: "Mystery Shows",
+                        data: state.genreResultTv3,
+                        isError: state.isGenreErrorTv3,
+                        isLoading: state.isGenreLoadingTv3,
+                        length: state.genreResultTv3.length,
+                        type: "TV",
                       ),
                     ],
                   );
