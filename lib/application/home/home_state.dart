@@ -48,6 +48,9 @@ class HomeState with _$HomeState {
     required List<TMDBResponse> filmMateTvList,
     required bool isFilmMateTvLoading,
     required bool isFilmMateTvError,
+    required List<TMDBResponse> langResultList,
+    required bool langResultLoading,
+    required bool langResultError,
   }) = _HomeState;
   factory HomeState.initial() => const HomeState(
         carouselIndex: 0,
@@ -95,5 +98,8 @@ class HomeState with _$HomeState {
         filmMateTvList: [],
         isFilmMateTvLoading: false,
         isFilmMateTvError: false,
+        langResultList: [],
+        langResultLoading: false,
+        langResultError: false,
       );
 }

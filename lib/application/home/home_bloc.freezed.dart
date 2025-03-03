@@ -20,6 +20,7 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -41,6 +42,7 @@ mixin _$HomeEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -62,6 +64,7 @@ mixin _$HomeEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -84,6 +87,7 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -105,6 +109,7 @@ mixin _$HomeEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -126,6 +131,7 @@ mixin _$HomeEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -237,6 +243,7 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -261,6 +268,7 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -285,6 +293,7 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -313,6 +322,7 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -337,6 +347,7 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -361,6 +372,7 @@ class _$ChangeIndicatorImpl implements _ChangeIndicator {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -441,6 +453,7 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -465,6 +478,7 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -489,6 +503,7 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -517,6 +532,7 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -541,6 +557,7 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -565,6 +582,7 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -591,6 +609,255 @@ class _$GetCarouselPostersImpl implements _GetCarouselPosters {
 
 abstract class _GetCarouselPosters implements HomeEvent {
   const factory _GetCarouselPosters() = _$GetCarouselPostersImpl;
+}
+
+/// @nodoc
+abstract class _$$GetMovieByLanguageImplCopyWith<$Res> {
+  factory _$$GetMovieByLanguageImplCopyWith(_$GetMovieByLanguageImpl value,
+          $Res Function(_$GetMovieByLanguageImpl) then) =
+      __$$GetMovieByLanguageImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String language, int? gid});
+}
+
+/// @nodoc
+class __$$GetMovieByLanguageImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetMovieByLanguageImpl>
+    implements _$$GetMovieByLanguageImplCopyWith<$Res> {
+  __$$GetMovieByLanguageImplCopyWithImpl(_$GetMovieByLanguageImpl _value,
+      $Res Function(_$GetMovieByLanguageImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? language = null,
+    Object? gid = freezed,
+  }) {
+    return _then(_$GetMovieByLanguageImpl(
+      language: null == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String,
+      gid: freezed == gid
+          ? _value.gid
+          : gid // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetMovieByLanguageImpl implements _GetMovieByLanguage {
+  const _$GetMovieByLanguageImpl({required this.language, this.gid});
+
+  @override
+  final String language;
+  @override
+  final int? gid;
+
+  @override
+  String toString() {
+    return 'HomeEvent.getMovieByLanguage(language: $language, gid: $gid)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetMovieByLanguageImpl &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.gid, gid) || other.gid == gid));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, language, gid);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetMovieByLanguageImplCopyWith<_$GetMovieByLanguageImpl> get copyWith =>
+      __$$GetMovieByLanguageImplCopyWithImpl<_$GetMovieByLanguageImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) changeIndicator,
+    required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
+    required TResult Function() getFilmMateMovieList,
+    required TResult Function() getFilmMateTvList,
+    required TResult Function() getTopTv,
+    required TResult Function() getTopMovie,
+    required TResult Function() getTopRatedMovie,
+    required TResult Function() getTopRatedTv,
+    required TResult Function() getGenreResult1,
+    required TResult Function() getGenreResult2,
+    required TResult Function() getGenreResult3,
+    required TResult Function() getGenreResult4,
+    required TResult Function() getGenreNames,
+    required TResult Function() resetAll,
+    required TResult Function() getGenreResultTv1,
+    required TResult Function() getGenreResultTv2,
+    required TResult Function() getGenreResultTv3,
+  }) {
+    return getMovieByLanguage(language, gid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? changeIndicator,
+    TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
+    TResult? Function()? getFilmMateMovieList,
+    TResult? Function()? getFilmMateTvList,
+    TResult? Function()? getTopTv,
+    TResult? Function()? getTopMovie,
+    TResult? Function()? getTopRatedMovie,
+    TResult? Function()? getTopRatedTv,
+    TResult? Function()? getGenreResult1,
+    TResult? Function()? getGenreResult2,
+    TResult? Function()? getGenreResult3,
+    TResult? Function()? getGenreResult4,
+    TResult? Function()? getGenreNames,
+    TResult? Function()? resetAll,
+    TResult? Function()? getGenreResultTv1,
+    TResult? Function()? getGenreResultTv2,
+    TResult? Function()? getGenreResultTv3,
+  }) {
+    return getMovieByLanguage?.call(language, gid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? changeIndicator,
+    TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
+    TResult Function()? getFilmMateMovieList,
+    TResult Function()? getFilmMateTvList,
+    TResult Function()? getTopTv,
+    TResult Function()? getTopMovie,
+    TResult Function()? getTopRatedMovie,
+    TResult Function()? getTopRatedTv,
+    TResult Function()? getGenreResult1,
+    TResult Function()? getGenreResult2,
+    TResult Function()? getGenreResult3,
+    TResult Function()? getGenreResult4,
+    TResult Function()? getGenreNames,
+    TResult Function()? resetAll,
+    TResult Function()? getGenreResultTv1,
+    TResult Function()? getGenreResultTv2,
+    TResult Function()? getGenreResultTv3,
+    required TResult orElse(),
+  }) {
+    if (getMovieByLanguage != null) {
+      return getMovieByLanguage(language, gid);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ChangeIndicator value) changeIndicator,
+    required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
+    required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
+    required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
+    required TResult Function(_GetTopTv value) getTopTv,
+    required TResult Function(_GetTopMovie value) getTopMovie,
+    required TResult Function(_GetTopRatedMovie value) getTopRatedMovie,
+    required TResult Function(_GetTopRatedTv value) getTopRatedTv,
+    required TResult Function(_GetGenreResult1 value) getGenreResult1,
+    required TResult Function(_GetGenreResult2 value) getGenreResult2,
+    required TResult Function(_GetGenreResult3 value) getGenreResult3,
+    required TResult Function(_GetGenreResult4 value) getGenreResult4,
+    required TResult Function(_GetGenreNames value) getGenreNames,
+    required TResult Function(_ResetAll value) resetAll,
+    required TResult Function(_GetGenreResultTv1 value) getGenreResultTv1,
+    required TResult Function(_GetGenreResultTv2 value) getGenreResultTv2,
+    required TResult Function(_GetGenreResultTv3 value) getGenreResultTv3,
+  }) {
+    return getMovieByLanguage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ChangeIndicator value)? changeIndicator,
+    TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
+    TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
+    TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
+    TResult? Function(_GetTopTv value)? getTopTv,
+    TResult? Function(_GetTopMovie value)? getTopMovie,
+    TResult? Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult? Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult? Function(_GetGenreResult1 value)? getGenreResult1,
+    TResult? Function(_GetGenreResult2 value)? getGenreResult2,
+    TResult? Function(_GetGenreResult3 value)? getGenreResult3,
+    TResult? Function(_GetGenreResult4 value)? getGenreResult4,
+    TResult? Function(_GetGenreNames value)? getGenreNames,
+    TResult? Function(_ResetAll value)? resetAll,
+    TResult? Function(_GetGenreResultTv1 value)? getGenreResultTv1,
+    TResult? Function(_GetGenreResultTv2 value)? getGenreResultTv2,
+    TResult? Function(_GetGenreResultTv3 value)? getGenreResultTv3,
+  }) {
+    return getMovieByLanguage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ChangeIndicator value)? changeIndicator,
+    TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
+    TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
+    TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
+    TResult Function(_GetTopTv value)? getTopTv,
+    TResult Function(_GetTopMovie value)? getTopMovie,
+    TResult Function(_GetTopRatedMovie value)? getTopRatedMovie,
+    TResult Function(_GetTopRatedTv value)? getTopRatedTv,
+    TResult Function(_GetGenreResult1 value)? getGenreResult1,
+    TResult Function(_GetGenreResult2 value)? getGenreResult2,
+    TResult Function(_GetGenreResult3 value)? getGenreResult3,
+    TResult Function(_GetGenreResult4 value)? getGenreResult4,
+    TResult Function(_GetGenreNames value)? getGenreNames,
+    TResult Function(_ResetAll value)? resetAll,
+    TResult Function(_GetGenreResultTv1 value)? getGenreResultTv1,
+    TResult Function(_GetGenreResultTv2 value)? getGenreResultTv2,
+    TResult Function(_GetGenreResultTv3 value)? getGenreResultTv3,
+    required TResult orElse(),
+  }) {
+    if (getMovieByLanguage != null) {
+      return getMovieByLanguage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetMovieByLanguage implements HomeEvent {
+  const factory _GetMovieByLanguage(
+      {required final String language,
+      final int? gid}) = _$GetMovieByLanguageImpl;
+
+  String get language;
+  int? get gid;
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetMovieByLanguageImplCopyWith<_$GetMovieByLanguageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -637,6 +904,7 @@ class _$GetFilmMateMovieListImpl implements _GetFilmMateMovieList {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -661,6 +929,7 @@ class _$GetFilmMateMovieListImpl implements _GetFilmMateMovieList {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -685,6 +954,7 @@ class _$GetFilmMateMovieListImpl implements _GetFilmMateMovieList {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -713,6 +983,7 @@ class _$GetFilmMateMovieListImpl implements _GetFilmMateMovieList {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -737,6 +1008,7 @@ class _$GetFilmMateMovieListImpl implements _GetFilmMateMovieList {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -761,6 +1033,7 @@ class _$GetFilmMateMovieListImpl implements _GetFilmMateMovieList {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -832,6 +1105,7 @@ class _$GetFilmMateTvListImpl implements _GetFilmMateTvList {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -856,6 +1130,7 @@ class _$GetFilmMateTvListImpl implements _GetFilmMateTvList {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -880,6 +1155,7 @@ class _$GetFilmMateTvListImpl implements _GetFilmMateTvList {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -908,6 +1184,7 @@ class _$GetFilmMateTvListImpl implements _GetFilmMateTvList {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -932,6 +1209,7 @@ class _$GetFilmMateTvListImpl implements _GetFilmMateTvList {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -956,6 +1234,7 @@ class _$GetFilmMateTvListImpl implements _GetFilmMateTvList {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -1027,6 +1306,7 @@ class _$GetTopTvImpl implements _GetTopTv {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -1051,6 +1331,7 @@ class _$GetTopTvImpl implements _GetTopTv {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -1075,6 +1356,7 @@ class _$GetTopTvImpl implements _GetTopTv {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -1103,6 +1385,7 @@ class _$GetTopTvImpl implements _GetTopTv {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -1127,6 +1410,7 @@ class _$GetTopTvImpl implements _GetTopTv {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -1151,6 +1435,7 @@ class _$GetTopTvImpl implements _GetTopTv {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -1222,6 +1507,7 @@ class _$GetTopMovieImpl implements _GetTopMovie {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -1246,6 +1532,7 @@ class _$GetTopMovieImpl implements _GetTopMovie {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -1270,6 +1557,7 @@ class _$GetTopMovieImpl implements _GetTopMovie {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -1298,6 +1586,7 @@ class _$GetTopMovieImpl implements _GetTopMovie {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -1322,6 +1611,7 @@ class _$GetTopMovieImpl implements _GetTopMovie {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -1346,6 +1636,7 @@ class _$GetTopMovieImpl implements _GetTopMovie {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -1417,6 +1708,7 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -1441,6 +1733,7 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -1465,6 +1758,7 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -1493,6 +1787,7 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -1517,6 +1812,7 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -1541,6 +1837,7 @@ class _$GetTopRatedMovieImpl implements _GetTopRatedMovie {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -1612,6 +1909,7 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -1636,6 +1934,7 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -1660,6 +1959,7 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -1688,6 +1988,7 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -1712,6 +2013,7 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -1736,6 +2038,7 @@ class _$GetTopRatedTvImpl implements _GetTopRatedTv {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -1807,6 +2110,7 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -1831,6 +2135,7 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -1855,6 +2160,7 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -1883,6 +2189,7 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -1907,6 +2214,7 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -1931,6 +2239,7 @@ class _$GetGenreResult1Impl implements _GetGenreResult1 {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -2002,6 +2311,7 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -2026,6 +2336,7 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -2050,6 +2361,7 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -2078,6 +2390,7 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -2102,6 +2415,7 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -2126,6 +2440,7 @@ class _$GetGenreResult2Impl implements _GetGenreResult2 {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -2197,6 +2512,7 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -2221,6 +2537,7 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -2245,6 +2562,7 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -2273,6 +2591,7 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -2297,6 +2616,7 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -2321,6 +2641,7 @@ class _$GetGenreResult3Impl implements _GetGenreResult3 {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -2392,6 +2713,7 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -2416,6 +2738,7 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -2440,6 +2763,7 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -2468,6 +2792,7 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -2492,6 +2817,7 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -2516,6 +2842,7 @@ class _$GetGenreResult4Impl implements _GetGenreResult4 {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -2587,6 +2914,7 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -2611,6 +2939,7 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -2635,6 +2964,7 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -2663,6 +2993,7 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -2687,6 +3018,7 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -2711,6 +3043,7 @@ class _$GetGenreNamesImpl implements _GetGenreNames {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -2782,6 +3115,7 @@ class _$ResetAllImpl implements _ResetAll {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -2806,6 +3140,7 @@ class _$ResetAllImpl implements _ResetAll {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -2830,6 +3165,7 @@ class _$ResetAllImpl implements _ResetAll {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -2858,6 +3194,7 @@ class _$ResetAllImpl implements _ResetAll {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -2882,6 +3219,7 @@ class _$ResetAllImpl implements _ResetAll {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -2906,6 +3244,7 @@ class _$ResetAllImpl implements _ResetAll {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -2977,6 +3316,7 @@ class _$GetGenreResultTv1Impl implements _GetGenreResultTv1 {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -3001,6 +3341,7 @@ class _$GetGenreResultTv1Impl implements _GetGenreResultTv1 {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -3025,6 +3366,7 @@ class _$GetGenreResultTv1Impl implements _GetGenreResultTv1 {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -3053,6 +3395,7 @@ class _$GetGenreResultTv1Impl implements _GetGenreResultTv1 {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -3077,6 +3420,7 @@ class _$GetGenreResultTv1Impl implements _GetGenreResultTv1 {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -3101,6 +3445,7 @@ class _$GetGenreResultTv1Impl implements _GetGenreResultTv1 {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -3172,6 +3517,7 @@ class _$GetGenreResultTv2Impl implements _GetGenreResultTv2 {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -3196,6 +3542,7 @@ class _$GetGenreResultTv2Impl implements _GetGenreResultTv2 {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -3220,6 +3567,7 @@ class _$GetGenreResultTv2Impl implements _GetGenreResultTv2 {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -3248,6 +3596,7 @@ class _$GetGenreResultTv2Impl implements _GetGenreResultTv2 {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -3272,6 +3621,7 @@ class _$GetGenreResultTv2Impl implements _GetGenreResultTv2 {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -3296,6 +3646,7 @@ class _$GetGenreResultTv2Impl implements _GetGenreResultTv2 {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -3367,6 +3718,7 @@ class _$GetGenreResultTv3Impl implements _GetGenreResultTv3 {
   TResult when<TResult extends Object?>({
     required TResult Function(int index) changeIndicator,
     required TResult Function() getcarouselPosters,
+    required TResult Function(String language, int? gid) getMovieByLanguage,
     required TResult Function() getFilmMateMovieList,
     required TResult Function() getFilmMateTvList,
     required TResult Function() getTopTv,
@@ -3391,6 +3743,7 @@ class _$GetGenreResultTv3Impl implements _GetGenreResultTv3 {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int index)? changeIndicator,
     TResult? Function()? getcarouselPosters,
+    TResult? Function(String language, int? gid)? getMovieByLanguage,
     TResult? Function()? getFilmMateMovieList,
     TResult? Function()? getFilmMateTvList,
     TResult? Function()? getTopTv,
@@ -3415,6 +3768,7 @@ class _$GetGenreResultTv3Impl implements _GetGenreResultTv3 {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int index)? changeIndicator,
     TResult Function()? getcarouselPosters,
+    TResult Function(String language, int? gid)? getMovieByLanguage,
     TResult Function()? getFilmMateMovieList,
     TResult Function()? getFilmMateTvList,
     TResult Function()? getTopTv,
@@ -3443,6 +3797,7 @@ class _$GetGenreResultTv3Impl implements _GetGenreResultTv3 {
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeIndicator value) changeIndicator,
     required TResult Function(_GetCarouselPosters value) getcarouselPosters,
+    required TResult Function(_GetMovieByLanguage value) getMovieByLanguage,
     required TResult Function(_GetFilmMateMovieList value) getFilmMateMovieList,
     required TResult Function(_GetFilmMateTvList value) getFilmMateTvList,
     required TResult Function(_GetTopTv value) getTopTv,
@@ -3467,6 +3822,7 @@ class _$GetGenreResultTv3Impl implements _GetGenreResultTv3 {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ChangeIndicator value)? changeIndicator,
     TResult? Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult? Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult? Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult? Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult? Function(_GetTopTv value)? getTopTv,
@@ -3491,6 +3847,7 @@ class _$GetGenreResultTv3Impl implements _GetGenreResultTv3 {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeIndicator value)? changeIndicator,
     TResult Function(_GetCarouselPosters value)? getcarouselPosters,
+    TResult Function(_GetMovieByLanguage value)? getMovieByLanguage,
     TResult Function(_GetFilmMateMovieList value)? getFilmMateMovieList,
     TResult Function(_GetFilmMateTvList value)? getFilmMateTvList,
     TResult Function(_GetTopTv value)? getTopTv,
@@ -3567,6 +3924,9 @@ mixin _$HomeState {
   List<TMDBResponse> get filmMateTvList => throw _privateConstructorUsedError;
   bool get isFilmMateTvLoading => throw _privateConstructorUsedError;
   bool get isFilmMateTvError => throw _privateConstructorUsedError;
+  List<TMDBResponse> get langResultList => throw _privateConstructorUsedError;
+  bool get langResultLoading => throw _privateConstructorUsedError;
+  bool get langResultError => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -3625,7 +3985,10 @@ abstract class $HomeStateCopyWith<$Res> {
       bool isFilmMateMovieError,
       List<TMDBResponse> filmMateTvList,
       bool isFilmMateTvLoading,
-      bool isFilmMateTvError});
+      bool isFilmMateTvError,
+      List<TMDBResponse> langResultList,
+      bool langResultLoading,
+      bool langResultError});
 }
 
 /// @nodoc
@@ -3688,6 +4051,9 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? filmMateTvList = null,
     Object? isFilmMateTvLoading = null,
     Object? isFilmMateTvError = null,
+    Object? langResultList = null,
+    Object? langResultLoading = null,
+    Object? langResultError = null,
   }) {
     return _then(_value.copyWith(
       carouselIndex: null == carouselIndex
@@ -3870,6 +4236,18 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.isFilmMateTvError
           : isFilmMateTvError // ignore: cast_nullable_to_non_nullable
               as bool,
+      langResultList: null == langResultList
+          ? _value.langResultList
+          : langResultList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      langResultLoading: null == langResultLoading
+          ? _value.langResultLoading
+          : langResultLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      langResultError: null == langResultError
+          ? _value.langResultError
+          : langResultError // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -3927,7 +4305,10 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       bool isFilmMateMovieError,
       List<TMDBResponse> filmMateTvList,
       bool isFilmMateTvLoading,
-      bool isFilmMateTvError});
+      bool isFilmMateTvError,
+      List<TMDBResponse> langResultList,
+      bool langResultLoading,
+      bool langResultError});
 }
 
 /// @nodoc
@@ -3988,6 +4369,9 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? filmMateTvList = null,
     Object? isFilmMateTvLoading = null,
     Object? isFilmMateTvError = null,
+    Object? langResultList = null,
+    Object? langResultLoading = null,
+    Object? langResultError = null,
   }) {
     return _then(_$HomeStateImpl(
       carouselIndex: null == carouselIndex
@@ -4170,6 +4554,18 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.isFilmMateTvError
           : isFilmMateTvError // ignore: cast_nullable_to_non_nullable
               as bool,
+      langResultList: null == langResultList
+          ? _value._langResultList
+          : langResultList // ignore: cast_nullable_to_non_nullable
+              as List<TMDBResponse>,
+      langResultLoading: null == langResultLoading
+          ? _value.langResultLoading
+          : langResultLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      langResultError: null == langResultError
+          ? _value.langResultError
+          : langResultError // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -4222,7 +4618,10 @@ class _$HomeStateImpl implements _HomeState {
       required this.isFilmMateMovieError,
       required final List<TMDBResponse> filmMateTvList,
       required this.isFilmMateTvLoading,
-      required this.isFilmMateTvError})
+      required this.isFilmMateTvError,
+      required final List<TMDBResponse> langResultList,
+      required this.langResultLoading,
+      required this.langResultError})
       : _carouselList = carouselList,
         _topTvList = topTvList,
         _topMovieList = topMovieList,
@@ -4238,7 +4637,8 @@ class _$HomeStateImpl implements _HomeState {
         _genreResultTv2 = genreResultTv2,
         _genreResultTv3 = genreResultTv3,
         _filmMateMovieList = filmMateMovieList,
-        _filmMateTvList = filmMateTvList;
+        _filmMateTvList = filmMateTvList,
+        _langResultList = langResultList;
 
   @override
   final int carouselIndex;
@@ -4427,10 +4827,22 @@ class _$HomeStateImpl implements _HomeState {
   final bool isFilmMateTvLoading;
   @override
   final bool isFilmMateTvError;
+  final List<TMDBResponse> _langResultList;
+  @override
+  List<TMDBResponse> get langResultList {
+    if (_langResultList is EqualUnmodifiableListView) return _langResultList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_langResultList);
+  }
+
+  @override
+  final bool langResultLoading;
+  @override
+  final bool langResultError;
 
   @override
   String toString() {
-    return 'HomeState(carouselIndex: $carouselIndex, isCarouselLoading: $isCarouselLoading, isCarouselError: $isCarouselError, carouselList: $carouselList, isTopTvError: $isTopTvError, isTopMovieError: $isTopMovieError, isTopTvLoading: $isTopTvLoading, isTopMovieLoading: $isTopMovieLoading, topTvList: $topTvList, topMovieList: $topMovieList, topRatedTv: $topRatedTv, topRatedMovies: $topRatedMovies, isTopRatedMovieError: $isTopRatedMovieError, isTopRatedTvError: $isTopRatedTvError, isTopRatedMovieLoading: $isTopRatedMovieLoading, isTopRatedTvLoading: $isTopRatedTvLoading, genreResult1: $genreResult1, isGenreLoading1: $isGenreLoading1, isGenreError1: $isGenreError1, genreResult2: $genreResult2, isGenreLoading2: $isGenreLoading2, isGenreError2: $isGenreError2, genreResult3: $genreResult3, isGenreLoading3: $isGenreLoading3, isGenreError3: $isGenreError3, genreResult4: $genreResult4, isGenreLoading4: $isGenreLoading4, isGenreError4: $isGenreError4, genreNames: $genreNames, genreIds: $genreIds, genreResultTv1: $genreResultTv1, isGenreLoadingTv1: $isGenreLoadingTv1, isGenreErrorTv1: $isGenreErrorTv1, genreResultTv2: $genreResultTv2, isGenreLoadingTv2: $isGenreLoadingTv2, isGenreErrorTv2: $isGenreErrorTv2, genreResultTv3: $genreResultTv3, isGenreLoadingTv3: $isGenreLoadingTv3, isGenreErrorTv3: $isGenreErrorTv3, filmMateMovieList: $filmMateMovieList, isFilmMateMovieLoading: $isFilmMateMovieLoading, isFilmMateMovieError: $isFilmMateMovieError, filmMateTvList: $filmMateTvList, isFilmMateTvLoading: $isFilmMateTvLoading, isFilmMateTvError: $isFilmMateTvError)';
+    return 'HomeState(carouselIndex: $carouselIndex, isCarouselLoading: $isCarouselLoading, isCarouselError: $isCarouselError, carouselList: $carouselList, isTopTvError: $isTopTvError, isTopMovieError: $isTopMovieError, isTopTvLoading: $isTopTvLoading, isTopMovieLoading: $isTopMovieLoading, topTvList: $topTvList, topMovieList: $topMovieList, topRatedTv: $topRatedTv, topRatedMovies: $topRatedMovies, isTopRatedMovieError: $isTopRatedMovieError, isTopRatedTvError: $isTopRatedTvError, isTopRatedMovieLoading: $isTopRatedMovieLoading, isTopRatedTvLoading: $isTopRatedTvLoading, genreResult1: $genreResult1, isGenreLoading1: $isGenreLoading1, isGenreError1: $isGenreError1, genreResult2: $genreResult2, isGenreLoading2: $isGenreLoading2, isGenreError2: $isGenreError2, genreResult3: $genreResult3, isGenreLoading3: $isGenreLoading3, isGenreError3: $isGenreError3, genreResult4: $genreResult4, isGenreLoading4: $isGenreLoading4, isGenreError4: $isGenreError4, genreNames: $genreNames, genreIds: $genreIds, genreResultTv1: $genreResultTv1, isGenreLoadingTv1: $isGenreLoadingTv1, isGenreErrorTv1: $isGenreErrorTv1, genreResultTv2: $genreResultTv2, isGenreLoadingTv2: $isGenreLoadingTv2, isGenreErrorTv2: $isGenreErrorTv2, genreResultTv3: $genreResultTv3, isGenreLoadingTv3: $isGenreLoadingTv3, isGenreErrorTv3: $isGenreErrorTv3, filmMateMovieList: $filmMateMovieList, isFilmMateMovieLoading: $isFilmMateMovieLoading, isFilmMateMovieError: $isFilmMateMovieError, filmMateTvList: $filmMateTvList, isFilmMateTvLoading: $isFilmMateTvLoading, isFilmMateTvError: $isFilmMateTvError, langResultList: $langResultList, langResultLoading: $langResultLoading, langResultError: $langResultError)';
   }
 
   @override
@@ -4524,7 +4936,10 @@ class _$HomeStateImpl implements _HomeState {
             const DeepCollectionEquality()
                 .equals(other._filmMateTvList, _filmMateTvList) &&
             (identical(other.isFilmMateTvLoading, isFilmMateTvLoading) || other.isFilmMateTvLoading == isFilmMateTvLoading) &&
-            (identical(other.isFilmMateTvError, isFilmMateTvError) || other.isFilmMateTvError == isFilmMateTvError));
+            (identical(other.isFilmMateTvError, isFilmMateTvError) || other.isFilmMateTvError == isFilmMateTvError) &&
+            const DeepCollectionEquality().equals(other._langResultList, _langResultList) &&
+            (identical(other.langResultLoading, langResultLoading) || other.langResultLoading == langResultLoading) &&
+            (identical(other.langResultError, langResultError) || other.langResultError == langResultError));
   }
 
   @override
@@ -4574,7 +4989,10 @@ class _$HomeStateImpl implements _HomeState {
         isFilmMateMovieError,
         const DeepCollectionEquality().hash(_filmMateTvList),
         isFilmMateTvLoading,
-        isFilmMateTvError
+        isFilmMateTvError,
+        const DeepCollectionEquality().hash(_langResultList),
+        langResultLoading,
+        langResultError
       ]);
 
   /// Create a copy of HomeState
@@ -4632,7 +5050,10 @@ abstract class _HomeState implements HomeState {
       required final bool isFilmMateMovieError,
       required final List<TMDBResponse> filmMateTvList,
       required final bool isFilmMateTvLoading,
-      required final bool isFilmMateTvError}) = _$HomeStateImpl;
+      required final bool isFilmMateTvError,
+      required final List<TMDBResponse> langResultList,
+      required final bool langResultLoading,
+      required final bool langResultError}) = _$HomeStateImpl;
 
   @override
   int get carouselIndex;
@@ -4724,6 +5145,12 @@ abstract class _HomeState implements HomeState {
   bool get isFilmMateTvLoading;
   @override
   bool get isFilmMateTvError;
+  @override
+  List<TMDBResponse> get langResultList;
+  @override
+  bool get langResultLoading;
+  @override
+  bool get langResultError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

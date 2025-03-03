@@ -3,6 +3,11 @@ part 'tmdb.g.dart';
 
 @JsonSerializable()
 class TMDB {
+  @JsonKey(name: 'page')
+  int? page;
+  @JsonKey(name: 'total_pages')
+  int? totalPage;
+
   @JsonKey(name: 'results')
   List<TMDBResponse> results;
 

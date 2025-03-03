@@ -142,7 +142,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       });
     });
 
-    on<_GetFilmMateTvList>((event,emit) async{
+    on<_GetFilmMateTvList>((event, emit) async {
       if (state.filmMateTvList.isNotEmpty) {
         return;
       }
@@ -173,7 +173,32 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         ));
       });
     });
-    
+
+    on<_GetMovieByLanguage>((event,emit) async{
+      emit(state.copyWith(langResultLoading: true, langResultError: false));
+
+      final result = await _homeServices.getMovieByLanguage(language: event.language,gid: event.gid);
+      result.fold((MainFailure failure) {
+        log('Top Movie -> failure');
+        emit(
+          state.copyWith(
+            langResultError: true,
+            langResultLoading: false,
+          ),
+        );
+      }, (TMDB success) {
+        log("Top Movie -> success");
+        // Filter the success.result list
+        final filteredMovies =
+            success.results.where((media) => media.posterPath != null).toList();
+        emit(state.copyWith(
+          langResultError: false,
+          langResultLoading: false,
+          langResultList: filteredMovies,
+        ));
+      });
+    });
+
     on<_GetTopMovie>((event, emit) async {
       if (state.topMovieList.isNotEmpty) {
         return;

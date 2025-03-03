@@ -1,4 +1,4 @@
-import 'package:film_mate/domain/models/user/genre.dart';
+import 'package:film_mate/domain/models/genre/genre.dart';
 
 class GenreData {
   static List<Genre> genres = [

@@ -290,9 +290,9 @@ class ImplHome implements HomeServices {
 
     return const Left(MainFailure.clientFailure());
   }
-  
+
   @override
-  Future<Either<MainFailure, TMDB>> getFilmMateTvList() async{
+  Future<Either<MainFailure, TMDB>> getFilmMateTvList() async {
     const int maxRetries = 5;
 
     for (int retryCount = 1; retryCount <= maxRetries; retryCount++) {
@@ -310,6 +310,59 @@ class ImplHome implements HomeServices {
         log("Response status code: ${response.statusCode}");
         log("Movie data: ${response.data.toString()}");
 
+        if (response.statusCode == 200 || response.statusCode == 203) {
+          final result = TMDB.fromJson(response.data);
+          return Right(result);
+        } else if (response.statusCode == 500) {
+          log("Server error: 500. Retrying attempt $retryCount of $maxRetries...");
+        } else {
+          log("Unexpected status code: ${response.statusCode}");
+          return const Left(MainFailure.serverFailure());
+        }
+      } on DioException catch (dioError) {
+        log("DioException: ${dioError.message}");
+        if (retryCount == maxRetries) {
+          return const Left(MainFailure.clientFailure());
+        }
+      } catch (e) {
+        log("Unexpected error: $e");
+        return const Left(MainFailure.clientFailure());
+      }
+
+      // Introduce an exponential backoff delay
+      await Future.delayed(Duration(milliseconds: 500 * retryCount));
+    }
+
+    return const Left(MainFailure.clientFailure());
+  }
+
+  @override
+  Future<Either<MainFailure, TMDB>> getMovieByLanguage(
+      {required String language, int? gid}) async {
+    const int maxRetries = 5;
+
+    for (int retryCount = 1; retryCount <= maxRetries; retryCount++) {
+      try {
+        Map<String, dynamic>? params = {
+          'api_key': apiKey,
+          'with_original_language': language,
+        };
+
+        if (gid != null) {
+          params = {
+            'api_key': apiKey,
+            'with_genres': gid,
+            'with_original_language': language,
+          };
+        }
+
+        final Response response = await Dio(BaseOptions()).get(
+          EndPoints.genreSearch,
+          queryParameters: params,
+        );
+        log("Endpoint: ${EndPoints.getMovie}");
+        log("Response status code: ${response.statusCode}");
+        log("Language filter with gid = $gid -> success");
         if (response.statusCode == 200 || response.statusCode == 203) {
           final result = TMDB.fromJson(response.data);
           return Right(result);

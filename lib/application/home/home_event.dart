@@ -6,6 +6,10 @@ class HomeEvent with _$HomeEvent {
     required int index,
   }) = _ChangeIndicator;
   const factory HomeEvent.getcarouselPosters() = _GetCarouselPosters;
+  const factory HomeEvent.getMovieByLanguage({
+    required String language,
+    int? gid
+  }) = _GetMovieByLanguage;
   const factory HomeEvent.getFilmMateMovieList() = _GetFilmMateMovieList;
   const factory HomeEvent.getFilmMateTvList() = _GetFilmMateTvList;
   const factory HomeEvent.getTopTv() = _GetTopTv;

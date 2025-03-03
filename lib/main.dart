@@ -5,7 +5,6 @@ import 'package:film_mate/presentation/splash/screen_splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'application/explore/explore_bloc.dart';
 import 'application/home/home_bloc.dart';
@@ -14,8 +13,7 @@ import 'application/search/search_bloc.dart';
 import 'application/user/user_bloc.dart';
 import 'core/di/injectable.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'domain/models/user/genre.dart';
-import 'domain/models/user/user_model.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,17 +22,6 @@ Future<void> main() async {
  );
   await configureInjectable();
   await SharedPreferences.getInstance();
-  await Hive.initFlutter();
-  if (!Hive.isAdapterRegistered(UserAdapter().typeId)) {
-    Hive.registerAdapter(UserAdapter());
-  }
-
-  if (!Hive.isAdapterRegistered(GenreAdapter().typeId)) {
-    Hive.registerAdapter(GenreAdapter());
-  }
-
-  await Hive.openBox<User>('user');
-  await Hive.openBox<Genre>('genre');
   runApp(const MyApp());
 }
 
