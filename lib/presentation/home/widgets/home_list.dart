@@ -29,8 +29,11 @@ class HomeList extends StatelessWidget {
     if (isError) {
       return const Text("Error");
     }
-    if (isLoading || data.isEmpty) {
+    if (isLoading) {
       return const CircularProgressIndicator();
+    }
+    if (data.isEmpty) {
+      return SizedBox();
     }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

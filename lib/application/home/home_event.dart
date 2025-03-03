@@ -6,6 +6,8 @@ class HomeEvent with _$HomeEvent {
     required int index,
   }) = _ChangeIndicator;
   const factory HomeEvent.getcarouselPosters() = _GetCarouselPosters;
+  const factory HomeEvent.getFilmMateMovieList() = _GetFilmMateMovieList;
+  const factory HomeEvent.getFilmMateTvList() = _GetFilmMateTvList;
   const factory HomeEvent.getTopTv() = _GetTopTv;
   const factory HomeEvent.getTopMovie() = _GetTopMovie;
   const factory HomeEvent.getTopRatedMovie() = _GetTopRatedMovie;

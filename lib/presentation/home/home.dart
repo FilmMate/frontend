@@ -26,6 +26,8 @@ class ScreenHome extends StatelessWidget {
       BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResultTv1());
       BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResultTv2());
       BlocProvider.of<HomeBloc>(context).add(HomeEvent.getGenreResultTv3());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getFilmMateMovieList());
+      BlocProvider.of<HomeBloc>(context).add(HomeEvent.getFilmMateTvList());
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -67,6 +69,24 @@ class ScreenHome extends StatelessWidget {
                         isError: state.isTopMovieError,
                         isLoading: state.isTopMovieLoading,
                         type: "movie",
+                      ),
+                      HomeList(
+                        size: size,
+                        title: "FilmMate's Movie Picks",
+                        data: state.filmMateMovieList,
+                        isError: state.isFilmMateMovieError,
+                        isLoading: state.isFilmMateMovieLoading,
+                        type: "movie",
+                        length: state.filmMateMovieList.length,
+                      ),
+                      HomeList(
+                        size: size,
+                        title: "FilmMate's Tv Picks",
+                        data: state.filmMateTvList,
+                        isError: state.isFilmMateTvError,
+                        isLoading: state.isFilmMateTvLoading,
+                        type: "tv",
+                        length: state.filmMateTvList.length,
                       ),
                       // const GenreSection(),
                       // TempGenreSection(size: size),

@@ -42,6 +42,12 @@ class HomeState with _$HomeState {
     required List<TMDBResponse> genreResultTv3,
     required bool isGenreLoadingTv3,
     required bool isGenreErrorTv3,
+    required List<TMDBResponse> filmMateMovieList,
+    required bool isFilmMateMovieLoading,
+    required bool isFilmMateMovieError,
+    required List<TMDBResponse> filmMateTvList,
+    required bool isFilmMateTvLoading,
+    required bool isFilmMateTvError,
   }) = _HomeState;
   factory HomeState.initial() => const HomeState(
         carouselIndex: 0,
@@ -72,7 +78,7 @@ class HomeState with _$HomeState {
         genreResult4: [],
         isGenreLoading4: false,
         isGenreError4: false,
-        genreNames: ['','','',''],
+        genreNames: ['', '', '', ''],
         genreIds: [],
         isGenreLoadingTv1: false,
         isGenreErrorTv1: false,
@@ -83,5 +89,11 @@ class HomeState with _$HomeState {
         isGenreLoadingTv3: false,
         isGenreErrorTv3: false,
         genreResultTv3: [],
+        filmMateMovieList: [],
+        isFilmMateMovieLoading: false,
+        isFilmMateMovieError: false,
+        filmMateTvList: [],
+        isFilmMateTvLoading: false,
+        isFilmMateTvError: false,
       );
 }

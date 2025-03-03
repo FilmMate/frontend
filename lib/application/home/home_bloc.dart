@@ -29,6 +29,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<_ResetAll>(
       (event, emit) {
         emit(state.copyWith(
+          carouselIndex: 0,
+          isCarouselLoading: false,
+          isCarouselError: false,
+          carouselList: [],
           genreResult1: [],
           isGenreLoading1: false,
           isGenreError1: false,
@@ -106,6 +110,70 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       });
     });
 
+    on<_GetFilmMateMovieList>((event, emit) async {
+      if (state.filmMateMovieList.isNotEmpty) {
+        return;
+      }
+      emit(state.copyWith(
+        isFilmMateMovieLoading: true,
+        isFilmMateMovieError: false,
+      ));
+
+      final result = await _homeServices.getFilmMateList();
+      result.fold((MainFailure failure) {
+        log('Filmmate movies Poster -> failure');
+        emit(
+          state.copyWith(
+            isFilmMateMovieError: true,
+            isFilmMateMovieLoading: false,
+          ),
+        );
+      }, (TMDB success) {
+        log("Filmmate movies Poster -> success");
+        // Filter the success.result list
+        final filteredMovies =
+            success.results.where((media) => media.posterPath != null).toList();
+        filteredMovies.shuffle();
+        emit(state.copyWith(
+          isFilmMateMovieError: false,
+          isFilmMateMovieLoading: false,
+          filmMateMovieList: filteredMovies,
+        ));
+      });
+    });
+
+    on<_GetFilmMateTvList>((event,emit) async{
+      if (state.filmMateTvList.isNotEmpty) {
+        return;
+      }
+      emit(state.copyWith(
+        isFilmMateTvLoading: true,
+        isFilmMateTvError: false,
+      ));
+
+      final result = await _homeServices.getFilmMateTvList();
+      result.fold((MainFailure failure) {
+        log('Filmmate movies Poster -> failure');
+        emit(
+          state.copyWith(
+            isFilmMateTvError: true,
+            isFilmMateTvLoading: false,
+          ),
+        );
+      }, (TMDB success) {
+        log("Filmmate movies Poster -> success");
+        // Filter the success.result list
+        final filteredMovies =
+            success.results.where((media) => media.posterPath != null).toList();
+        filteredMovies.shuffle();
+        emit(state.copyWith(
+          isFilmMateTvError: false,
+          isFilmMateTvLoading: false,
+          filmMateTvList: filteredMovies,
+        ));
+      });
+    });
+    
     on<_GetTopMovie>((event, emit) async {
       if (state.topMovieList.isNotEmpty) {
         return;

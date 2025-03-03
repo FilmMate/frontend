@@ -52,7 +52,7 @@ class CarouselSection extends StatelessWidget {
                     log(state.carouselList[index].id.toString());
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => ScreenDetailPrimary(
-                              type: "movie",
+                              type: state.carouselList[index].type ?? "movie",
                               id: state.carouselList[index].id!,
                             )));
                   },
@@ -61,7 +61,7 @@ class CarouselSection extends StatelessWidget {
                   ),
                 );
               },
-              itemCount: 6,
+              itemCount: 5,
               options: CarouselOptions(
                 height: size.width,
                 aspectRatio: 4 / 5,
@@ -84,7 +84,7 @@ class CarouselSection extends StatelessWidget {
             ),
             kHeightXS,
             DotsIndicator(
-              dotsCount: 6,
+              dotsCount: 5,
               position: state.carouselIndex,
               decorator: DotsDecorator(
                 activeColor: kSelectedBackgroundColor,

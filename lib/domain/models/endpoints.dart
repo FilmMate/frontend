@@ -14,6 +14,12 @@ class EndPoints {
   //get hero
   static const getHero = "$serverBaseUrl/gethero";
 
+  //GET MOVIE LIST from admin console
+  static const movieList = "$serverBaseUrl/getmovie";
+
+  //GET TV LIST from admin console
+  static const tvList = "$serverBaseUrl/gettv";
+
   // get details
   static const getMovie = "$serverBaseUrl/getmoviedetail";
   static const getTv = "$serverBaseUrl/gettvdetail";

@@ -18,7 +18,7 @@ class ImplHome implements HomeServices {
     while (true) {
       try {
         final Response response = await Dio(BaseOptions()).get(
-          EndPoints.getNowPlaying,
+          EndPoints.getHero,
           queryParameters: {
             'api_key': apiKey,
           },
@@ -216,7 +216,7 @@ class ImplHome implements HomeServices {
     int retryCount = 0;
     while (true) {
       try {
-        final List<String> lang = ['ja','ko','en','de'];
+        final List<String> lang = ['ja', 'ko', 'en', 'de'];
         final Response response = await Dio(BaseOptions()).get(
           EndPoints.genreSearchTv,
           queryParameters: {
@@ -244,5 +244,95 @@ class ImplHome implements HomeServices {
         }
       }
     }
+  }
+
+  @override
+  Future<Either<MainFailure, TMDB>> getFilmMateList() async {
+    const int maxRetries = 5;
+
+    for (int retryCount = 1; retryCount <= maxRetries; retryCount++) {
+      try {
+        final Response response = await Dio(
+          BaseOptions(
+            validateStatus: (status) {
+              // Allow all status codes to be handled manually
+              return true;
+            },
+          ),
+        ).get(EndPoints.movieList);
+
+        log("Endpoint: ${EndPoints.getMovie}");
+        log("Response status code: ${response.statusCode}");
+        log("Movie data: ${response.data.toString()}");
+
+        if (response.statusCode == 200 || response.statusCode == 203) {
+          final result = TMDB.fromJson(response.data);
+          return Right(result);
+        } else if (response.statusCode == 500) {
+          log("Server error: 500. Retrying attempt $retryCount of $maxRetries...");
+        } else {
+          log("Unexpected status code: ${response.statusCode}");
+          return const Left(MainFailure.serverFailure());
+        }
+      } on DioException catch (dioError) {
+        log("DioException: ${dioError.message}");
+        if (retryCount == maxRetries) {
+          return const Left(MainFailure.clientFailure());
+        }
+      } catch (e) {
+        log("Unexpected error: $e");
+        return const Left(MainFailure.clientFailure());
+      }
+
+      // Introduce an exponential backoff delay
+      await Future.delayed(Duration(milliseconds: 500 * retryCount));
+    }
+
+    return const Left(MainFailure.clientFailure());
+  }
+  
+  @override
+  Future<Either<MainFailure, TMDB>> getFilmMateTvList() async{
+    const int maxRetries = 5;
+
+    for (int retryCount = 1; retryCount <= maxRetries; retryCount++) {
+      try {
+        final Response response = await Dio(
+          BaseOptions(
+            validateStatus: (status) {
+              // Allow all status codes to be handled manually
+              return true;
+            },
+          ),
+        ).get(EndPoints.tvList);
+
+        log("Endpoint: ${EndPoints.getMovie}");
+        log("Response status code: ${response.statusCode}");
+        log("Movie data: ${response.data.toString()}");
+
+        if (response.statusCode == 200 || response.statusCode == 203) {
+          final result = TMDB.fromJson(response.data);
+          return Right(result);
+        } else if (response.statusCode == 500) {
+          log("Server error: 500. Retrying attempt $retryCount of $maxRetries...");
+        } else {
+          log("Unexpected status code: ${response.statusCode}");
+          return const Left(MainFailure.serverFailure());
+        }
+      } on DioException catch (dioError) {
+        log("DioException: ${dioError.message}");
+        if (retryCount == maxRetries) {
+          return const Left(MainFailure.clientFailure());
+        }
+      } catch (e) {
+        log("Unexpected error: $e");
+        return const Left(MainFailure.clientFailure());
+      }
+
+      // Introduce an exponential backoff delay
+      await Future.delayed(Duration(milliseconds: 500 * retryCount));
+    }
+
+    return const Left(MainFailure.clientFailure());
   }
 }

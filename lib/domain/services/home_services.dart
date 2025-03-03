@@ -4,6 +4,8 @@ import 'package:film_mate/domain/models/tmdb/tmdb.dart';
 
 abstract class HomeServices {
   Future<Either<MainFailure, TMDB>> getCarouselList();
+  Future<Either<MainFailure, TMDB>> getFilmMateList();
+  Future<Either<MainFailure, TMDB>> getFilmMateTvList();
   Future<Either<MainFailure, TMDB>> getTopMovies();
   Future<Either<MainFailure, TMDB>> getTopTv();
   Future<Either<MainFailure, TMDB>> getTopRatedMovies();
