@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/ASUS/Downloads/FilmMate/film_mate/linux"
+    "cmake.sourceDirectory": "C:/Users/ASUS/Downloads/FilmMate/film_mate/linux",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

@@ -1,0 +1,2 @@
+C:/Users/ASUS/Downloads/FilmMate/film_mate/android/app/.cxx/Debug/6fy45f22/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/Downloads/FilmMate/film_mate/android/app/.cxx/Debug/6fy45f22/armeabi-v7a/CMakeFiles/rebuild_cache.dir
