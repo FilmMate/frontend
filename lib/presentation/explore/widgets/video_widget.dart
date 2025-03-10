@@ -117,7 +117,7 @@ class _VideoWidgetState extends State<VideoWidget> {
                       padding: const EdgeInsets.all(8.0),
                       child: CircleAvatar(
                         radius: 14,
-                        backgroundColor: Colors.black.withOpacity(0.5),
+                        backgroundColor: Colors.black.withValues(alpha: 0.5),
                         child: Center(
                           child: IconButton(
                             alignment: Alignment.center,
@@ -170,7 +170,7 @@ class _VideoWidgetState extends State<VideoWidget> {
                       ),
                       CircleAvatar(
                         radius: 30,
-                        backgroundColor: kBackgroundColor.withOpacity(0.6),
+                        backgroundColor: kBackgroundColor.withValues(alpha: 0.6),
                         child: const Icon(
                           Icons.play_arrow_rounded,
                           color: kSelectedBackgroundColor,
