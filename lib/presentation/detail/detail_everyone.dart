@@ -4,6 +4,7 @@ import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/domain/models/cast_and_crew.dart/cast_and_crew.dart';
 import 'package:film_mate/domain/models/languages/lang_data.dart';
+import 'package:film_mate/presentation/detail/widgets/chat_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/cast_section.dart';
@@ -12,6 +13,7 @@ import 'widgets/section1.dart';
 import 'widgets/section2.dart';
 
 class ScreenDetailEveryone extends StatelessWidget {
+  final int id;
   final String title, duration, overview, release, image, lang, backDrop;
   final double rating;
   final List<String> genres;
@@ -32,7 +34,8 @@ class ScreenDetailEveryone extends StatelessWidget {
       required this.image,
       required this.crew,
       required this.cast,
-      required this.backDrop});
+      required this.backDrop,
+      required this.id});
 
   @override
   Widget build(BuildContext context) {
@@ -97,6 +100,10 @@ class ScreenDetailEveryone extends StatelessWidget {
             crew.isEmpty ? kHeightXS : CrewSection(size: size, crew: crew)
           ],
         ),
+      ),
+      floatingActionButton: ChatButton(
+        id: id,
+        title: title,
       ),
     );
   }

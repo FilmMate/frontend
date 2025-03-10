@@ -3,7 +3,7 @@ import 'package:film_mate/application/explore/explore_bloc.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/domain/models/languages/lang_data.dart';
-import 'package:film_mate/presentation/chat/chatroom.dart';
+import 'package:film_mate/presentation/detail/widgets/chat_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/cast_section.dart';
@@ -117,26 +117,8 @@ class ScreenDetailPrimary extends StatelessWidget {
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: kWhite,
-        foregroundColor: kSelectedBackgroundColor,
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) =>
-                      BlocSelector<DetailBloc, DetailState, String?>(
-                        selector: (state) => state.detailData.title,
-                        builder: (context, title) {
-                          final String? mytitle = title;
-                          return ChatRoom(
-                            title: mytitle,
-                            mediaId: id.toString(),
-                          );
-                        },
-                      )));
-        },
-        child: Icon(Icons.message),
+      floatingActionButton: ChatButton(
+        id: id,
       ),
     );
   }
