@@ -17,7 +17,7 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       BlocProvider.of<MainNavigatorBloc>(context)
-                  .add(MainNavigatorEvent.changeItem(item: 0));
+          .add(MainNavigatorEvent.changeItem(item: 0));
     });
     final TextEditingController usernameController = TextEditingController();
     final TextEditingController emailController = TextEditingController();
@@ -52,7 +52,8 @@ class Register extends StatelessWidget {
         // Register user with Firebase Auth
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: email, password: password);
-
+        await userCredential.user!
+            .updateDisplayName(usernameController.text.trim());
         // Add user details to Firestore
         await FirebaseFirestore.instance
             .collection('users')
@@ -73,7 +74,9 @@ class Register extends StatelessWidget {
 
         await Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
-            builder: (context) => GenreNavigator(userId: FirebaseAuth.instance.currentUser!.uid,),
+            builder: (context) => GenreNavigator(
+              userId: FirebaseAuth.instance.currentUser!.uid,
+            ),
           ),
           (route) => false,
         );
