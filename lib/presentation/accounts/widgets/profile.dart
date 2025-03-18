@@ -1,9 +1,13 @@
 import 'dart:developer';
+import 'dart:math' show Random;
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:film_mate/presentation/accounts/widgets/info_card.dart';
+import 'package:film_mate/presentation/accounts/widgets/profile_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:film_mate/core/colors.dart';
+import 'package:shimmer/shimmer.dart';
 
 class ScreenProfile extends StatefulWidget {
   const ScreenProfile({super.key});
@@ -16,6 +20,15 @@ class _ScreenProfileState extends State<ScreenProfile> {
   String userName = '';
   String email = '';
   List<String> genres = [];
+  String imageUrl = '';
+  List<String> defaultImages = [
+    "lib/assets/pics/girrafe.jpg",
+    "lib/assets/pics/koala.jpg",
+    "lib/assets/pics/panda.jpg",
+    "lib/assets/pics/tiger.jpg",
+    "lib/assets/pics/dino.jpg",
+    "lib/assets/pics/monkey.jpg",
+  ];
 
   @override
   void initState() {
@@ -23,28 +36,78 @@ class _ScreenProfileState extends State<ScreenProfile> {
     fetchUserData();
   }
 
+  String getRandomImage() {
+    final Random random = Random();
+    return defaultImages[random.nextInt(defaultImages.length)];
+  }
+
   Future<void> fetchUserData() async {
     try {
       String uid = FirebaseAuth.instance.currentUser?.uid ?? '';
       if (uid.isEmpty) return;
 
-      DocumentSnapshot userDoc =
-          await FirebaseFirestore.instance.collection('users').doc(uid).get();
+      DocumentReference userRef =
+          FirebaseFirestore.instance.collection('users').doc(uid);
+      DocumentSnapshot userDoc = await userRef.get();
 
       if (userDoc.exists) {
         Map<String, dynamic> data = userDoc.data() as Map<String, dynamic>;
-        setState(() {
-          userName = data['user_name'] ?? 'Unknown';
-          email = data['email'] ?? 'No Email';
-          genres = (data['genre'] as List<dynamic>?)
-                  ?.map((g) => g['name'] as String)
-                  .toList() ??
-              [];
-        });
+        userName = data['user_name'] ?? 'Unknown';
+        email = data['email'] ?? 'No Email';
+        genres = (data['genre'] as List<dynamic>?)
+                ?.map((g) => g['name'] as String)
+                .toList() ??
+            [];
+
+        if (data['image_url'] == null) {
+          imageUrl = getRandomImage();
+          await userRef.update({'image_url': imageUrl});
+        } else {
+          imageUrl = data['image_url'];
+        }
+        setState(() {});
       }
     } catch (e) {
       log('Error fetching user data: $e');
     }
+  }
+
+  void _showImagePicker() {
+    showModalBottomSheet(
+      backgroundColor: kBackgroundColor,
+      context: context,
+      builder: (context) {
+        return Container(
+          padding: const EdgeInsets.all(16.0),
+          child: Wrap(
+            children: defaultImages.map((img) {
+              return GestureDetector(
+                onTap: () async {
+                  setState(() {
+                    imageUrl = img;
+                  });
+                  Navigator.pop(context);
+                  String uid = FirebaseAuth.instance.currentUser?.uid ?? '';
+                  if (uid.isNotEmpty) {
+                    await FirebaseFirestore.instance
+                        .collection('users')
+                        .doc(uid)
+                        .update({'image_url': img});
+                  }
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage(img),
+                  ),
+                ),
+              );
+            }).toList(),
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -63,34 +126,34 @@ class _ScreenProfileState extends State<ScreenProfile> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const CircleAvatar(
-                radius: 50,
-                backgroundColor: Colors.white,
-                child: Icon(Icons.person, size: 50, color: Colors.black54),
+              Stack(
+                alignment: Alignment.bottomRight,
+                children: [
+                  BuildProfileImage(imageUrl: imageUrl),
+                  Container(
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      color: kSelectedBackgroundColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      iconSize: 15,
+                      icon: const Icon(Icons.edit, color: Colors.white),
+                      onPressed: _showImagePicker,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 20),
-              _buildInfoCard(Icons.person, "Username", userName),
+              InfoCard(icon: Icons.person, label: "Username", value: userName),
               const SizedBox(height: 12),
-              _buildInfoCard(Icons.email, "Email", email),
+              InfoCard(icon: Icons.email, label: "Email", value: email),
               const SizedBox(height: 12),
               _buildGenresCard(),
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _buildInfoCard(IconData icon, String label, String value) {
-    return Card(
-      color: Colors.black.withValues(alpha: 0.2),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: ListTile(
-        leading: Icon(icon, color: Colors.white),
-        title: Text(label,
-            style: const TextStyle(color: Colors.white70, fontSize: 14)),
-        subtitle: Text(value,
-            style: const TextStyle(color: Colors.white, fontSize: 16)),
       ),
     );
   }
@@ -115,10 +178,9 @@ class _ScreenProfileState extends State<ScreenProfile> {
             const SizedBox(height: 8),
             ...genres.map((genre) => Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4.0),
-                  child: Text(
-                    "- $genre",
-                    style: const TextStyle(color: Colors.white, fontSize: 16),
-                  ),
+                  child: Text("- $genre",
+                      style:
+                          const TextStyle(color: Colors.white, fontSize: 16)),
                 )),
           ],
         ),

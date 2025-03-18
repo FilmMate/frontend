@@ -30,11 +30,6 @@ class _ScreenAccountsState extends State<ScreenAccounts> {
     }
   }
 
-  void _reset() {
-    Navigator.pop(context);
-    BlocProvider.of<HomeBloc>(context).add(HomeEvent.resetAll());
-  }
-
   void logOut() async {
     BlocProvider.of<HomeBloc>(context).add(HomeEvent.resetAll());
     log("log out");
@@ -92,7 +87,10 @@ class _ScreenAccountsState extends State<ScreenAccounts> {
                       .update({
                     'genre': [],
                   });
-                  _reset();
+                  // ignore: use_build_context_synchronously
+                  Navigator.pop(context);
+                  // ignore: use_build_context_synchronously
+                  BlocProvider.of<HomeBloc>(context).add(HomeEvent.resetAll());
                   log('Genre field cleared successfully.');
                 } else {
                   log('No user is signed in.');
