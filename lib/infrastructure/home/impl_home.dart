@@ -263,7 +263,6 @@ class ImplHome implements HomeServices {
 
         log("Endpoint: ${EndPoints.getMovie}");
         log("Response status code: ${response.statusCode}");
-        log("Movie data: ${response.data.toString()}");
 
         if (response.statusCode == 200 || response.statusCode == 203) {
           final result = TMDB.fromJson(response.data);
@@ -308,7 +307,6 @@ class ImplHome implements HomeServices {
 
         log("Endpoint: ${EndPoints.getMovie}");
         log("Response status code: ${response.statusCode}");
-        log("Movie data: ${response.data.toString()}");
 
         if (response.statusCode == 200 || response.statusCode == 203) {
           final result = TMDB.fromJson(response.data);
@@ -360,8 +358,7 @@ class ImplHome implements HomeServices {
           EndPoints.genreSearch,
           queryParameters: params,
         );
-        log("Endpoint: ${EndPoints.getMovie}");
-        log("Response status code: ${response.statusCode}");
+
         log("Language filter with gid = $gid -> success");
         if (response.statusCode == 200 || response.statusCode == 203) {
           final result = TMDB.fromJson(response.data);

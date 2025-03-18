@@ -47,10 +47,33 @@ class _LoginState extends State<Login> {
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
+  _navigate(String userId) {
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(
+        builder: (context) => GenreNavigator(userId: userId),
+      ),
+      (route) => false,
+    );
+  }
+
+  Future<String?> getUserType(String uid) async {
+    try {
+      DocumentSnapshot doc =
+          await FirebaseFirestore.instance.collection('users').doc(uid).get();
+      if (doc.exists) {
+        return doc['type'] as String?;
+      } else {
+        return null; // User not found
+      }
+    } catch (e) {
+      log('Error fetching user type: $e');
+      return null;
+    }
+  }
+
   Future<void> signIn() async {
     String email = emailController.text.trim();
     String password = passwordController.text.trim();
-
     if (email.isEmpty || password.isEmpty) {
       showSnackBar(const SnackBar(
         content: Text("Please fill in all fields."),
@@ -65,18 +88,20 @@ class _LoginState extends State<Login> {
         email: email,
         password: password,
       );
+      String userId = userCredential.user!.uid;
 
+      String? type = await getUserType(userId);
+      if (type == 'admin') {
+        showSnackBar(const SnackBar(
+          content: Text("Login using a user account"),
+          backgroundColor: Colors.red,
+        ));
+        return;
+      }
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.setBool('isLoggedIn', true);
 
-      await Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(
-          builder: (context) => GenreNavigator(
-            userId: userCredential.user!.uid,
-          ),
-        ),
-        (route) => false,
-      );
+      _navigate(userId);
     } on FirebaseAuthException catch (e) {
       String message;
 
@@ -103,6 +128,7 @@ class _LoginState extends State<Login> {
 
   Future<void> signInWithGoogle() async {
     try {
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
       await GoogleSignIn().signOut(); // Clear previous sign-in sessions
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
@@ -144,16 +170,9 @@ class _LoginState extends State<Login> {
         log("Existing user found in Firestore.");
       }
 
-      final SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.setBool('isLoggedIn', true);
-
-      await Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(
-          builder: (context) =>
-              GenreNavigator(userId: userCredential.user!.uid),
-        ),
-        (route) => false,
-      );
+      String userId = userCredential.user!.uid;
+      _navigate(userId);
     } on FirebaseAuthException catch (e) {
       log("FirebaseAuthException: ${e.message}");
       showSnackBar(SnackBar(
