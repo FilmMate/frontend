@@ -8,25 +8,28 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: GenreServices)
-class ImplGenre implements GenreServices{
+class ImplGenre implements GenreServices {
   @override
-  Future<Either<MainFailure, List<Map<String, dynamic>>>> fetchUserGenres() async{
+  Future<Either<MainFailure, List<Map<String, dynamic>>>>
+      fetchUserGenres() async {
     try {
-    // Reference the user's document in the 'users' collection
-    final DocumentSnapshot userDoc =
-        await FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser!.uid).get();
+      // Reference the user's document in the 'users' collection
+      final DocumentSnapshot userDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .get();
 
-    // Check if the document exists and retrieve the 'genre' field
-    if (userDoc.exists) {
-      final data = userDoc.data() as Map<String, dynamic>;
-      return Right(List<Map<String, dynamic>>.from(data['genre'] ?? []));
-    } else {
-      log('User document does not exist');
-      return Left(MainFailure.serverFailure());
+      // Check if the document exists and retrieve the 'genre' field
+      if (userDoc.exists) {
+        final data = userDoc.data() as Map<String, dynamic>;
+        return Right(List<Map<String, dynamic>>.from(data['genre'] ?? []));
+      } else {
+        log('User document does not exist');
+        return Left(MainFailure.serverFailure());
+      }
+    } catch (e) {
+      log('Error fetching user genres: $e');
+      return Left(MainFailure.clientFailure());
     }
-  } catch (e) {
-    log('Error fetching user genres: $e');
-    return Left(MainFailure.clientFailure());
-  }
   }
 }

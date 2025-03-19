@@ -49,7 +49,8 @@ class MediaContainer extends StatelessWidget {
         kHeightXS,
         Padding(
           padding: const EdgeInsets.only(left: 6.0),
-          child: Text("${genre.join(', ')}${duration == "0h 0m" ? "" : " | $duration"}",
+          child: Text(
+              "${genre.join(', ')}${duration == "0h 0m" ? "" : " | $duration"}",
               style: const TextStyle(
                   color: kWhite, fontWeight: FontWeight.normal, fontSize: 12)),
         ),

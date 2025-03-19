@@ -6,6 +6,7 @@ import 'package:film_mate/core/failure/main_failure.dart';
 import 'package:film_mate/domain/models/endpoints.dart';
 import 'package:film_mate/domain/models/get_detail/get_detail.dart';
 import 'package:film_mate/domain/models/tmdb/tmdb.dart';
+import 'package:film_mate/domain/models/watch_provider/watch_provider.dart';
 import 'package:film_mate/domain/services/detail_services.dart';
 import 'package:injectable/injectable.dart';
 
@@ -103,6 +104,43 @@ class ImplDetail implements DetailServices {
         if (retryCount <= maxRetries) {
           // Retry if there are remaining retries
           log('Retrying... (similar) Attempt $retryCount of $maxRetries');
+          continue; // Continue to the next iteration of the while loop
+        } else {
+          return const Left(MainFailure.clientFailure());
+        }
+      }
+    }
+  }
+
+  @override
+  Future<Either<MainFailure, WatchProvider>> getProvider({
+    required int id,
+    required String type,
+  }) async {
+    const int maxRetries = 2;
+    int retryCount = 0;
+    while (true) {
+      try {
+        String endpoint = EndPoints.getTvprovide(id);
+        if (type == 'movie') {
+          endpoint = EndPoints.getMovieprovide(id);
+        }
+        final Response response = await Dio(BaseOptions()).get(
+          endpoint,
+          queryParameters: {'api_key': apiKey},
+        );
+        if (response.statusCode == 200 || response.statusCode == 201) {
+          final result = WatchProvider.fromJson(response.data);
+          return Right(result);
+        } else {
+          return const Left(MainFailure.serverFailure());
+        }
+      } catch (e) {
+        // log(e.toString());
+        retryCount++;
+        if (retryCount <= maxRetries) {
+          // Retry if there are remaining retries
+          log('Retrying... (provider) Attempt $retryCount of $maxRetries');
           continue; // Continue to the next iteration of the while loop
         } else {
           return const Left(MainFailure.clientFailure());

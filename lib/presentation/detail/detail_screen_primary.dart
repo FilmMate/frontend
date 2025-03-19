@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:film_mate/application/detail/detail_bloc.dart';
 import 'package:film_mate/application/explore/explore_bloc.dart';
 import 'package:film_mate/core/colors.dart';
@@ -5,6 +6,7 @@ import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/domain/models/languages/lang_data.dart';
 import 'package:film_mate/presentation/detail/widgets/chat_button.dart';
 import 'package:film_mate/presentation/detail/widgets/similar.dart';
+import 'package:film_mate/presentation/detail/widgets/where_to_watch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/cast_section.dart';
@@ -24,6 +26,7 @@ class ScreenDetailPrimary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(id.toString());
     WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<ExploreBloc>(context)
           .add(const ExploreEvent.triggerDetail(trigger: false));
@@ -33,6 +36,8 @@ class ScreenDetailPrimary extends StatelessWidget {
           .add(DetailEvent.getSimilar(type: type, id: id));
       BlocProvider.of<DetailBloc>(context)
           .add(const DetailEvent.triggerTrailer(trigger: false));
+      BlocProvider.of<DetailBloc>(context)
+          .add(DetailEvent.getTvProvider(tid: id, type: type));
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -71,7 +76,7 @@ class ScreenDetailPrimary extends StatelessWidget {
                     image: state.detailData.posterPath ?? ""),
                 Section2(
                   size: size,
-                  overview: state.detailData.overview ?? "",
+                  overview: state.detailData.overview ?? "Unavailabe",
                   video: state.detailData.video,
                   lang: LanguageData.getLanguageName(state.detailData.lang!),
                   release: state.detailData.releaseDate ?? "",
@@ -86,6 +91,7 @@ class ScreenDetailPrimary extends StatelessWidget {
                     state: state,
                   ),
                 ),
+                WhereToWatch(size: size),
                 state.detailData.cast.isEmpty
                     ? SizedBox()
                     : const Padding(

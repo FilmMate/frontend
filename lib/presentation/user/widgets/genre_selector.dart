@@ -109,7 +109,9 @@ class _GenreSelectorState extends State<GenreSelector> {
               // Navigate to the Login page or next screen
               Navigator.of(context).pushAndRemoveUntil(
                 MaterialPageRoute(
-                  builder: (context) => GenreNavigator(userId: FirebaseAuth.instance.currentUser!.uid,),
+                  builder: (context) => GenreNavigator(
+                    userId: FirebaseAuth.instance.currentUser!.uid,
+                  ),
                 ),
                 (route) => false,
               );

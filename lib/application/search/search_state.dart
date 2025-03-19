@@ -14,6 +14,7 @@ class SearchState with _$SearchState {
         idleList: [],
         resultList: [],
         isError: false,
-        isLoading: false, noResult: false,
+        isLoading: false,
+        noResult: false,
       );
 }

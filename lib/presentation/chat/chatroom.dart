@@ -254,9 +254,7 @@ class _ChatRoomState extends State<ChatRoom> {
                     style: const TextStyle(color: kWhite),
                     decoration: InputDecoration(
                       prefixIcon:
-                          IconButton(onPressed: () {
-                            
-                          }, icon: Icon(Icons.link)),
+                          IconButton(onPressed: () {}, icon: Icon(Icons.link)),
                       filled: true,
                       hintText: 'Enter your message',
                       focusColor: kSelectedBackgroundColor,

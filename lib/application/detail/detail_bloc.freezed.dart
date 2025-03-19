@@ -21,6 +21,7 @@ mixin _$DetailEvent {
     required TResult Function(bool trigger) triggerTrailer,
     required TResult Function(String type, int id) getDetails,
     required TResult Function(String type, int id) getSimilar,
+    required TResult Function(int tid, String type) getTvProvider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$DetailEvent {
     TResult? Function(bool trigger)? triggerTrailer,
     TResult? Function(String type, int id)? getDetails,
     TResult? Function(String type, int id)? getSimilar,
+    TResult? Function(int tid, String type)? getTvProvider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$DetailEvent {
     TResult Function(bool trigger)? triggerTrailer,
     TResult Function(String type, int id)? getDetails,
     TResult Function(String type, int id)? getSimilar,
+    TResult Function(int tid, String type)? getTvProvider,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$DetailEvent {
     required TResult Function(_TriggerTrailer value) triggerTrailer,
     required TResult Function(_GetDetails value) getDetails,
     required TResult Function(_GetSimilar value) getSimilar,
+    required TResult Function(_GetTvProvider value) getTvProvider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$DetailEvent {
     TResult? Function(_TriggerTrailer value)? triggerTrailer,
     TResult? Function(_GetDetails value)? getDetails,
     TResult? Function(_GetSimilar value)? getSimilar,
+    TResult? Function(_GetTvProvider value)? getTvProvider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$DetailEvent {
     TResult Function(_TriggerTrailer value)? triggerTrailer,
     TResult Function(_GetDetails value)? getDetails,
     TResult Function(_GetSimilar value)? getSimilar,
+    TResult Function(_GetTvProvider value)? getTvProvider,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +161,7 @@ class _$TriggerTrailerImpl implements _TriggerTrailer {
     required TResult Function(bool trigger) triggerTrailer,
     required TResult Function(String type, int id) getDetails,
     required TResult Function(String type, int id) getSimilar,
+    required TResult Function(int tid, String type) getTvProvider,
   }) {
     return triggerTrailer(trigger);
   }
@@ -165,6 +172,7 @@ class _$TriggerTrailerImpl implements _TriggerTrailer {
     TResult? Function(bool trigger)? triggerTrailer,
     TResult? Function(String type, int id)? getDetails,
     TResult? Function(String type, int id)? getSimilar,
+    TResult? Function(int tid, String type)? getTvProvider,
   }) {
     return triggerTrailer?.call(trigger);
   }
@@ -175,6 +183,7 @@ class _$TriggerTrailerImpl implements _TriggerTrailer {
     TResult Function(bool trigger)? triggerTrailer,
     TResult Function(String type, int id)? getDetails,
     TResult Function(String type, int id)? getSimilar,
+    TResult Function(int tid, String type)? getTvProvider,
     required TResult orElse(),
   }) {
     if (triggerTrailer != null) {
@@ -189,6 +198,7 @@ class _$TriggerTrailerImpl implements _TriggerTrailer {
     required TResult Function(_TriggerTrailer value) triggerTrailer,
     required TResult Function(_GetDetails value) getDetails,
     required TResult Function(_GetSimilar value) getSimilar,
+    required TResult Function(_GetTvProvider value) getTvProvider,
   }) {
     return triggerTrailer(this);
   }
@@ -199,6 +209,7 @@ class _$TriggerTrailerImpl implements _TriggerTrailer {
     TResult? Function(_TriggerTrailer value)? triggerTrailer,
     TResult? Function(_GetDetails value)? getDetails,
     TResult? Function(_GetSimilar value)? getSimilar,
+    TResult? Function(_GetTvProvider value)? getTvProvider,
   }) {
     return triggerTrailer?.call(this);
   }
@@ -209,6 +220,7 @@ class _$TriggerTrailerImpl implements _TriggerTrailer {
     TResult Function(_TriggerTrailer value)? triggerTrailer,
     TResult Function(_GetDetails value)? getDetails,
     TResult Function(_GetSimilar value)? getSimilar,
+    TResult Function(_GetTvProvider value)? getTvProvider,
     required TResult orElse(),
   }) {
     if (triggerTrailer != null) {
@@ -310,6 +322,7 @@ class _$GetDetailsImpl implements _GetDetails {
     required TResult Function(bool trigger) triggerTrailer,
     required TResult Function(String type, int id) getDetails,
     required TResult Function(String type, int id) getSimilar,
+    required TResult Function(int tid, String type) getTvProvider,
   }) {
     return getDetails(type, id);
   }
@@ -320,6 +333,7 @@ class _$GetDetailsImpl implements _GetDetails {
     TResult? Function(bool trigger)? triggerTrailer,
     TResult? Function(String type, int id)? getDetails,
     TResult? Function(String type, int id)? getSimilar,
+    TResult? Function(int tid, String type)? getTvProvider,
   }) {
     return getDetails?.call(type, id);
   }
@@ -330,6 +344,7 @@ class _$GetDetailsImpl implements _GetDetails {
     TResult Function(bool trigger)? triggerTrailer,
     TResult Function(String type, int id)? getDetails,
     TResult Function(String type, int id)? getSimilar,
+    TResult Function(int tid, String type)? getTvProvider,
     required TResult orElse(),
   }) {
     if (getDetails != null) {
@@ -344,6 +359,7 @@ class _$GetDetailsImpl implements _GetDetails {
     required TResult Function(_TriggerTrailer value) triggerTrailer,
     required TResult Function(_GetDetails value) getDetails,
     required TResult Function(_GetSimilar value) getSimilar,
+    required TResult Function(_GetTvProvider value) getTvProvider,
   }) {
     return getDetails(this);
   }
@@ -354,6 +370,7 @@ class _$GetDetailsImpl implements _GetDetails {
     TResult? Function(_TriggerTrailer value)? triggerTrailer,
     TResult? Function(_GetDetails value)? getDetails,
     TResult? Function(_GetSimilar value)? getSimilar,
+    TResult? Function(_GetTvProvider value)? getTvProvider,
   }) {
     return getDetails?.call(this);
   }
@@ -364,6 +381,7 @@ class _$GetDetailsImpl implements _GetDetails {
     TResult Function(_TriggerTrailer value)? triggerTrailer,
     TResult Function(_GetDetails value)? getDetails,
     TResult Function(_GetSimilar value)? getSimilar,
+    TResult Function(_GetTvProvider value)? getTvProvider,
     required TResult orElse(),
   }) {
     if (getDetails != null) {
@@ -466,6 +484,7 @@ class _$GetSimilarImpl implements _GetSimilar {
     required TResult Function(bool trigger) triggerTrailer,
     required TResult Function(String type, int id) getDetails,
     required TResult Function(String type, int id) getSimilar,
+    required TResult Function(int tid, String type) getTvProvider,
   }) {
     return getSimilar(type, id);
   }
@@ -476,6 +495,7 @@ class _$GetSimilarImpl implements _GetSimilar {
     TResult? Function(bool trigger)? triggerTrailer,
     TResult? Function(String type, int id)? getDetails,
     TResult? Function(String type, int id)? getSimilar,
+    TResult? Function(int tid, String type)? getTvProvider,
   }) {
     return getSimilar?.call(type, id);
   }
@@ -486,6 +506,7 @@ class _$GetSimilarImpl implements _GetSimilar {
     TResult Function(bool trigger)? triggerTrailer,
     TResult Function(String type, int id)? getDetails,
     TResult Function(String type, int id)? getSimilar,
+    TResult Function(int tid, String type)? getTvProvider,
     required TResult orElse(),
   }) {
     if (getSimilar != null) {
@@ -500,6 +521,7 @@ class _$GetSimilarImpl implements _GetSimilar {
     required TResult Function(_TriggerTrailer value) triggerTrailer,
     required TResult Function(_GetDetails value) getDetails,
     required TResult Function(_GetSimilar value) getSimilar,
+    required TResult Function(_GetTvProvider value) getTvProvider,
   }) {
     return getSimilar(this);
   }
@@ -510,6 +532,7 @@ class _$GetSimilarImpl implements _GetSimilar {
     TResult? Function(_TriggerTrailer value)? triggerTrailer,
     TResult? Function(_GetDetails value)? getDetails,
     TResult? Function(_GetSimilar value)? getSimilar,
+    TResult? Function(_GetTvProvider value)? getTvProvider,
   }) {
     return getSimilar?.call(this);
   }
@@ -520,6 +543,7 @@ class _$GetSimilarImpl implements _GetSimilar {
     TResult Function(_TriggerTrailer value)? triggerTrailer,
     TResult Function(_GetDetails value)? getDetails,
     TResult Function(_GetSimilar value)? getSimilar,
+    TResult Function(_GetTvProvider value)? getTvProvider,
     required TResult orElse(),
   }) {
     if (getSimilar != null) {
@@ -544,6 +568,169 @@ abstract class _GetSimilar implements DetailEvent {
 }
 
 /// @nodoc
+abstract class _$$GetTvProviderImplCopyWith<$Res> {
+  factory _$$GetTvProviderImplCopyWith(
+          _$GetTvProviderImpl value, $Res Function(_$GetTvProviderImpl) then) =
+      __$$GetTvProviderImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int tid, String type});
+}
+
+/// @nodoc
+class __$$GetTvProviderImplCopyWithImpl<$Res>
+    extends _$DetailEventCopyWithImpl<$Res, _$GetTvProviderImpl>
+    implements _$$GetTvProviderImplCopyWith<$Res> {
+  __$$GetTvProviderImplCopyWithImpl(
+      _$GetTvProviderImpl _value, $Res Function(_$GetTvProviderImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? tid = null,
+    Object? type = null,
+  }) {
+    return _then(_$GetTvProviderImpl(
+      tid: null == tid
+          ? _value.tid
+          : tid // ignore: cast_nullable_to_non_nullable
+              as int,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetTvProviderImpl implements _GetTvProvider {
+  const _$GetTvProviderImpl({required this.tid, required this.type});
+
+  @override
+  final int tid;
+  @override
+  final String type;
+
+  @override
+  String toString() {
+    return 'DetailEvent.getTvProvider(tid: $tid, type: $type)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetTvProviderImpl &&
+            (identical(other.tid, tid) || other.tid == tid) &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, tid, type);
+
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetTvProviderImplCopyWith<_$GetTvProviderImpl> get copyWith =>
+      __$$GetTvProviderImplCopyWithImpl<_$GetTvProviderImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool trigger) triggerTrailer,
+    required TResult Function(String type, int id) getDetails,
+    required TResult Function(String type, int id) getSimilar,
+    required TResult Function(int tid, String type) getTvProvider,
+  }) {
+    return getTvProvider(tid, type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool trigger)? triggerTrailer,
+    TResult? Function(String type, int id)? getDetails,
+    TResult? Function(String type, int id)? getSimilar,
+    TResult? Function(int tid, String type)? getTvProvider,
+  }) {
+    return getTvProvider?.call(tid, type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool trigger)? triggerTrailer,
+    TResult Function(String type, int id)? getDetails,
+    TResult Function(String type, int id)? getSimilar,
+    TResult Function(int tid, String type)? getTvProvider,
+    required TResult orElse(),
+  }) {
+    if (getTvProvider != null) {
+      return getTvProvider(tid, type);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_TriggerTrailer value) triggerTrailer,
+    required TResult Function(_GetDetails value) getDetails,
+    required TResult Function(_GetSimilar value) getSimilar,
+    required TResult Function(_GetTvProvider value) getTvProvider,
+  }) {
+    return getTvProvider(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_TriggerTrailer value)? triggerTrailer,
+    TResult? Function(_GetDetails value)? getDetails,
+    TResult? Function(_GetSimilar value)? getSimilar,
+    TResult? Function(_GetTvProvider value)? getTvProvider,
+  }) {
+    return getTvProvider?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_TriggerTrailer value)? triggerTrailer,
+    TResult Function(_GetDetails value)? getDetails,
+    TResult Function(_GetSimilar value)? getSimilar,
+    TResult Function(_GetTvProvider value)? getTvProvider,
+    required TResult orElse(),
+  }) {
+    if (getTvProvider != null) {
+      return getTvProvider(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetTvProvider implements DetailEvent {
+  const factory _GetTvProvider(
+      {required final int tid,
+      required final String type}) = _$GetTvProviderImpl;
+
+  int get tid;
+  String get type;
+
+  /// Create a copy of DetailEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTvProviderImplCopyWith<_$GetTvProviderImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$DetailState {
   bool get pressedTrailer => throw _privateConstructorUsedError;
   GetDetail get detailData => throw _privateConstructorUsedError;
@@ -552,6 +739,9 @@ mixin _$DetailState {
   bool get isLoadingSimilar => throw _privateConstructorUsedError;
   bool get isErrorSimilar => throw _privateConstructorUsedError;
   List<TMDBResponse> get similarList => throw _privateConstructorUsedError;
+  bool get isLoadingTvProvider => throw _privateConstructorUsedError;
+  bool get isErrorTvProvider => throw _privateConstructorUsedError;
+  In get tvProviderList => throw _privateConstructorUsedError;
 
   /// Create a copy of DetailState
   /// with the given fields replaced by the non-null parameter values.
@@ -573,7 +763,10 @@ abstract class $DetailStateCopyWith<$Res> {
       bool isError,
       bool isLoadingSimilar,
       bool isErrorSimilar,
-      List<TMDBResponse> similarList});
+      List<TMDBResponse> similarList,
+      bool isLoadingTvProvider,
+      bool isErrorTvProvider,
+      In tvProviderList});
 }
 
 /// @nodoc
@@ -598,6 +791,9 @@ class _$DetailStateCopyWithImpl<$Res, $Val extends DetailState>
     Object? isLoadingSimilar = null,
     Object? isErrorSimilar = null,
     Object? similarList = null,
+    Object? isLoadingTvProvider = null,
+    Object? isErrorTvProvider = null,
+    Object? tvProviderList = null,
   }) {
     return _then(_value.copyWith(
       pressedTrailer: null == pressedTrailer
@@ -628,6 +824,18 @@ class _$DetailStateCopyWithImpl<$Res, $Val extends DetailState>
           ? _value.similarList
           : similarList // ignore: cast_nullable_to_non_nullable
               as List<TMDBResponse>,
+      isLoadingTvProvider: null == isLoadingTvProvider
+          ? _value.isLoadingTvProvider
+          : isLoadingTvProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isErrorTvProvider: null == isErrorTvProvider
+          ? _value.isErrorTvProvider
+          : isErrorTvProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
+      tvProviderList: null == tvProviderList
+          ? _value.tvProviderList
+          : tvProviderList // ignore: cast_nullable_to_non_nullable
+              as In,
     ) as $Val);
   }
 }
@@ -647,7 +855,10 @@ abstract class _$$DetailStateImplCopyWith<$Res>
       bool isError,
       bool isLoadingSimilar,
       bool isErrorSimilar,
-      List<TMDBResponse> similarList});
+      List<TMDBResponse> similarList,
+      bool isLoadingTvProvider,
+      bool isErrorTvProvider,
+      In tvProviderList});
 }
 
 /// @nodoc
@@ -670,6 +881,9 @@ class __$$DetailStateImplCopyWithImpl<$Res>
     Object? isLoadingSimilar = null,
     Object? isErrorSimilar = null,
     Object? similarList = null,
+    Object? isLoadingTvProvider = null,
+    Object? isErrorTvProvider = null,
+    Object? tvProviderList = null,
   }) {
     return _then(_$DetailStateImpl(
       pressedTrailer: null == pressedTrailer
@@ -700,6 +914,18 @@ class __$$DetailStateImplCopyWithImpl<$Res>
           ? _value._similarList
           : similarList // ignore: cast_nullable_to_non_nullable
               as List<TMDBResponse>,
+      isLoadingTvProvider: null == isLoadingTvProvider
+          ? _value.isLoadingTvProvider
+          : isLoadingTvProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isErrorTvProvider: null == isErrorTvProvider
+          ? _value.isErrorTvProvider
+          : isErrorTvProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
+      tvProviderList: null == tvProviderList
+          ? _value.tvProviderList
+          : tvProviderList // ignore: cast_nullable_to_non_nullable
+              as In,
     ));
   }
 }
@@ -714,7 +940,10 @@ class _$DetailStateImpl implements _DetailState {
       required this.isError,
       required this.isLoadingSimilar,
       required this.isErrorSimilar,
-      required final List<TMDBResponse> similarList})
+      required final List<TMDBResponse> similarList,
+      required this.isLoadingTvProvider,
+      required this.isErrorTvProvider,
+      required this.tvProviderList})
       : _similarList = similarList;
 
   @override
@@ -738,8 +967,15 @@ class _$DetailStateImpl implements _DetailState {
   }
 
   @override
+  final bool isLoadingTvProvider;
+  @override
+  final bool isErrorTvProvider;
+  @override
+  final In tvProviderList;
+
+  @override
   String toString() {
-    return 'DetailState(pressedTrailer: $pressedTrailer, detailData: $detailData, isLoading: $isLoading, isError: $isError, isLoadingSimilar: $isLoadingSimilar, isErrorSimilar: $isErrorSimilar, similarList: $similarList)';
+    return 'DetailState(pressedTrailer: $pressedTrailer, detailData: $detailData, isLoading: $isLoading, isError: $isError, isLoadingSimilar: $isLoadingSimilar, isErrorSimilar: $isErrorSimilar, similarList: $similarList, isLoadingTvProvider: $isLoadingTvProvider, isErrorTvProvider: $isErrorTvProvider, tvProviderList: $tvProviderList)';
   }
 
   @override
@@ -759,7 +995,13 @@ class _$DetailStateImpl implements _DetailState {
             (identical(other.isErrorSimilar, isErrorSimilar) ||
                 other.isErrorSimilar == isErrorSimilar) &&
             const DeepCollectionEquality()
-                .equals(other._similarList, _similarList));
+                .equals(other._similarList, _similarList) &&
+            (identical(other.isLoadingTvProvider, isLoadingTvProvider) ||
+                other.isLoadingTvProvider == isLoadingTvProvider) &&
+            (identical(other.isErrorTvProvider, isErrorTvProvider) ||
+                other.isErrorTvProvider == isErrorTvProvider) &&
+            (identical(other.tvProviderList, tvProviderList) ||
+                other.tvProviderList == tvProviderList));
   }
 
   @override
@@ -771,7 +1013,10 @@ class _$DetailStateImpl implements _DetailState {
       isError,
       isLoadingSimilar,
       isErrorSimilar,
-      const DeepCollectionEquality().hash(_similarList));
+      const DeepCollectionEquality().hash(_similarList),
+      isLoadingTvProvider,
+      isErrorTvProvider,
+      tvProviderList);
 
   /// Create a copy of DetailState
   /// with the given fields replaced by the non-null parameter values.
@@ -790,7 +1035,10 @@ abstract class _DetailState implements DetailState {
       required final bool isError,
       required final bool isLoadingSimilar,
       required final bool isErrorSimilar,
-      required final List<TMDBResponse> similarList}) = _$DetailStateImpl;
+      required final List<TMDBResponse> similarList,
+      required final bool isLoadingTvProvider,
+      required final bool isErrorTvProvider,
+      required final In tvProviderList}) = _$DetailStateImpl;
 
   @override
   bool get pressedTrailer;
@@ -806,6 +1054,12 @@ abstract class _DetailState implements DetailState {
   bool get isErrorSimilar;
   @override
   List<TMDBResponse> get similarList;
+  @override
+  bool get isLoadingTvProvider;
+  @override
+  bool get isErrorTvProvider;
+  @override
+  In get tvProviderList;
 
   /// Create a copy of DetailState
   /// with the given fields replaced by the non-null parameter values.

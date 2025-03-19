@@ -50,21 +50,20 @@ class GetLatestResponse {
   @JsonKey(name: 'crew')
   List<Crew>? crew;
 
-  GetLatestResponse({
-    this.backdropPath,
-    this.duration,
-    this.genres = const [],
-    this.id,
-    this.overview,
-    this.posterPath,
-    this.title,
-    this.video,
-    this.cast, 
-		this.crew, 
-    this.rating,
-    this.lang,
-    this.releaseDate
-  });
+  GetLatestResponse(
+      {this.backdropPath,
+      this.duration,
+      this.genres = const [],
+      this.id,
+      this.overview,
+      this.posterPath,
+      this.title,
+      this.video,
+      this.cast,
+      this.crew,
+      this.rating,
+      this.lang,
+      this.releaseDate});
 
   factory GetLatestResponse.fromJson(Map<String, dynamic> json) {
     return GetLatestResponse(
@@ -77,15 +76,15 @@ class GetLatestResponse {
       posterPath: json['poster_path'] as String?,
       title: json['title'] as String?,
       video: json['video'] as String?,
-      rating : json['rating'] as double?,
-      lang : json['lang'] as String?,
+      rating: json['rating'] as double?,
+      lang: json['lang'] as String?,
       releaseDate: json['release_date'] as String?,
       cast: (json['cast'] as List<dynamic>?)
-						?.map((e) => Cast.fromJson(e as Map<String, dynamic>))
-						.toList(),
-				crew: (json['crew'] as List<dynamic>?)
-						?.map((e) => Crew.fromJson(e as Map<String, dynamic>))
-						.toList(),
+          ?.map((e) => Cast.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      crew: (json['crew'] as List<dynamic>?)
+          ?.map((e) => Crew.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
   }
 
@@ -98,11 +97,10 @@ class GetLatestResponse {
         'title': title,
         'video': video,
         'duration': duration,
-        'rating' : rating,
-        'lang' : lang,
-        'releaseDate' : releaseDate,
-        'cast' : cast,
-        'crew' : crew,
+        'rating': rating,
+        'lang': lang,
+        'releaseDate': releaseDate,
+        'cast': cast,
+        'crew': crew,
       };
 }
-

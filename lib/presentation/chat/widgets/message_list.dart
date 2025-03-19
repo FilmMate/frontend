@@ -11,7 +11,8 @@ class MessageList extends StatelessWidget {
   final Function(String) onDeleteMessage;
   final Function(int) onNewMessages;
 
-  const MessageList({super.key, 
+  const MessageList({
+    super.key,
     required this.messageStream,
     required this.firebaseAuth,
     required this.scrollController,

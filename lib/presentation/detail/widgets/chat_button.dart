@@ -40,15 +40,14 @@ class ChatButton extends StatelessWidget {
                               );
                             },
                           )));
-            }else{
+            } else {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          ChatRoom(
-                                title: title,
-                                mediaId: id.toString(),
-                              )));
+                      builder: (context) => ChatRoom(
+                            title: title,
+                            mediaId: id.toString(),
+                          )));
             }
           },
           child: Icon(Icons.message),

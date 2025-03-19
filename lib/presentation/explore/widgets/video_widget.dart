@@ -170,7 +170,8 @@ class _VideoWidgetState extends State<VideoWidget> {
                       ),
                       CircleAvatar(
                         radius: 30,
-                        backgroundColor: kBackgroundColor.withValues(alpha: 0.6),
+                        backgroundColor:
+                            kBackgroundColor.withValues(alpha: 0.6),
                         child: const Icon(
                           Icons.play_arrow_rounded,
                           color: kSelectedBackgroundColor,

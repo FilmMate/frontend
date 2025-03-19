@@ -6,6 +6,7 @@ import 'package:film_mate/domain/models/cast_and_crew.dart/cast_and_crew.dart';
 import 'package:film_mate/domain/models/languages/lang_data.dart';
 import 'package:film_mate/presentation/detail/widgets/chat_button.dart';
 import 'package:film_mate/presentation/detail/widgets/similar.dart';
+import 'package:film_mate/presentation/detail/widgets/where_to_watch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/cast_section.dart';
@@ -47,6 +48,8 @@ class ScreenDetailEveryone extends StatelessWidget {
           .add(const DetailEvent.triggerTrailer(trigger: false));
       BlocProvider.of<DetailBloc>(context)
           .add(DetailEvent.getSimilar(type: "movie", id: id));
+      BlocProvider.of<DetailBloc>(context)
+          .add(DetailEvent.getTvProvider(tid: id, type: "movie"));
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -83,9 +86,10 @@ class ScreenDetailEveryone extends StatelessWidget {
                 );
               },
             ),
+            WhereToWatch(size: size),
             const Padding(
               padding: EdgeInsets.only(left: 10.0),
-              child: Text(
+              child: Text(  
                 'Cast',
                 style: TextStyle(
                   color: kWhite,

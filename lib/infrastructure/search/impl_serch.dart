@@ -12,7 +12,7 @@ import 'package:injectable/injectable.dart';
 @LazySingleton(as: SearchServices)
 class ImplSearch implements SearchServices {
   @override
-  Future<Either<MainFailure, TMDB>> getTrending() async{
+  Future<Either<MainFailure, TMDB>> getTrending() async {
     const int maxRetries = 5;
     int retryCount = 0;
     while (true) {
@@ -42,9 +42,10 @@ class ImplSearch implements SearchServices {
       }
     }
   }
-  
+
   @override
-  Future<Either<MainFailure, TMDB>> getSearchResult({required String query}) async{
+  Future<Either<MainFailure, TMDB>> getSearchResult(
+      {required String query}) async {
     const int maxRetries = 5;
     int retryCount = 0;
     while (true) {
@@ -53,7 +54,7 @@ class ImplSearch implements SearchServices {
           EndPoints.search,
           queryParameters: {
             'api_key': apiKey,
-            'query' : query,
+            'query': query,
           },
         );
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -75,5 +76,4 @@ class ImplSearch implements SearchServices {
       }
     }
   }
-
 }

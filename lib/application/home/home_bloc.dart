@@ -174,10 +174,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       });
     });
 
-    on<_GetMovieByLanguage>((event,emit) async{
+    on<_GetMovieByLanguage>((event, emit) async {
       emit(state.copyWith(langResultLoading: true, langResultError: false));
 
-      final result = await _homeServices.getMovieByLanguage(language: event.language,gid: event.gid);
+      final result = await _homeServices.getMovieByLanguage(
+          language: event.language, gid: event.gid);
       result.fold((MainFailure failure) {
         log('Top Movie -> failure');
         emit(

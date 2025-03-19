@@ -63,10 +63,13 @@ class _ScreenSplashState extends State<ScreenSplash> {
           context,
           MaterialPageRoute(
               builder: (context) => const ScreenLoginAndRegister()));
-    }
-     else {
-      Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => GenreNavigator(userId: FirebaseAuth.instance.currentUser!.uid,)));
+    } else {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (context) => GenreNavigator(
+                    userId: FirebaseAuth.instance.currentUser!.uid,
+                  )));
     }
   }
 }

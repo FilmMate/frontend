@@ -16,6 +16,5 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<_ChangeScreen>((event, emit) {
       emit(state.copyWith(changeScreen: !state.changeScreen));
     });
-
   }
 }

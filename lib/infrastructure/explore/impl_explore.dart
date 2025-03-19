@@ -47,9 +47,9 @@ class GetLastestImpl implements ExploreServices {
       }
     }
   }
-  
+
   @override
-  Future<Either<MainFailure, GetLatestTv>> getLatestTV() async{
+  Future<Either<MainFailure, GetLatestTv>> getLatestTV() async {
     const int maxRetries = 2;
     int retryCount = 0;
 

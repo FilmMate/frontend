@@ -5,6 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:film_mate/core/failure/main_failure.dart';
 import 'package:film_mate/domain/models/get_detail/get_detail.dart';
 import 'package:film_mate/domain/models/tmdb/tmdb.dart';
+import 'package:film_mate/domain/models/watch_provider/watch_provider.dart';
 import 'package:film_mate/domain/services/detail_services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -57,14 +58,34 @@ class DetailBloc extends Bloc<DetailEvent, DetailState> {
           state.copyWith(isErrorSimilar: true, isLoadingSimilar: false),
         );
       }, (TMDB success) {
-        log("Detail -> success");
-        final filteredList =
-            success.results.where((media) => media.backdropPath != null).toList();
+        log("Similar -> success");
+        final filteredList = success.results
+            .where((media) => media.backdropPath != null)
+            .toList();
         emit(state.copyWith(
           isErrorSimilar: false,
           isLoadingSimilar: false,
           similarList: filteredList,
         ));
+      });
+    });
+
+    on<_GetTvProvider>((event, emit) async {
+      emit(state.copyWith(isLoadingTvProvider: true));
+      late final Either<MainFailure, WatchProvider> result;
+      result = await _detailServices.getProvider(id: event.tid, type: event.type);
+      result.fold((MainFailure failure) {
+        log('Detail -> failure');
+        emit(
+          state.copyWith(isErrorTvProvider: true, isLoadingTvProvider: false),
+        );
+      }, (WatchProvider success) {
+        log("Provider -> success");
+        emit(state.copyWith(
+            isErrorSimilar: false,
+            isLoadingSimilar: false,
+            tvProviderList:
+                success.results?.india ?? In(flatrate: [], link: null)));
       });
     });
   }

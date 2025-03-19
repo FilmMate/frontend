@@ -15,4 +15,9 @@ class DetailEvent with _$DetailEvent {
     required String type,
     required int id,
   }) = _GetSimilar;
+
+  const factory DetailEvent.getTvProvider({
+    required int tid,
+    required String type,
+  }) = _GetTvProvider;
 }

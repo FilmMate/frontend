@@ -15,8 +15,7 @@ class CastSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
+      padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
       child: Container(
         constraints: BoxConstraints(
           maxHeight: size.height * 2,
@@ -38,10 +37,9 @@ class CastSection extends StatelessWidget {
                 ),
                 Container(
                   constraints: BoxConstraints(
-                      maxHeight:
-                          MediaQuery.of(context).size.width * 0.20,
-                      maxWidth: size.width *
-                          0.3 // Limit width to screen width - 10
+                      maxHeight: MediaQuery.of(context).size.width * 0.20,
+                      maxWidth:
+                          size.width * 0.3 // Limit width to screen width - 10
                       ),
                   child: Text(
                     cast[index].character ?? "",

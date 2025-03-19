@@ -59,4 +59,12 @@ class EndPoints {
 
   //get similar movies $tmdbBaseUrl/tv/{id}/recommendations
   static const similarTv = "$tmdbBaseUrl/tv/";
+
+  static String getTvprovide(int tid) {
+    return "$tmdbBaseUrl/tv/$tid/watch/providers";
+  }
+
+  static String getMovieprovide(int mid) {
+    return "$tmdbBaseUrl/movie/$mid/watch/providers";
+  }
 }

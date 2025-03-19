@@ -210,6 +210,6 @@ class LanguageData {
   };
 
   static String getLanguageName(String code) {
-  return langMap[code] ?? code; // Returns the name or the code if not found
-}
+    return langMap[code] ?? code; // Returns the name or the code if not found
+  }
 }

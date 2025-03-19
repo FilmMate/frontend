@@ -36,8 +36,9 @@ class EveryOneWatchingBody extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => ScreenDetailEveryone(
-                                    id: state.latestMovies[index].id!,
-                                    backDrop: state.latestMovies[index].backdropPath!,
+                                        id: state.latestMovies[index].id!,
+                                        backDrop: state
+                                            .latestMovies[index].backdropPath!,
                                         duration:
                                             state.latestMovies[index].duration!,
                                         overview:
@@ -77,8 +78,9 @@ class EveryOneWatchingBody extends StatelessWidget {
                                     trigger: true));
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => ScreenDetailEveryone(
-                                  id: state.latestMovies[index].id!,
-                                  backDrop: state.latestMovies[index].backdropPath!,
+                                      id: state.latestMovies[index].id!,
+                                      backDrop: state
+                                          .latestMovies[index].backdropPath!,
                                       duration:
                                           state.latestMovies[index].duration!,
                                       overview:

@@ -15,8 +15,7 @@ class CrewSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
+      padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
       child: Container(
         constraints: BoxConstraints(
           maxHeight: size.height * 2,
@@ -54,4 +53,3 @@ class CrewSection extends StatelessWidget {
     );
   }
 }
-

@@ -156,5 +156,4 @@ class _ScreenProfileState extends State<ScreenProfile> {
       ),
     );
   }
-
 }
