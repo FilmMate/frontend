@@ -14,6 +14,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 
 class ScreenAccounts extends StatefulWidget {
   const ScreenAccounts({super.key});
@@ -38,81 +39,20 @@ class _ScreenAccountsState extends State<ScreenAccounts> {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isLoggedIn', false);
     await prefs.remove('currentUser');
-    _navigate(
-      widget: ScreenLoginAndRegister(),
-    );
+    _navigate(widget: ScreenLoginAndRegister());
   }
 
   void _navigate({required Widget widget}) {
     Navigator.of(context).pushAndRemoveUntil(
-      MaterialPageRoute(
-        builder: (context) => widget,
-      ),
+      MaterialPageRoute(builder: (context) => widget),
       (route) => false,
-    );
-  }
-
-  void _showResetDialog() {
-    HapticFeedback.lightImpact();
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text(
-          "Reset your Preferences",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: kSelectedBackgroundColor),
-        ),
-        content: const Text(
-          textAlign: TextAlign.justify,
-          "By clicking 'Reset', all your saved genre preferences will be reset",
-          style: TextStyle(fontWeight: FontWeight.w800),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child:
-                const Text("Cancel", style: TextStyle(color: Colors.black87)),
-          ),
-          TextButton(
-            onPressed: () async {
-              try {
-                User? user = FirebaseAuth.instance.currentUser;
-                if (user != null) {
-                  String uid = user.uid;
-
-                  await FirebaseFirestore.instance
-                      .collection('users')
-                      .doc(uid)
-                      .update({
-                    'genre': [],
-                  });
-                  // ignore: use_build_context_synchronously
-                  Navigator.pop(context);
-                  // ignore: use_build_context_synchronously
-                  BlocProvider.of<HomeBloc>(context).add(HomeEvent.resetAll());
-                  log('Genre field cleared successfully.');
-                } else {
-                  log('No user is signed in.');
-                }
-              } catch (e) {
-                log('Error clearing genre field: $e');
-              }
-            },
-            child: const Text("Reset",
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-          ),
-        ],
-      ),
     );
   }
 
   Future<void> getVersionInfo() async {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    String version = packageInfo.version;
     setState(() {
-      appVersion = version;
+      appVersion = packageInfo.version;
     });
   }
 
@@ -128,106 +68,115 @@ class _ScreenAccountsState extends State<ScreenAccounts> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-        body: SizedBox(
-      width: size.width,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          kHeightS,
-          kHeightS,
-          SizedBox(
+      body: Container(
+        width: size.width,
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
               width: size.width * 0.4,
-              child: Image.asset(
-                'lib/assets/logo.png',
-              )),
-          Text(
-            "FilmMate : $appVersion ",
-            style: TextStyle(color: kWhite),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Divider(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ScreenProfile()));
-                  },
-                  child: SizedBox(
-                    width: size.width,
-                    child: Text(
-                      "Your Profile",
-                      style: TextStyle(color: kWhite),
-                    ),
-                  ),
-                ),
-                kHeightXS,
-                Divider(),
-                kHeightXS,
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => ScreenAbout()));
-                  },
-                  child: SizedBox(
-                    width: size.width,
-                    child: Text(
-                      "About FilmMate",
-                      style: TextStyle(color: kWhite),
-                    ),
-                  ),
-                ),
-                Divider(),
-                kHeightS,
-                GestureDetector(
-                  onTap: _showResetDialog,
-                  child: SizedBox(
-                    width: size.width,
-                    child: Text(
-                      "Reset Preferences",
-                      style: TextStyle(color: kWhite),
-                    ),
-                  ),
-                ),
-                Divider(),
-                kHeightS,
-                GestureDetector(
-                  onTap: _launchUrl,
-                  child: SizedBox(
-                    width: size.width,
-                    child: Text(
-                      "Visit GitHub",
-                      style: TextStyle(color: kWhite),
-                    ),
-                  ),
-                ),
-                Divider(),
-                kHeightS,
-                SizedBox(
-                  width: size.width,
-                  height: 50,
-                  child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all<Color>(
-                            kSelectedBackgroundColor), // Set background color
-                      ),
-                      onPressed: logOut,
-                      child: const Text(
-                        "Log out",
-                        style: TextStyle(
-                            fontSize: 17,
-                            color: kWhite,
-                            fontWeight: FontWeight.bold),
-                      )),
-                )
-              ],
+              child: Image.asset('lib/assets/logo.png'),
             ),
-          )
+            Text("FilmMate : $appVersion",
+                style: TextStyle(
+                    color: kWhite, fontSize: 16, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 20),
+            _buildOption(
+                context,
+                "Your Profile",
+                LucideIcons.user,
+                () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ScreenProfile()))),
+            _buildOption(
+                context,
+                "About FilmMate",
+                LucideIcons.info,
+                () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ScreenAbout()))),
+            _buildOption(context, "Reset Preferences", LucideIcons.settings,
+                _showResetDialog),
+            _buildOption(
+                context, "Visit GitHub", LucideIcons.github, _launchUrl),
+            const Spacer(),
+            SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: kSelectedBackgroundColor,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12)),
+                ),
+                onPressed: logOut,
+                child: const Text("Log out",
+                    style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildOption(
+      BuildContext context, String title, IconData icon, VoidCallback onTap) {
+    return Card(
+      color: Colors.black.withValues(alpha: 0.2),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ListTile(
+        leading: Icon(icon, color: Colors.white),
+        title: Text(title,
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        trailing:
+            Icon(Icons.arrow_forward_ios, color: Colors.white70, size: 18),
+        onTap: onTap,
+      ),
+    );
+  }
+
+  void _showResetDialog() {
+    HapticFeedback.lightImpact();
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: Colors.blueGrey.shade900,
+        title: const Text("Reset your Preferences",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+        content: const Text(
+            "By clicking 'Reset', all your saved genre preferences will be reset.",
+            textAlign: TextAlign.justify,
+            style: TextStyle(color: Colors.white70)),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child:
+                const Text("Cancel", style: TextStyle(color: Colors.white70)),
+          ),
+          TextButton(
+            onPressed: () async {
+              User? user = FirebaseAuth.instance.currentUser;
+              if (user != null) {
+                String uid = user.uid;
+                await FirebaseFirestore.instance
+                    .collection('users')
+                    .doc(uid)
+                    .update({'genre': []});
+                Navigator.pop(context);
+                BlocProvider.of<HomeBloc>(context).add(HomeEvent.resetAll());
+                log('Genre preferences reset.');
+              }
+            },
+            child: const Text("Reset",
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+          ),
         ],
       ),
-    ));
+    );
   }
 }

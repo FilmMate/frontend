@@ -53,4 +53,10 @@ class EndPoints {
 
   // search tv shows by genre
   static const genreSearchTv = "$tmdbBaseUrl/discover/tv";
+
+  //get similar movies $tmdbBaseUrl/movie/{id}/recommendations
+  static const similarMovie = "$tmdbBaseUrl/movie/";
+
+  //get similar movies $tmdbBaseUrl/tv/{id}/recommendations
+  static const similarTv = "$tmdbBaseUrl/tv/";
 }

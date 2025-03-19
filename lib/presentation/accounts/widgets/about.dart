@@ -1,6 +1,6 @@
-import 'package:film_mate/core/colors.dart';
-import 'package:film_mate/core/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:film_mate/core/colors.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 
 class ScreenAbout extends StatelessWidget {
   const ScreenAbout({super.key});
@@ -11,93 +11,67 @@ class ScreenAbout extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kSelectedBackgroundColor,
         foregroundColor: kWhite,
-        title: Text("About FilmMate"),
+        title: const Text("About FilmMate"),
+        centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            kHeightS,
-            const Text(
-              textAlign: TextAlign.justify,
-              "Film Mate is a personalized platform for discovering your next favourite movies and TV shows. Embark on a journey of exploring personalized movie and TV show recommendations, trending releases, and exciting trailers—all within a secure and user-friendly platform.",
-              style: TextStyle(
-                color: kWhite,
-              ),
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildSectionHeader("What is FilmMate?", LucideIcons.film),
+              _buildText(
+                  "Film Mate is a personalized platform for discovering your next favorite movies and TV shows. Embark on a journey of exploring personalized recommendations, trending releases, and exciting trailers—all within a secure and user-friendly platform."),
+              _buildSectionHeader("Project Background", LucideIcons.bookOpen),
+              _buildText(
+                  "Initially conceived as a mini-project for the sixth-semester curriculum under KTU, Film Mate was later expanded into a comprehensive main project."),
+              _buildSectionHeader("Tech Stack", LucideIcons.code),
+              _buildText(
+                  "Flutter, Flask, Dart, Python, Firebase, React, Git, GitHub, PythonAnywhere.com by Anaconda."),
+              _buildSectionHeader("Project Guide", LucideIcons.userCheck),
+              _buildText("Mrs. Salini Dev P. V"),
+              _buildSectionHeader("Team Members", LucideIcons.users),
+              _buildText("Akshay Shine Krishna - VJC21IT006"),
+              _buildText("Joshua Johny - VJC21IT038"),
+              _buildText("Nikhil S - VJC21IT049"),
+              _buildText("Niya Brijith James - VJC21IT050"),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSectionHeader(String title, IconData icon) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Row(
+        children: [
+          Icon(icon, color: Colors.white, size: 20),
+          const SizedBox(width: 8),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
-            kHeightS,
-            const Text(
-              textAlign: TextAlign.justify,
-              "Initially conceived as a mini-project for the sixth-semester curriculum under KTU, Film Mate was later expanded and developed into a comprehensive main project.",
-              style: TextStyle(
-                color: kWhite,
-              ),
-            ),
-            kHeightS,
-            const Text(
-              textAlign: TextAlign.start,
-              "Tech Stack : ",
-              style: TextStyle(color: kWhite, fontWeight: FontWeight.bold),
-            ),
-            const Text(
-              textAlign: TextAlign.start,
-              "Flutter, Flask, Dart, Python, Firebase, React, Git, GitHub, PythonAnyWhere.com by Anaconda",
-              style: TextStyle(color: kWhite),
-            ),
-            kHeightS,
-            Row(
-              children: [
-                const Text(
-                  textAlign: TextAlign.start,
-                  "Project Guide : ",
-                  style: TextStyle(color: kWhite, fontWeight: FontWeight.bold),
-                ),
-                const Text(
-                  textAlign: TextAlign.start,
-                  "Mrs. Salini Dev P. V",
-                  style: TextStyle(color: kWhite),
-                ),
-              ],
-            ),
-            kHeightS,
-            SizedBox(
-              child: const Text(
-                textAlign: TextAlign.start,
-                "Team Members",
-                style: TextStyle(color: kWhite, fontWeight: FontWeight.bold),
-              ),
-            ),
-            kHeightXS,
-            const Text(
-              textAlign: TextAlign.start,
-              "Akshay Shine Krishna - VJC21IT006",
-              style: TextStyle(
-                color: kWhite,
-              ),
-            ),
-            const Text(
-              textAlign: TextAlign.start,
-              "Joshua Johny- VJC21IT038",
-              style: TextStyle(
-                color: kWhite,
-              ),
-            ),
-            const Text(
-              textAlign: TextAlign.start,
-              "Nikhil S- VJC21IT049",
-              style: TextStyle(
-                color: kWhite,
-              ),
-            ),
-            const Text(
-              textAlign: TextAlign.start,
-              "Niya Brijith James- VJC21IT050",
-              style: TextStyle(
-                color: kWhite,
-              ),
-            ),
-          ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildText(String content) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10.0),
+      child: Text(
+        content,
+        style: const TextStyle(
+          color: Colors.white70,
+          fontSize: 14,
+          height: 1.5,
         ),
       ),
     );

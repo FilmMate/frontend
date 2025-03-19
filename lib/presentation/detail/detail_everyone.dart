@@ -5,6 +5,7 @@ import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/domain/models/cast_and_crew.dart/cast_and_crew.dart';
 import 'package:film_mate/domain/models/languages/lang_data.dart';
 import 'package:film_mate/presentation/detail/widgets/chat_button.dart';
+import 'package:film_mate/presentation/detail/widgets/similar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/cast_section.dart';
@@ -44,6 +45,8 @@ class ScreenDetailEveryone extends StatelessWidget {
           .add(const ExploreEvent.triggerDetail(trigger: false));
       BlocProvider.of<DetailBloc>(context)
           .add(const DetailEvent.triggerTrailer(trigger: false));
+      BlocProvider.of<DetailBloc>(context)
+          .add(DetailEvent.getSimilar(type: "movie", id: id));
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -70,6 +73,15 @@ class ScreenDetailEveryone extends StatelessWidget {
               lang: LanguageData.getLanguageName(lang),
               release: release,
               image: backDrop,
+            ),
+            BlocBuilder<DetailBloc, DetailState>(
+              builder: (context, state) {
+                return Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: SimilarContentWidget(
+                      size: size, type: "movie", state: state),
+                );
+              },
             ),
             const Padding(
               padding: EdgeInsets.only(left: 10.0),

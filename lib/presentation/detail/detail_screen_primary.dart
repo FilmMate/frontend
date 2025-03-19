@@ -4,6 +4,7 @@ import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/domain/models/languages/lang_data.dart';
 import 'package:film_mate/presentation/detail/widgets/chat_button.dart';
+import 'package:film_mate/presentation/detail/widgets/similar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/cast_section.dart';
@@ -28,6 +29,8 @@ class ScreenDetailPrimary extends StatelessWidget {
           .add(const ExploreEvent.triggerDetail(trigger: false));
       BlocProvider.of<DetailBloc>(context)
           .add(DetailEvent.getDetails(type: type, id: id));
+      BlocProvider.of<DetailBloc>(context)
+          .add(DetailEvent.getSimilar(type: type, id: id));
       BlocProvider.of<DetailBloc>(context)
           .add(const DetailEvent.triggerTrailer(trigger: false));
     });
@@ -74,8 +77,17 @@ class ScreenDetailPrimary extends StatelessWidget {
                   release: state.detailData.releaseDate ?? "",
                   image: state.detailData.backdropPath ?? "",
                 ),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+                  child: SimilarContentWidget(
+                    size: size,
+                    type: type,
+                    state: state,
+                  ),
+                ),
                 state.detailData.cast.isEmpty
-                    ? kHeightXS
+                    ? SizedBox()
                     : const Padding(
                         padding: EdgeInsets.only(left: 10.0),
                         child: Text(
@@ -89,7 +101,7 @@ class ScreenDetailPrimary extends StatelessWidget {
                       ),
                 kHeightS,
                 state.detailData.cast.isEmpty
-                    ? kHeightXS
+                    ? SizedBox()
                     : CastSection(size: size, cast: state.detailData.cast),
                 kHeightS,
                 state.detailData.crew.isEmpty

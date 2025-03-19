@@ -10,4 +10,9 @@ class DetailEvent with _$DetailEvent {
     required String type,
     required int id,
   }) = _GetDetails;
+
+  const factory DetailEvent.getSimilar({
+    required String type,
+    required int id,
+  }) = _GetSimilar;
 }

@@ -1,13 +1,12 @@
 import 'dart:developer';
 import 'dart:math' show Random;
-
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:film_mate/presentation/accounts/widgets/genre_cards.dart';
 import 'package:film_mate/presentation/accounts/widgets/info_card.dart';
 import 'package:film_mate/presentation/accounts/widgets/profile_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:film_mate/core/colors.dart';
-import 'package:shimmer/shimmer.dart';
 
 class ScreenProfile extends StatefulWidget {
   const ScreenProfile({super.key});
@@ -150,7 +149,7 @@ class _ScreenProfileState extends State<ScreenProfile> {
               const SizedBox(height: 12),
               InfoCard(icon: Icons.email, label: "Email", value: email),
               const SizedBox(height: 12),
-              _buildGenresCard(),
+              GenreCards(genres: genres),
             ],
           ),
         ),
@@ -158,33 +157,4 @@ class _ScreenProfileState extends State<ScreenProfile> {
     );
   }
 
-  Widget _buildGenresCard() {
-    return Card(
-      color: Colors.black.withValues(alpha: 0.2),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Row(
-              children: [
-                Icon(Icons.movie, color: Colors.white),
-                SizedBox(width: 8),
-                Text("Selected Genres",
-                    style: TextStyle(color: Colors.white70, fontSize: 14)),
-              ],
-            ),
-            const SizedBox(height: 8),
-            ...genres.map((genre) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
-                  child: Text("- $genre",
-                      style:
-                          const TextStyle(color: Colors.white, fontSize: 16)),
-                )),
-          ],
-        ),
-      ),
-    );
-  }
 }
