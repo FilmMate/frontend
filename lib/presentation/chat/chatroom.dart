@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/domain/services/chat_service.dart';
+import 'package:film_mate/domain/services/yt_services.dart';
 import 'package:film_mate/presentation/chat/widgets/message_list.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -141,11 +142,22 @@ class _ChatRoomState extends State<ChatRoom> {
   }
 
   void sendMessage() async {
-    if (_messageController.text.isNotEmpty) {
-      await _chatServices.sendMessage(
-        widget.mediaId,
-        _messageController.text.trim(),
-      );
+    if (_messageController.text.trim().isNotEmpty) {
+      dynamic result =
+          await checkYouTubeVideoExists(_messageController.text.trim());
+      if (result != null) {
+        await _chatServices.sendMessageWithLink(
+          widget.mediaId,
+          _messageController.text.trim(),
+          result["url"],
+          result["thumbnail"],
+        );
+      } else {
+        await _chatServices.sendMessage(
+          widget.mediaId,
+          _messageController.text.trim(),
+        );
+      }
       _messageController.clear();
       HapticFeedback.lightImpact();
       // Auto-scroll to bottom when sending a message

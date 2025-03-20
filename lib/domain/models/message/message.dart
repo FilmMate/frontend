@@ -7,6 +7,9 @@ class Message {
   final String message;
   final Timestamp timestamp;
   final String? username;
+  final bool validUrl;
+  final String? url;
+  final String? thumbnail;
 
   Message(
       {required this.mediaId,
@@ -14,7 +17,10 @@ class Message {
       required this.senderEmail,
       required this.message,
       required this.timestamp,
-      required this.username});
+      required this.username,
+      this.validUrl = false,
+      this.url,
+      this.thumbnail});
 
   Map<String, dynamic> toMap() {
     return {
@@ -24,6 +30,9 @@ class Message {
       'message': message,
       'timestamp': timestamp,
       'username': username,
+      "validUrl": validUrl,
+      "url": url,
+      "thumbnail" :thumbnail,
     };
   }
 }

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:film_mate/core/colors.dart';
 import 'package:film_mate/core/constants.dart';
+import 'package:film_mate/presentation/explore/widgets/video_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -81,21 +82,54 @@ class MessageList extends StatelessWidget {
             GestureDetector(
               onLongPress:
                   isCurrentUser ? () => onDeleteMessage(messageId) : null,
-              child: Container(
-                  decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 63, 61, 61),
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      data["message"],
-                      style: const TextStyle(color: kWhite),
-                    ),
-                  )),
+              child: MessageBubble(data: data),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+class MessageBubble extends StatelessWidget {
+  const MessageBubble({
+    super.key,
+    required this.data,
+  });
+
+  final Map<String, dynamic> data;
+
+  @override
+  Widget build(BuildContext context) {
+    if (data["validUrl"] == true) {
+      return Column(
+        children: [
+          VideoWidget(videoUrl: data["url"], imageUrl: data["thumbnail"]),
+          kHeightXS,
+          Container(
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 63, 61, 61),
+                  borderRadius: BorderRadius.circular(8)),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  data["message"],
+                  style: const TextStyle(color: kWhite),
+                ),
+              ))
+        ],
+      );
+    }
+    return Container(
+        decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 63, 61, 61),
+            borderRadius: BorderRadius.circular(8)),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            data["message"],
+            style: const TextStyle(color: kWhite),
+          ),
+        ));
   }
 }
