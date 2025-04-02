@@ -352,7 +352,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         // Filter the success.result list
         final filteredMovies =
             success.results.where((media) => media.posterPath != null).toList();
-        log(filteredMovies[0].posterPath.toString());
         emit(state.copyWith(
           isGenreError1: false,
           isGenreLoading1: false,
@@ -381,7 +380,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       }
       final result = await _homeServices.getGenre(gid: state.genreIds[1]);
       result.fold((MainFailure failure) {
-        log('Genre Detail -> failure');
+        log('Genre Detail 1 -> failure');
         emit(
           state.copyWith(
             isGenreError2: true,
@@ -389,11 +388,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
         );
       }, (TMDB success) {
-        log("Genre Detail -> success");
+        log("Genre Detail 2-> success");
         // Filter the success.result list
         final filteredMovies =
             success.results.where((media) => media.posterPath != null).toList();
-        log(filteredMovies[0].posterPath.toString());
         emit(state.copyWith(
           isGenreError2: false,
           isGenreLoading2: false,
@@ -430,11 +428,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
         );
       }, (TMDB success) {
-        log("Genre Detail -> success");
+        log("Genre Detail 3 -> success");
         // Filter the success.result list
         final filteredMovies =
             success.results.where((media) => media.posterPath != null).toList();
-        log(filteredMovies[0].posterPath.toString());
         emit(state.copyWith(
           isGenreError3: false,
           isGenreLoading3: false,
@@ -471,11 +468,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
         );
       }, (TMDB success) {
-        log("Genre Detail -> success");
+        log("Genre Detail 4-> success");
         // Filter the success.result list
         final filteredMovies =
             success.results.where((media) => media.posterPath != null).toList();
-        log(filteredMovies[0].posterPath.toString());
         emit(state.copyWith(
           isGenreError4: false,
           isGenreLoading4: false,
@@ -500,15 +496,14 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
         );
       }, (TMDB success) {
-        log("Genre Detail TV -> success");
+        log("Genre Detail TV 1-> success");
         // Filter the success.result list
-        final filteredMovies =
+        final filteredTv =
             success.results.where((media) => media.posterPath != null).toList();
-        log(filteredMovies[0].posterPath.toString());
         emit(state.copyWith(
           isGenreErrorTv1: false,
           isGenreLoadingTv1: false,
-          genreResultTv1: success.results,
+          genreResultTv1: filteredTv,
         ));
       });
     }));
@@ -529,15 +524,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
         );
       }, (TMDB success) {
-        log("Genre Detail -> success");
+        log("Genre Detail TV 2-> success");
         // Filter the success.result list
-        final filteredMovies =
+        final filteredTv =
             success.results.where((media) => media.posterPath != null).toList();
-        log(filteredMovies[0].posterPath.toString());
+
         emit(state.copyWith(
           isGenreErrorTv2: false,
           isGenreLoadingTv2: false,
-          genreResultTv2: filteredMovies,
+          genreResultTv2: filteredTv,
         ));
       });
     }));
@@ -558,15 +553,14 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           ),
         );
       }, (TMDB success) {
-        log("Genre Detail -> success");
+        log("Genre Detail TV 3-> success");
         // Filter the success.result list
-        final filteredMovies =
+        final filteredTv =
             success.results.where((media) => media.posterPath != null).toList();
-        log(filteredMovies[0].posterPath.toString());
         emit(state.copyWith(
           isGenreErrorTv3: false,
           isGenreLoadingTv3: false,
-          genreResultTv3: filteredMovies,
+          genreResultTv3: filteredTv,
         ));
       });
     }));
