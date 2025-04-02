@@ -21,6 +21,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool isObscure = true;
   late TextEditingController emailController;
   late TextEditingController passwordController;
 
@@ -29,7 +30,6 @@ class _LoginState extends State<Login> {
     super.initState();
     emailController = TextEditingController();
     passwordController = TextEditingController();
-
     WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<MainNavigatorBloc>(context)
           .add(MainNavigatorEvent.changeItem(item: 0));
@@ -43,6 +43,11 @@ class _LoginState extends State<Login> {
     super.dispose();
   }
 
+  void toggleObscureText(){
+    setState(() {
+      isObscure = !isObscure;
+    });
+  }
   void showSnackBar(SnackBar snackBar) {
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
@@ -209,6 +214,7 @@ class _LoginState extends State<Login> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextField(
+            keyboardType: TextInputType.emailAddress,
               controller: emailController,
               cursorColor: kSelectedBackgroundColor,
               style: const TextStyle(color: kWhite),
@@ -233,10 +239,12 @@ class _LoginState extends State<Login> {
           padding: const EdgeInsets.all(8.0),
           child: TextField(
             controller: passwordController,
-            obscureText: true,
+            obscureText: isObscure,
             cursorColor: kSelectedBackgroundColor,
             style: const TextStyle(color: kWhite),
             decoration: InputDecoration(
+              suffixIcon: IconButton(color: Colors.grey,
+                  onPressed: toggleObscureText, icon: isObscure ? Icon(Icons.visibility) : Icon(Icons.visibility_off)),
               filled: true,
               label: const Text("Password"),
               hintText: 'Enter your password',
