@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:film_mate/application/home/home_bloc.dart';
 import 'package:film_mate/core/colors.dart';
+import 'package:film_mate/core/constants.dart';
 import 'package:film_mate/presentation/accounts/widgets/about.dart';
 import 'package:film_mate/presentation/accounts/widgets/profile.dart';
 import 'package:film_mate/presentation/user/login_and_register.dart';
@@ -97,7 +98,7 @@ class _ScreenAccountsState extends State<ScreenAccounts> {
                 _showResetDialog),
             _buildOption(
                 context, "Visit GitHub", LucideIcons.github, _launchUrl),
-            const Spacer(),
+            kHeightS,
             SizedBox(
               width: double.infinity,
               height: 50,
